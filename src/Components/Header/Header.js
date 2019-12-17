@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div>
-          <img src="/images/dive_logo.jpg" />
+          <img src="/images/dive_logo.jpg" alt="logo" />
         </div>
         <div>
           <nav>
@@ -17,6 +17,9 @@ class Header extends Component {
               </li>
               <li>
                 <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
