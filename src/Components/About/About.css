@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+  .about {
+    width: 100%;
+    color: navy;
+    padding: 3px;
+    margin: 0;
+  }
+
+  .about p {
+    margin: auto;
+    font-size: 1.2em;
+  }
+}

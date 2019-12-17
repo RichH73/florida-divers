@@ -1,0 +1,46 @@
+@media screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    height: 20%;
+  }
+
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .header img {
+    margin: 12px 0 12px 12px;
+    max-width: 100px;
+  }
+
+  .header ul li {
+    display: inline;
+    color: white;
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header nav {
+  }
+
+  .header ul li {
+    display: inline;
+    color: blue;
+    padding: 8px;
+  }
+
+  .header img {
+    margin: 12px 0 12px 12px;
+    max-width: 200px;
+  }
+}
