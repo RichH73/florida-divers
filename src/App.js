@@ -9,9 +9,15 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
-        <Pages />
-        <Footer />
+        <div className="header">
+          <Header />
+        </div>
+        <div className="pages">
+          <Pages />
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     </BrowserRouter>
   );

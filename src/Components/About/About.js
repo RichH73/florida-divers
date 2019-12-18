@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import './About.css';
+import "./About.css";
 
 class About extends Component {
   render() {
     return (
-      <div className='about'>
+      <div className="about">
         <h3>Dreams do come true!!!</h3>
         <p>
           Founded in 2016, Floridivers was the result of one little boy standing
@@ -18,6 +18,12 @@ class About extends Component {
           inhabitants and its mystery. Classes range from Open water scuba diver
           all the way up to dive master! When you're ready, come on in, we're
           waiting for you!!!
+        </p>
+        <h3 id='goal'>Our Goal</h3>
+        <p>
+          At Floridivers , we know about the amazing connection that can occur
+          when you go underwater and explore a whole new world. Let us guide you
+          in that amazing journey.
         </p>
       </div>
     );

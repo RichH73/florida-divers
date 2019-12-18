@@ -5,7 +5,11 @@ import { images } from './images';
 
 class Gallery extends Component {
   render() {
-    return <ImageGallery items={images} />;
+    return (
+      <div className='gallery'>
+        <ImageGallery items={images} />
+      </div>
+    );
   }
 }
 

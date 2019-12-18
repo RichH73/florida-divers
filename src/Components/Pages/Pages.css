@@ -1,3 +1,16 @@
-.main-body {
-    padding: 3px;
+@media screen and (max-width: 600px) {
+  .main-body {
+    padding: 13px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .main-body {
+    height: 100%;
+    width: 60%;
+    margin: auto;
+  }
+
+  
 }
