@@ -8,7 +8,13 @@ class Header extends Component {
       <div className="header">
         <div id="header">
           <div id="logo">
-            <img src="/images/dive_logo.jpg" alt="logo" />
+            <img src="/images/transparent_logo.png" alt="logo" />
+          </div>
+          <div id='label'>
+          <img src='/images/label.png' alt='label' />
+          <div id='nav-button' onClick={()=> alert('Button clicked')}>
+            <img src='images/hamburger_button.png' alt='nav' />
+          </div>
           </div>
           <div id="nav">
             <nav id='navigation-bar'>
@@ -20,14 +26,19 @@ class Header extends Component {
                   <Link to="/about">About</Link>
                 </li>
                 <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
+                <li>
                   <Link to="/crew">Crew</Link>
                 </li>
-
                 <li>
                   <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/learn">Learn</Link>
+                </li>
+                <li>
+                  <Link to="/store">Store</Link>
                 </li>
               </ul>
             </nav>

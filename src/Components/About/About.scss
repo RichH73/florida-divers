@@ -1,22 +1,33 @@
+$color: navy;
+$desktop: 601px;
+
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .about {
     width: 100%;
-    color: navy;
+    color: $color;
     padding: 3px;
     margin: 0;
   }
+
   .about p {
     margin: auto;
     font-size: 1.2em;
   }
+
   #goal {
     margin-top: 2em;
   }
 }
 
-@media (min-width: 601px) {
+@include desktop {
   .about h3 {
     text-align: center;
   }
 }
-/*# sourceMappingURL=About.css.map */

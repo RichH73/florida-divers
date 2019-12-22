@@ -1,24 +1,47 @@
-.crew-container {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-
 @media screen and (max-width: 600px) {
-  .crew img {
+  .crew h1 {
+    text-align: center;
+    color: #9AF6E0;
+  }
+  .crew-grid-card img {
+    max-width: 200px;
+  }
+  .crew-grid-card {
+    background-color: #9DBFE6;
+    margin-top: 20px;
+    padding: 1em;
+    -webkit-box-shadow: 2px 4px 4px 0px #8f8f8f;
+            box-shadow: 2px 4px 4px 0px #8f8f8f;
+  }
+  .crew-grid-card p {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1121px) {
+  .crew h1 {
+    text-align: center;
+    color: #9AF6E0;
+  }
+  .crew-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 80%;
+    margin: auto;
+  }
+  .crew-grid-card {
+    background-color: #9DBFE6;
+    max-width: 400px;
+    padding: 45px;
+    -webkit-box-shadow: 2px 4px 4px 0px #8f8f8f;
+            box-shadow: 2px 4px 4px 0px #8f8f8f;
+  }
+  .crew-grid-card img {
     max-width: 200px;
   }
 }
-
-@media screen and (min-width: 601px) {
-    .crew img {
-        width: 300px;
-      }
-
-      .crew-container {
-        margin-left: 10%;
-      }
-
-      .crew h3 {
-          text-align: center;
-      }
-}
+/*# sourceMappingURL=Crew.css.map */

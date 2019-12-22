@@ -1,0 +1,162 @@
+  
+  @media screen and (max-width: 600px) {
+    #nav {
+      display: none;
+    }
+
+    .header {
+      width: 100%;
+      height: 184px;
+      background-color: #5D9DE6;
+    }
+
+    #header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #logo {
+      margin-top: 31px;
+      margin-left: 2em;
+    }
+
+    #logo img {
+      width: 100px;
+      height: 123px;
+    }
+
+    #label {
+      margin-top: 1.4em;
+      margin-left: auto;
+      margin-right: 2em;
+    }
+    
+    #label img {
+      max-width: 164px;
+      // height: 75;
+    }
+
+    #nav-button {
+      width: 10px;
+      margin-left: auto;
+      margin-top: 1em;
+      margin-right: 2em;
+    }
+  
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1120px) {
+    #nav {
+      display: none;
+    }
+
+    .header {
+      width: 100%;
+      height: 184px;
+      background-color: #5D9DE6;
+    }
+
+    #header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #logo {
+      margin-top: 31px;
+      margin-left: 2em;
+    }
+
+    #logo img {
+      width: 100px;
+      height: 123px;
+    }
+
+    #label {
+      margin-top: 1.4em;
+      margin-left: auto;
+      margin-right: 2em;
+    }
+    
+    #label img {
+      max-width: 164px;
+    }
+
+    #nav-button {
+      width: 10px;
+      margin-left: auto;
+      margin-top: 1em;
+      margin-right: 2em;
+    }
+  
+  }
+
+  @media screen and (min-width: 1121px) {
+    #nav-button {
+      display: none;
+    }
+    .header {
+      width: 100%;
+      height: 275px;
+
+    }
+    .header img {
+        width: 182px;
+    }
+
+    #label {
+      margin-top: 1em;
+      margin-left: 1em;
+  }
+
+    #label img {
+      width: 390;
+      height: 155;
+    }
+
+    #nav {
+      margin: auto 1em 0.1em auto;
+    }
+    
+    #logo {
+        margin-top: 28px;
+        margin-left: 73px;
+    }
+
+    .header {
+        width: 100%;
+        height: 275px;
+        background: #5D9DE6;
+      }
+      
+      .header ul li {
+        display: inline;
+        color: #1D09CF;
+        justify-content: space-evenly;
+        font-size: 20px;
+        padding: 20px;
+      }
+      
+      .header ul {
+        padding: 0;
+      }
+      
+      .header nav a {
+        color: #1D09CF;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      .header nav a:hover {
+        color: white;
+      }
+      
+      .header nav a:active {
+        color: white;
+      }
+
+      #header {
+        display: flex;
+        flex-direction: row;
+      }
+    
+  }

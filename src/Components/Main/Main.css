@@ -1,14 +1,49 @@
+.main {
+  color: #9AF6E0;
+}
+
 @media screen and (max-width: 600px) {
   .main {
-      width: 100%;
-      padding: 3px;
-      margin: 0;
+    width: 100%;
+    padding: 3px;
+    margin: 0;
   }
-
   .main p {
-      font-size: 1.2em;
-      margin: auto;
+    font-size: 1.2em;
+    margin: auto;
     text-align: center;
     width: 90%;
   }
 }
+
+@media screen and (min-width: 1121px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .intro {
+    width: 50%;
+    margin-left: 2em;
+  }
+  #intro {
+    width: 835px;
+    height: 238px;
+  }
+  .intro p {
+    font-size: 20px;
+  }
+  #hero {
+    margin: 2em 0 auto auto;
+    z-index: -1;
+  }
+  #hero img {
+    opacity: 0.4;
+    max-width: 1036px;
+  }
+}
+/*# sourceMappingURL=Main.css.map */
