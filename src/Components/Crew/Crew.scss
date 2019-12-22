@@ -1,5 +1,35 @@
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 601px) {
+  .crew {
+    padding: 1em;
+  }
+
+  .crew h1 {
+    text-align: center;
+    color: #9AF6E0;
+}
+
+  .crew-grid-card img {
+    max-width: 200px;
+  }
+
+  .crew-grid-card {
+    background-color: #9DBFE6;
+    margin-top: 20px;
+    padding: 1em;
+    box-shadow: 2px 4px 4px 0px rgb(143, 143, 143);
+}
+
+.crew-grid-card p {
+    text-align: left;
+}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+  .crew {
+    padding: 1em;
+  }
+  
   .crew h1 {
     text-align: center;
     color: #9AF6E0;
