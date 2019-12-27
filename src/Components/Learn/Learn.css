@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=Learn.css.map */
+@media screen and (max-width: 600px) {
+  .learn {
+    width: 98%;
+    margin: auto;
+  }
+  .learn ul {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+  .learn {
+    width: 98%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1121px) {
+  .learn {
+    font-size: 1.2em;
+    margin-left: 80px;
+    margin-top: 125px;
+  }
+}
+/*# sourceMappingURL=Learn.css.map */

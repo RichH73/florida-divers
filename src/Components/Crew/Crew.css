@@ -1,3 +1,7 @@
+.crew {
+  color: black;
+}
+
 @media screen and (max-width: 601px) {
   .crew {
     padding: 1em;
@@ -63,8 +67,8 @@
     background-color: #9DBFE6;
     max-width: 400px;
     padding: 45px;
-    -webkit-box-shadow: 2px 4px 4px 0px #8f8f8f;
-            box-shadow: 2px 4px 4px 0px #8f8f8f;
+    -webkit-box-shadow: 1px 1px 3px 1px black;
+            box-shadow: 1px 1px 3px 1px black;
   }
   .crew-grid-card img {
     max-width: 200px;

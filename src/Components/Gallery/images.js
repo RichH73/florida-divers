@@ -15,3 +15,21 @@ export const images = [
     description: 'A school of fish'
   }
 ];
+
+export const more_images = [
+  {
+    original: "images/devils_den.png",
+    thumbnail: "images/devils_den_thumb.png",
+    description: 'Devils Den'
+  },
+  {
+    original: "images/long_neck.png",
+    thumbnail: "images/long_neck_thumb.png",
+    description: "Long Neck Turtle"
+  },
+  {
+    original: "images/pose.png",
+    thumbnail: "images/pose_thumb.png",
+    description: 'The Pose'
+  }
+];

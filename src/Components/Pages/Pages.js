@@ -7,6 +7,8 @@ import About from "../About/About";
 import Gallery from "../Gallery/Gallery";
 import Contact from '../Contact/Contact';
 import Crew from "../Crew/Crew";
+import Learn from '../Learn/Learn';
+import Store from '../Store/Store';
 
 class Body extends Component {
   render() {
@@ -17,6 +19,8 @@ class Body extends Component {
         <Route path="/crew" component={Crew} />
         <Route path="/gallery" component={Gallery} />
         <Route path='/contact' component={Contact} />
+        <Route path='/learn' component={Learn} />
+        <Route path='/store' component={Store} />
       </div>
     );
   }

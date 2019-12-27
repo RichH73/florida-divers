@@ -1,22 +1,45 @@
 @media screen and (max-width: 600px) {
   .about {
-    width: 100%;
-    color: navy;
-    padding: 3px;
-    margin: 0;
+    width: 98%;
+    color: #9DBFE6;
+    margin: auto;
   }
   .about p {
-    margin: auto;
     font-size: 1.2em;
+    text-align: left;
   }
   #goal {
     margin-top: 2em;
   }
 }
 
-@media (min-width: 601px) {
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+  .about {
+    width: 98%;
+    color: #9DBFE6;
+    margin: auto;
+  }
+  .about p {
+    text-align: left;
+    font-size: 2em;
+  }
+  #goal {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 1121px) {
+  .about {
+    margin-left: 80px;
+    margin-top: 125px;
+    color: #9DBFE6;
+    width: 60%;
+  }
   .about h3 {
     text-align: center;
+  }
+  .about p {
+    font-size: 1.4em;
   }
 }
 /*# sourceMappingURL=About.css.map */

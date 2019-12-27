@@ -4,13 +4,18 @@ import './Main.css';
 class Main extends Component {
   render() {
     return (
+      <div id='main'>
       <div className='main'>
+      <div id='logo'>
+        <img src='images/transparent_logo.png' alt='logo' />
+      </div>
       <div className='intro'>
-      <h1>Welcome to Florida Divers</h1>
+      <h1>Welcome to FloriDivers</h1>
+      <div id='intro'>
         <p>
           Never been in the ocean? Don't worry!
           </p>
-          <p id='intro'>
+          <p>
           Floridivers works with new
           divers, swimmers, and clients of all ages. Got a vacation planned? Let
           us certify you and your family so you can see and enjoy things that
@@ -19,10 +24,12 @@ class Main extends Component {
           splash.
         </p>
         </div>
+        </div>
+      </div>
         <div id='hero'>
           <img src='images/hero.png' alt='hero img' />
         </div>
-      </div>
+        </div>
     );
   }
 }

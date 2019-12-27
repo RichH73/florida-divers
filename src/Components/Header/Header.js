@@ -33,9 +33,6 @@ class Header extends Component {
     return (
       <div className="header">
         <div id="header">
-          <div id="logo">
-            <img src="/images/transparent_logo.png" alt="logo" />
-          </div>
           <div id='label'>
           <img src='/images/label.png' alt='label' />
           {sideDrawer}

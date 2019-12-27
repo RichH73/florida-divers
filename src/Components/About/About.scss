@@ -1,6 +1,5 @@
-$color: navy;
-$desktop: 601px;
-
+$color: #9DBFE6;
+$desktop: 1121px;
 
 @mixin desktop {
   @media (min-width: #{$desktop}) {
@@ -10,15 +9,31 @@ $desktop: 601px;
 
 @media screen and (max-width: 600px) {
   .about {
-    width: 100%;
+    width: 98%;
     color: $color;
-    padding: 3px;
-    margin: 0;
+    margin: auto;
   }
 
   .about p {
-    margin: auto;
     font-size: 1.2em;
+    text-align: left;
+  }
+
+  #goal {
+    margin-top: 2em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+  .about {
+    width: 98%;
+    color: $color;
+    margin: auto;
+  }
+
+  .about p {
+    text-align: left;
+    font-size: 2em;
   }
 
   #goal {
@@ -27,7 +42,17 @@ $desktop: 601px;
 }
 
 @include desktop {
+  .about {
+    margin-left: 80px;
+    margin-top: 125px;
+    color: $color;
+    width: 60%;
+  }
   .about h3 {
     text-align: center;
+  }
+
+  .about p {
+    font-size: 1.4em;
   }
 }

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='footer'>
             <footer>
                 <small>
-                    All content owned by Florida Divers
+                    All content owned by FloriDivers. Contact the <a href='mailto:richh73@yahoo.com'>Webmaster</a>.
                 </small>
             </footer>
         </div>

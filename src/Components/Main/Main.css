@@ -1,23 +1,45 @@
-.main {
-  color: #9AF6E0;
-}
-
 @media screen and (max-width: 600px) {
   .main {
-    width: 100%;
-    padding: 3px;
-    margin: 0;
+    width: 98%;
+    margin: auto;
   }
   .main p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: auto;
-    text-align: center;
+    text-align: left;
     width: 90%;
+  }
+  #hero {
+    z-index: -1;
+  }
+  #hero img {
+    opacity: 0.5;
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+  .main {
+    width: 98%;
+    margin: auto;
+  }
+  .main p {
+    font-size: 1.3em;
+    margin: auto;
+    text-align: left;
+    width: 90%;
+  }
+  #hero {
+    z-index: -1;
+  }
+  #hero img {
+    opacity: 0.5;
+    width: 98%;
   }
 }
 
 @media screen and (min-width: 1121px) {
-  .main {
+  #main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -26,24 +48,48 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 70px;
+    margin: auto;
+  }
+  .main img {
+    width: 286px;
+  }
+  #logo {
+    padding-top: 2em;
+    margin: auto;
+  }
   .intro {
     width: 50%;
-    margin-left: 2em;
+    margin-left: 1em;
+  }
+  .intro h1 {
+    margin-left: 64px;
+    width: 100%;
   }
   #intro {
-    width: 835px;
+    width: 585px;
     height: 238px;
   }
   .intro p {
     font-size: 20px;
+    width: 100%;
+    margin-left: 70px;
   }
   #hero {
-    margin: 2em 0 auto auto;
+    margin: 0 0 auto auto;
     z-index: -1;
   }
   #hero img {
     opacity: 0.4;
-    max-width: 1036px;
+    max-width: 1237px;
   }
 }
 /*# sourceMappingURL=Main.css.map */

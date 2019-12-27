@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { a } from 'react-router-dom';
 import "./Contact.css";
 
 class Contact extends Component {
@@ -8,7 +7,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <div className='contact'>
         <h3>Contact</h3>
         (352)448-0028
         <br />

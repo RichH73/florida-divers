@@ -1,51 +1,108 @@
 .main {
-    color: #9AF6E0;
+  //color: #9af6e0;
 }
 
 @media screen and (max-width: 600px) {
+  .main {
+    width: 98%;
+    margin: auto;
+  }
+
+  .main p {
+    font-size: 1.3em;
+    margin: auto;
+    text-align: left;
+    width: 90%;
+  }
+
+  #hero {
+    //margin: 2em 0 auto auto;
+    // width: 98%;
+    z-index: -1;
+  }
+
+  #hero img {
+    opacity: 0.5;
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
     .main {
-        width: 100%;
-        padding: 3px;
-        margin: 0;
+      width: 98%;
+      margin: auto;
     }
   
     .main p {
-        font-size: 1.2em;
-        margin: auto;
-      text-align: center;
+      font-size: 1.3em;
+      margin: auto;
+      text-align: left;
       width: 90%;
     }
+  
+    #hero {
+      //margin: 2em 0 auto auto;
+      // width: 98%;
+      z-index: -1;
+    }
+  
+    #hero img {
+      opacity: 0.5;
+      width: 98%;
+    }
   }
+  
 
 @media screen and (min-width: 1121px) {
-    .main {
-        display: flex;
-        flex-direction: row;
-    }
+  #main {
+    display: flex;
+    flex-direction: row;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    margin: auto;
+  }
 
-    .intro {
-        width: 50%;
-        margin-left: 2em;
-    }
+  .main img {
+    width: 286px;
+  }
 
-    #intro {
-        width: 835px;
-        height: 238px;
-    }
+  #logo {
+    padding-top: 2em;
+    margin: auto;
+  }
 
-    .intro p {
-        font-size: 20px;
-    }
+  .intro {
+    width: 50%;
+    margin-left: 1em;
+  }
 
-    #hero {
-        margin: 2em 0 auto auto;
-        z-index: -1;
-    }
+  .intro h1 {
+    margin-left: 64px;
+    width: 100%;
+  }
 
-    #hero img {
-        opacity: 0.4;
-        max-width: 1036px;
-        //height: 805px;
-    }
+  #intro {
+    width: 585px;
+    height: 238px;
+  }
 
+  .intro p {
+    font-size: 20px;
+    width: 100%;
+    margin-left: 70px;
+  }
+
+  #hero {
+    margin: 0 0 auto auto;
+    z-index: -1;
+  }
+
+  #hero img {
+    opacity: 0.4;
+    max-width: 1237px;
+    //height: 805px;
+  }
 }

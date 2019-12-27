@@ -1,0 +1,28 @@
+@media screen and (max-width: 600px) {
+    .learn {
+        //color: #9AF6E0;
+        width: 98%;
+        margin: auto;
+    }
+
+    .learn ul {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+    .learn {
+        //color: #9AF6E0;
+        width: 98%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1121px) {
+    .learn {
+        //color: #9AF6E0;
+        font-size: 1.2em;
+        margin-left: 80px;
+        margin-top: 125px;
+    }
+}

@@ -6,11 +6,12 @@
 
     .header {
       width: 100%;
-      height: 184px;
+      height: 100px;
       background-color: #5D9DE6;
     }
 
     #header {
+      height: 70px;
         display: flex;
         flex-direction: row;
     }
@@ -26,9 +27,10 @@
     }
 
     #label {
-      margin-top: 1.4em;
-      margin-left: auto;
-      margin-right: 2em;
+      margin-left: .75em;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
     }
     
     #label img {
@@ -39,8 +41,8 @@
     #nav-button {
       width: 10px;
       margin-left: auto;
-      margin-top: 1em;
-      margin-right: 2em;
+      margin-top: 1.5em;
+      margin-right: 3em;
     }
   
   }
@@ -94,39 +96,35 @@
     #nav-button {
       display: none;
     }
+
     .header {
       width: 100%;
-      height: 275px;
-
+      height: 95px;
+      background: #5D9DE6;
     }
+
     .header img {
         width: 182px;
     }
 
     #label {
-      margin-top: 1em;
+      margin-top: 0.7em;
       margin-left: 1em;
   }
 
     #label img {
-      width: 390;
-      height: 155;
+      width: 202;
+      // height: 155;
     }
 
     #nav {
-      margin: auto 1em 0.1em auto;
+      margin: auto 1em 0 auto;
     }
     
-    #logo {
-        margin-top: 28px;
-        margin-left: 73px;
-    }
-
-    .header {
-        width: 100%;
-        height: 275px;
-        background: #5D9DE6;
-      }
+    // #logo {
+    //     margin-top: 25px;
+    //     margin-left: 73px;
+    // }
       
       .header ul li {
         display: inline;
