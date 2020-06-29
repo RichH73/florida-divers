@@ -8,7 +8,7 @@ import Gallery from "../Gallery/Gallery";
 import Contact from '../Contact/Contact';
 import Crew from "../Crew/Crew";
 import Learn from '../Learn/Learn';
-import Store from '../Store/Store';
+import calendar from '../Calendar/Calendar';
 
 class Body extends Component {
   render() {
@@ -20,7 +20,7 @@ class Body extends Component {
         <Route path="/gallery" component={Gallery} />
         <Route path='/contact' component={Contact} />
         <Route path='/learn' component={Learn} />
-        <Route path='/store' component={Store} />
+        <Route path='/calendar' component={calendar} />
       </div>
     );
   }

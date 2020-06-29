@@ -1,0 +1,16 @@
+.store h1 {
+  text-align: center;
+}
+
+.cal-container {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+}
+
+.google-cal {
+  border: 0;
+  width: 100%;
+  height: 800px;
+}
+/*# sourceMappingURL=Calendar.css.map */

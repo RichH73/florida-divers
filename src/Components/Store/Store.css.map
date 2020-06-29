@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC,EAAE,CAAC;EACN,UAAU,EAAE,MAAM;CACrB",
-    "sources": [
-        "Store.scss"
-    ],
-    "names": [],
-    "file": "Store.css"
-}
