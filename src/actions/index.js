@@ -11,3 +11,10 @@ export const contactForm = (data) => {
         data
     }
 }
+
+export const learningPackageData = (data) => {
+    return {
+        type: 'NewPackages',
+        data
+    }
+}

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
 import axios from 'axios';
-
+import _ from 'lodash';
 class Contact extends Component {
 
 onChangeHandler = (event) => {
@@ -22,6 +22,11 @@ onSubmitHandler = (event) => {
       something: 'some headers'
     },
     data: this.props.submissionFormData
+  })
+  .then((response) => {
+    if(_.isEqual(response.status, 200)){
+      this.props.history.push('/contact')
+    }
   })
 }
 
