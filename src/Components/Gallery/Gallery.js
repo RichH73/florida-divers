@@ -11,7 +11,7 @@ class Gallery extends Component {
 componentDidMount() {
   axios({
     method: 'get',
-    url: 'http://localhost:8550/galleries',
+    url: 'http://floridivers.com:8600/galleries',
   })
   .then((response) => {
     this.props.getNewGalleries(

@@ -17,7 +17,7 @@ onSubmitHandler = (event) => {
   event.preventDefault();
   axios({
     method: 'post',
-    url: 'http://localhost:8550/contact/newContact',
+    url: 'http://floridivers.com:8600/contact/newContact',
     headers: {
       something: 'some headers'
     },
