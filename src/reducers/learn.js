@@ -4,7 +4,8 @@ const initialState = {
         title: '',
         description: '',
         price: '',
-        link: ''
+        link: '',
+        linkText: ''
             }
         ]
 }

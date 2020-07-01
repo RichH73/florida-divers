@@ -9,7 +9,7 @@ class Crew extends Component {
         <div className="crew-grid">
           <div className="crew-grid-card item1">
             <img
-              src="http://dev.richthats.me/images/nich_small.jpg"
+              src="http://floridivers.com/images/nich_small.jpg"
               alt="Nich"
             />
             <h2>Nicholas Strazzulla</h2>

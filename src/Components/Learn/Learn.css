@@ -21,5 +21,18 @@
     margin-left: 80px;
     margin-top: 125px;
   }
+  .learn-dive-package-info {
+    width: 40%;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    padding-left: 1em;
+    border-radius: 6px;
+  }
+  .learn-dive-package-info-title {
+    margin-top: 0;
+    font-size: 1.4em;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=Learn.css.map */

@@ -52,10 +52,10 @@ onSubmitHandler = (event) => {
           Sun: Closed
           <div className='social-media'>
           <h3>Social Media</h3>
-          <a href='https://facebook.com/scubaforthesoul' target='new'><img src='http://dev.richthats.me/images/icons/fb.png' alt='FaceBook'/></a>
-          <a href='https://twitter.com/@scubaforthesoul' target='new'><img src='http://dev.richthats.me/images/icons/twitter.png' alt='Twitter'/></a>
-          <a href='https://www.instagram.com/explore/tags/scubaforthesoul/' target='new'><img src='http://dev.richthats.me/images/icons/inst.png' alt='Instagram'/></a>
-          <a href='https://www.youtube.com/channel/UC57qQD8U-ZGDKAbzFjllJ4A' target='new'><img src='http://dev.richthats.me/images/icons/youtube.png' alt='YouTube'/></a>
+          <a href='https://facebook.com/scubaforthesoul' target='new'><img src='http://floridivers.com/images/icons/fb.png' alt='FaceBook'/></a>
+          <a href='https://twitter.com/@scubaforthesoul' target='new'><img src='http://floridivers.com/images/icons/twitter.png' alt='Twitter'/></a>
+          <a href='https://www.instagram.com/explore/tags/scubaforthesoul/' target='new'><img src='http://floridivers.com/images/icons/inst.png' alt='Instagram'/></a>
+          <a href='https://www.youtube.com/channel/UC57qQD8U-ZGDKAbzFjllJ4A' target='new'><img src='http://floridivers.com/images/icons/youtube.png' alt='YouTube'/></a>
           </div>
         </div>
         <div className='contact-us-form'>

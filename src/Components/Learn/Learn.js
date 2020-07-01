@@ -1,41 +1,49 @@
 import React, { Component } from "react";
 import "./Learn.css";
 import axios from "axios";
+import _ from "lodash";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
 
 class Learn extends Component {
   componentDidMount() {
     axios({
       method: "get",
-      url: 'http://floridivers.com:8600/learning'
+      url: "http://floridivers.com:8600/learning",
       //url: "http://localhost:8600/learning",
     }).then((response) => {
       this.props.learningPackageData(response.data);
     });
   }
 
+  divePackageInfo = () => {
+    return this.props.packagesPrices.map((pack) => (
+      <div className="learn-dive-package-info">
+        <div className="learn-dive-package-info-title">{pack.title}</div>
+        {ReactHtmlParser(pack.description)}
+        <div className="learn-package-price">
+          Course Price (per student): ${pack.price}
+        </div>
+        <a href={pack.link} target="new">
+          {pack.linkText}
+        </a>
+      </div>
+    ));
+  };
+
   render() {
-    const html = typeof this.props.packagesPrices === 'object' ? '' : this.props.packagesPrices
     const { packagesPrices } = this.props;
     return (
       <div className="learn">
         <h2>Ready to take the next step?</h2>
         <p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
-        {/* {packagesPrices.map((pack) => (
-          <div>
-            <h3>{pack.title}</h3>
-            <p>{pack.description}</p>
-            <p>${pack.price}</p>
-            <a href={pack.link} target="new">
-              {pack.linkDescription}
-            </a>
-          </div>
-        ))} */}
-        <div>{ ReactHtmlParser(html) }</div>
-        
+
         <ul>
           <li>Open Water: $300</li>
           <li>Advanced Open Water: $250</li>
@@ -46,6 +54,9 @@ class Learn extends Component {
           <li>Public Safety Diver: $600</li>
           <li>Dive master: $600</li>
         </ul>
+
+        <this.divePackageInfo />
+
         <p>
           If you would like more information about a course, or if you are ready
           to get started please contact us.
@@ -59,7 +70,7 @@ class Learn extends Component {
 
 const mapStateToProps = (state) => ({
   packagesPrices: state.learningPackages.packages,
-  text: state.richText.text
+  text: state.richText.text,
 });
 
 const mapDispatchToProps = (dispatch) => {
