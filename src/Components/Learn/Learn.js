@@ -4,6 +4,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 class Learn extends Component {
   componentDidMount() {
@@ -17,12 +18,13 @@ class Learn extends Component {
   }
 
   render() {
+    const html = typeof this.props.packagesPrices === 'object' ? '' : this.props.packagesPrices
     const { packagesPrices } = this.props;
     return (
       <div className="learn">
         <h2>Ready to take the next step?</h2>
         <p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
-        {packagesPrices.map((pack) => (
+        {/* {packagesPrices.map((pack) => (
           <div>
             <h3>{pack.title}</h3>
             <p>{pack.description}</p>
@@ -31,7 +33,9 @@ class Learn extends Component {
               {pack.linkDescription}
             </a>
           </div>
-        ))}
+        ))} */}
+        <div>{ ReactHtmlParser(html) }</div>
+        
         <ul>
           <li>Open Water: $300</li>
           <li>Advanced Open Water: $250</li>
@@ -47,6 +51,7 @@ class Learn extends Component {
           to get started please contact us.
         </p>
         <h3>We look forward to diving with you soon!!</h3>
+        <div dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
       </div>
     );
   }
@@ -54,6 +59,7 @@ class Learn extends Component {
 
 const mapStateToProps = (state) => ({
   packagesPrices: state.learningPackages.packages,
+  text: state.richText.text
 });
 
 const mapDispatchToProps = (dispatch) => {

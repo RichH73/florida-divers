@@ -18,3 +18,23 @@ export const learningPackageData = (data) => {
         data
     }
 }
+
+export const changeAdminPanel = (data) => {
+    return {
+        type: 'NavigatePanel',
+        data
+    }
+}
+
+export const editText = (data) => {
+    return {
+      type: 'new_text',
+      data
+    }
+  }
+  
+  export const clearRichText = () => {
+    return {
+      type: 'clear_rich_text'
+    }
+  }

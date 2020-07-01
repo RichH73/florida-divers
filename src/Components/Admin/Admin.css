@@ -1,0 +1,45 @@
+@media screen and (max-width: 600px) {
+  .admin {
+    width: 98%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1120px) {
+  .admin {
+    width: 98%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1121px) {
+  .admin {
+    font-size: 1.2em;
+    margin-left: 80px;
+    margin-top: 125px;
+  }
+  .admin-header {
+    background-color: #5D9DE6;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+  .admin-header li {
+    display: inline;
+    color: #1D09CF;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .admin-header li:hover {
+    color: white;
+    cursor: pointer;
+  }
+  .admin-panel-body {
+    width: 60%;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=Admin.css.map */
