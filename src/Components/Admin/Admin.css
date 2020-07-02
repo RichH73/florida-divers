@@ -41,5 +41,15 @@
     width: 60%;
     margin: auto;
   }
+  .admin-learn-form {
+    padding: 1em 0 1em 2em;
+  }
+  .admin-learn-form-element {
+    margin: 1em 0;
+  }
+  .admin-learn-form-input-field input {
+    width: 60%;
+    height: 2em;
+  }
 }
 /*# sourceMappingURL=Admin.css.map */
