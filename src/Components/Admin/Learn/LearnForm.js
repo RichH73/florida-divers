@@ -1,13 +1,22 @@
 import React, { Component } from "react";
 import TextEditor from "../../Helpers/TextEditor";
 import axios from "axios";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actionCreators from "../../../actions/index";
+
 class LeanrForm extends Component {
   onChangeHandler = (event) => {
-    console.log(event.target.name, event.target.value);
+    this.props.newPackageFormData([event.target.name], event.target.value);
   };
 
   onSubmitHandler = (event) => {
     event.preventDefault();
+    axios({
+      method: "post",
+      url: "http://floridivers.com:8600/learn/createNewPackage",
+      data: {},
+    });
   };
 
   render() {
@@ -54,4 +63,13 @@ class LeanrForm extends Component {
   }
 }
 
-export default LeanrForm;
+const mapStateToProps = (state) => ({
+  packagesPrices: state.learningPackages.packages,
+  text: state.richText.text,
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actionCreators, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LeanrForm);
