@@ -6,11 +6,6 @@ import { bindActionCreators } from "redux";
 import * as actionCreators from "../../../actions/index";
 import _ from "lodash";
 import DivePackages from "./DivePackages";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
 
 class LeanrForm extends Component {
   componentWillUnmount() {
