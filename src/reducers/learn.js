@@ -1,3 +1,4 @@
+import { editText } from "../actions/index";
 const initialState = {
   packages: [
     {
@@ -23,6 +24,7 @@ const learningPackages = (state = initialState, data) => {
       return {
         packages: data.data,
       };
+
     default:
       return state;
   }
@@ -30,19 +32,12 @@ const learningPackages = (state = initialState, data) => {
 
 export default learningPackages;
 
-export const createNewPackage = (
-  state = packageInitialState,
-  type,
-  key,
-  value
-) => {
-  console.log("learn form data", type, key, value);
-  switch (type) {
+export const createNewPackage = (state = packageInitialState, data) => {
+  switch (data.type) {
     case "newLearnFormData":
-      console.log("ITS ALIVE!!!!");
       return {
         ...state,
-        //text: data.data.text
+        [data.key]: data.value,
       };
     case "clearLearnForm":
       return {
@@ -50,6 +45,17 @@ export const createNewPackage = (
         price: "",
         link: "",
         linkText: "",
+      };
+    case "EditPackage":
+      console.log("some data", data);
+      return {
+        ...editText(data.data.description),
+        _id: data.data._id,
+        title: data.data.title,
+        description: data.data.description,
+        price: data.data.price,
+        link: data.data.link,
+        linkText: data.data.linkText,
       };
     default:
       return state;

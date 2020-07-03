@@ -77,7 +77,7 @@ class Admin extends Component {
       case "letter":
         return this.newsLetterPanel();
       case "learn":
-        return <LearnForm />;
+        return <LearnForm history={this.props.history} />;
     }
   };
 

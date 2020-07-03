@@ -51,5 +51,15 @@
     width: 60%;
     height: 2em;
   }
+  .admin-form-edit-dive-package {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .admin-form-edit-dive-package div {
+    border: 1px solid black;
+    padding: 0 8px;
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=Admin.css.map */
