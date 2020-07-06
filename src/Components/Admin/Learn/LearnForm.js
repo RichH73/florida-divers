@@ -29,7 +29,7 @@ class LeanrForm extends Component {
     axios({
       method: "post",
       // url: "http://floridivers.com:8600/learn/createNewPackage",
-      url: "http://localhost:8600/learn/createNewPackage",
+      url: "http://floridivers.com:8600/learn/createNewPackage",
       data: {
         _id: _id,
         title: title,

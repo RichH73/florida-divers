@@ -22,9 +22,12 @@ const learningPackages = (state = initialState, data) => {
   switch (data.type) {
     case "NewPackages":
       return {
+        packages: data.diveCourses,
+      };
+    case "UpdatePackages":
+      return {
         packages: data.data,
       };
-
     default:
       return state;
   }

@@ -4,6 +4,8 @@ import submissionForm from "./formSubmission";
 import learningPackages, { createNewPackage } from "./learn";
 import adminPanel from "./admin";
 import richText from "./richText";
+import userInfo from "./user";
+import Config from "./config";
 
 const allReducers = combineReducers({
   galleries: getGalleries,
@@ -12,6 +14,8 @@ const allReducers = combineReducers({
   adminPanel,
   richText,
   createNewPackage,
+  userInfo,
+  Config,
 });
 
 export default allReducers;

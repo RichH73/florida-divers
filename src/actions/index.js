@@ -19,6 +19,13 @@ export const learningPackageData = (data) => {
   };
 };
 
+export const updateLearningPackageData = (data) => {
+  return {
+    type: "UpdatePackages",
+    data,
+  };
+};
+
 export const loadPackageData = (data) => {
   return {
     type: "EditPackage",
@@ -34,7 +41,6 @@ export const changeAdminPanel = (data) => {
 };
 
 export const editText = (data) => {
-  console.log("editText", data);
   return {
     type: "new_text",
     data,
@@ -61,4 +67,11 @@ export const newPackageFormData = (key, value) => {
 
 export const messageSeen = (data) => {
   return function (dispatch) {};
+};
+
+export const userCheck = (data) => {
+  return {
+    type: "NewUser",
+    data,
+  };
 };

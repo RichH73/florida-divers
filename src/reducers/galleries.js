@@ -1,17 +1,16 @@
 const initialState = {
-    siteImages: []
-}
+  siteImages: [],
+};
 
 const getGalleries = (state = initialState, galleries) => {
-    console.log('this is galleries', galleries.data)
-    switch(galleries.type){
-        case 'NewGalleries':
-            return {
-                siteImages: galleries.data
-            }
+  switch (galleries.type) {
+    case "NewGalleries":
+      return {
+        siteImages: galleries.data,
+      };
     default:
-        return state
-    }
-}
+      return state;
+  }
+};
 
-export default getGalleries
+export default getGalleries;

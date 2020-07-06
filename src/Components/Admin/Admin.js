@@ -7,9 +7,31 @@ import * as actionCreators from "../../actions/index";
 import _ from "lodash";
 import TextEditor from "../Helpers/TextEditor";
 import LearnForm from "./Learn/LearnForm";
+import Login from "./LoginForm";
+import NewsLetter from "./NewsLetter/NewsLetter";
+import Gallery from "./Gallery/Gallery";
 
 class Admin extends Component {
-  componentDidMount() {}
+  state = {
+    username: "",
+    password: "",
+  };
+  componentDidMount() {
+    if (localStorage.floridiversToken) {
+      axios({
+        method: "post",
+        url: "http://floridivers.com:8600/login/token_check",
+        headers: {
+          Authorization: `bearer ${localStorage.floridiversToken}`,
+        },
+      }).then((response) => {
+        if (_.isEqual(response.status, 200)) {
+          _.set(response, "data.user", true);
+          this.props.userCheck(response.data);
+        }
+      });
+    }
+  }
 
   changePanel = (event) => {
     this.props.changeAdminPanel(event.target.id);
@@ -19,48 +41,38 @@ class Admin extends Component {
     return <LearnForm />;
   };
 
-  galleryPanel = () => {
-    return <div>Gallery Stuff</div>;
-  };
-
-  onSubmitHandler = () => {
-    axios({
-      method: "post",
-      url: "http://floridivers.com:8600/newsLetter",
-      data: {
-        html: this.props.text,
-        name: "Rich",
-        subject: "Monthly News Letter",
-      },
-    });
-  };
-
-  newsLetterPanel = () => {
-    return (
-      <div>
-        <TextEditor />
-        <button onClick={this.onSubmitHandler}>Send</button>
-      </div>
-    );
-  };
-
   adminWelcome = () => {};
 
   adminHeader = () => {
+    const navigation = () => {
+      switch (this.props.page) {
+        case "welcome":
+          return this.adminWelcome();
+        case "gallery":
+          return <Gallery />;
+        case "letter":
+          return <NewsLetter />;
+        case "learn":
+          return <LearnForm history={this.props.history} />;
+      }
+    };
     return (
-      <div className="admin-header">
-        <ul>
-          <li id="learn" onClick={this.changePanel}>
-            Learn
-          </li>
-          <li id="gallery" onClick={this.changePanel}>
-            Gallery
-          </li>
-          <li id="letter" onClick={this.changePanel}>
-            News Letter
-          </li>
-        </ul>
-      </div>
+      <React.Fragment>
+        <div className="admin-header">
+          <ul>
+            <li id="learn" onClick={this.changePanel}>
+              Learn
+            </li>
+            <li id="gallery" onClick={this.changePanel}>
+              Gallery
+            </li>
+            <li id="letter" onClick={this.changePanel}>
+              News Letter
+            </li>
+          </ul>
+        </div>
+        <div className="admin-panel-main-body">{navigation()}</div>
+      </React.Fragment>
     );
   };
 
@@ -75,20 +87,37 @@ class Admin extends Component {
       case "gallery":
         return this.galleryPanel();
       case "letter":
-        return this.newsLetterPanel();
+        return <NewsLetter />;
       case "learn":
         return <LearnForm history={this.props.history} />;
     }
   };
 
+  // login = () => {
+  //   const token = localStorage.floridiversToken
+  //   console.log(!!token)
+  //   if(!!token){
+  //     return (
+  //     <div className="admin">
+  //     <this.adminHeader />
+  //     <div className="admin-panel-body">
+  //       <this.navigation />
+  //     <Login />
+  //     </div>
+  //   </div>
+  //   )
+  //   }
+  // }
+
   render() {
-    const { packagesPrices } = this.props;
+    const { loggedUser } = this.props;
     return (
-      <div className="admin">
-        <this.adminHeader />
-        <div className="admin-panel-body">
-          <this.navigation />
-        </div>
+      <div className="admin-panel-main-body1">
+        {_.isEqual(loggedUser, false) ? (
+          <Login history={this.props.history} />
+        ) : (
+          <this.adminHeader />
+        )}
       </div>
     );
   }
@@ -97,6 +126,8 @@ class Admin extends Component {
 const mapStateToProps = (state) => ({
   page: state.adminPanel.panel,
   text: state.richText.text,
+  userInfo: state.userInfo,
+  loggedUser: state.userInfo.user,
 });
 
 const mapDispatchToProps = (dispatch) => {

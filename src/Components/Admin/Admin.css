@@ -61,5 +61,9 @@
     padding: 0 8px;
     cursor: pointer;
   }
+  .admin-panel-main-body {
+    width: 60%;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=Admin.css.map */

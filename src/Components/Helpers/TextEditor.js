@@ -18,12 +18,8 @@ class TextEditor extends Component {
         { indent: "+1" },
       ],
       ["link", "image", "video"],
-      ["emoji"],
       ["clean"],
     ],
-    //"emoji-toolbar": true,
-    //"emoji-textarea": true,
-    //"emoji-shortname": true,
   };
 
   formats = [
@@ -40,7 +36,6 @@ class TextEditor extends Component {
     "image",
     "video",
     "clean",
-    "emoji",
   ];
 
   handleChange = (value) => {
@@ -50,9 +45,9 @@ class TextEditor extends Component {
   };
 
   render() {
-    console.log(this.props.description);
     return (
       <ReactQuill
+        style={{ backgroundColor: "white", color: "black" }}
         name="quil"
         value={this.props.text}
         onChange={this.handleChange}
