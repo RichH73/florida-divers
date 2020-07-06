@@ -1,12 +1,5 @@
 const _ = require("lodash");
 
-var os = require("os");
-
-var networkInterfaces = os.networkInterfaces();
-
-console.log(networkInterfaces);
-console.log("some ip stuff", networkInterfaces);
-
 const initialState = {
   url: "http://floridivers.com:8600/",
   activeModules: {
