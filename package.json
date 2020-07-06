@@ -28,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "git add . && git commit -m \"saving changes\" && git push"
+    "deploy": "git add . && git commit -m \"saving changes\" && git push",
+    "prettier": "prettier --use-tabs --print-width 150 --arrow-parens always --single-quote --bracket-spacing --write \"src/**/*.{js,json}\""
   },
   "eslintConfig": {
     "extends": "react-app"
