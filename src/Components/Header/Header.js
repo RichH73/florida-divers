@@ -50,7 +50,7 @@ class Header extends Component {
           <div id="nav">
             <nav id="navigation-bar">
               <ul>
-                {!!this.props.userLoggedIn ? (
+                {!!this.props.modules.ADMIN ? (
                   <li>
                     <Link to="/admin">Admin</Link>
                   </li>

@@ -13,8 +13,8 @@ import axios from "axios";
 //  export const store = createStore(allReducers, composeWithDevTools(applyMiddleware(logger)))
 export const store = createStore(
   allReducers,
-  // composeWithDevTools(applyMiddleware(thunk)),
-  applyMiddleware(thunk)
+  composeWithDevTools(applyMiddleware(thunk))
+  // applyMiddleware(thunk)
 );
 
 // const configs = axios.get('http://floridivers.com:8600/config')

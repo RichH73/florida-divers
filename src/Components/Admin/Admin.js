@@ -20,7 +20,7 @@ class Admin extends Component {
     if (localStorage.floridiversToken) {
       axios({
         method: "post",
-        url: "http://floridivers.com:8600/login/token_check",
+        url: `${this.props.siteURL}login/token_check`,
         headers: {
           Authorization: `bearer ${localStorage.floridiversToken}`,
         },
@@ -128,6 +128,7 @@ const mapStateToProps = (state) => ({
   text: state.richText.text,
   userInfo: state.userInfo,
   loggedUser: state.userInfo.user,
+  siteURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {
