@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
 import _ from "lodash";
-import TextEditor from "../Helpers/TextEditor";
 import LearnForm from "./Learn/LearnForm";
 import Login from "./LoginForm";
 import NewsLetter from "./NewsLetter/NewsLetter";
