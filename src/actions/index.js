@@ -5,6 +5,25 @@ export const getNewGalleries = (data) => {
   };
 };
 
+export const new_album = (files) => {
+  return {
+    type: "new_gallery",
+    photos: files.files,
+    save_files: files.save_files,
+    //image_array: files.image_array
+  };
+};
+
+export const delete_album_photos = (path) => ({
+  type: "delete_album_photos",
+  path
+});
+
+export const gallery_name_handler = (data) => ({
+  type: 'album_text_data',
+  data
+})
+
 export const contactForm = (data) => {
   return {
     type: "NewFormData",

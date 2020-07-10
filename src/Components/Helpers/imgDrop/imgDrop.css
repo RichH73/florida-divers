@@ -1,0 +1,59 @@
+.ImageDrop-body {
+  color: #7a6dee;
+  height: 101px;
+}
+
+.edit-profile-dropbox {
+  height: auto;
+  background-color: #5D9DE6;
+  color: #1D09CF;
+  border: 1px solid black;
+}
+
+.edit-profile-image-drop-box-dropper {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  height: 100px;
+  border-radius: 25px;
+  margin-bottom: 1em;
+  border: 1px solid black;
+}
+
+#imagedrop-image-preview {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#imagedrop-image-preview img {
+  width: 100px;
+}
+
+.edit-profile-image-drop-box-album-info {
+  margin-bottom: 20px;
+}
+
+.edit-profile-image-drop-box-name {
+  width: 370px;
+  height: 34px;
+}
+
+.edit-profile-image-drop-box-description {
+  width: 370px;
+  height: 34px;
+}
+
+.edit-profile-image-flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=imgDrop.css.map */

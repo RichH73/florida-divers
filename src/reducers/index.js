@@ -6,6 +6,7 @@ import adminPanel from "./admin";
 import richText from "./richText";
 import userInfo from "./user";
 import Config from "./config";
+import gallery_uploader from './gallery_uploader'
 
 const allReducers = combineReducers({
   galleries: getGalleries,
@@ -16,6 +17,7 @@ const allReducers = combineReducers({
   createNewPackage,
   userInfo,
   Config,
+  gallery_uploader
 });
 
 export default allReducers;
