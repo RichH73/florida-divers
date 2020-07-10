@@ -26,13 +26,13 @@ export const store = createStore(
 //       });
 // })
 
+// eslint-disable-next-line
 const diveCourses = axios({
   method: "get",
   url: "http://floridivers.com:8600/learning",
   //url: "http://floridivers.com:8600/learning",
 }).then((response) => {
   let diveCourses = response.data;
-  console.log("packs", diveCourses);
   store.dispatch({
     type: "NewPackages",
     diveCourses,

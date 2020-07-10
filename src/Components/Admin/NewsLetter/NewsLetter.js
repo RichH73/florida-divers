@@ -4,7 +4,6 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../../actions/index";
-import _ from "lodash";
 import TextEditor from "../../Helpers/TextEditor";
 
 class NewsLetter extends Component {
@@ -21,7 +20,6 @@ class NewsLetter extends Component {
   };
 
   render() {
-    const token = localStorage.floridiversToken;
     return (
       <div>
         <TextEditor />

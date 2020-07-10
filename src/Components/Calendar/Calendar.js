@@ -21,8 +21,7 @@ class Calendar extends Component {
     render(){     
       return (
         <div className='cal-container'>
-
-          <iframe className='google-cal' src="https://calendar.google.com/calendar/embed?src=scubaforthesoulclub%40gmail.com&ctz=America%2FNew_York" />
+          <iframe title='Floridivers Calendar' className='google-cal' src="https://calendar.google.com/calendar/embed?src=scubaforthesoulclub%40gmail.com&ctz=America%2FNew_York" />
         </div>
       )
     }

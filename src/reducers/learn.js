@@ -50,7 +50,6 @@ export const createNewPackage = (state = packageInitialState, data) => {
         linkText: "",
       };
     case "EditPackage":
-      console.log("some data", data);
       return {
         ...editText(data.data.description),
         _id: data.data._id,

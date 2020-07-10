@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Toolbar from "../mobileMenu/toolbar";
+// import Toolbar from "../mobileMenu/toolbar";
 import SideDrawer from "../mobileMenu/sideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
-import _ from "lodash";
 
 class Header extends Component {
   state = {
@@ -25,7 +24,6 @@ class Header extends Component {
   };
 
   render() {
-    console.log("user logged", !!this.props.userLoggedIn);
     let backdrop;
     let sideDrawer;
 
@@ -33,8 +31,6 @@ class Header extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
       sideDrawer = <SideDrawer />;
     }
-    const ADMIN = _.get(this, "props.modules.ADMIN");
-    console.log("modules", ADMIN);
     return (
       <div className="header">
         <div id="header">

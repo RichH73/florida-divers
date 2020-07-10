@@ -9,8 +9,7 @@ const initialState = {
 };
 
 if (_.isEqual(_.get(initialState, "activeModules.ADMIN"), true)) {
-  _.set(initialState, "url", "http://localhost:8600/");
-  console.log("this", this);
+  //_.set(initialState, "url", "http://localhost:8600/");
 }
 
 const Config = (state = initialState, config) => {

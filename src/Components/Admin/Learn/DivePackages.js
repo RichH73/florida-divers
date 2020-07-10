@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-import TextEditor from "../../Helpers/TextEditor";
-import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../../actions/index";
-import _ from "lodash";
-import { Link } from "react-router-dom";
 
 class DivePackages extends Component {
   componentWillUnmount() {
@@ -14,14 +10,13 @@ class DivePackages extends Component {
   }
 
   onClickHandler = (id) => {
-    console.log(id);
-    let packageData = this.props.packagesPrices.filter((course) => {
-      _.isEqual(course._id, id);
-      // title: "",
-      // price: "",
-      // link: "",
-      // linkText: "",
-    });
+    // let packageData = this.props.packagesPrices.filter((course) => {
+    //   _.isEqual(course._id, id);
+    //   // title: "",
+    //   // price: "",
+    //   // link: "",
+    //   // linkText: "",
+    // });
     this.props.loadPackageData(id);
     this.props.editText({ text: id.description });
   };

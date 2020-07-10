@@ -21,7 +21,6 @@ class LeanrForm extends Component {
     const {
       _id,
       title,
-      description,
       price,
       link,
       linkText,
@@ -49,7 +48,6 @@ class LeanrForm extends Component {
 
   render() {
     const {
-      _id,
       title,
       description,
       price,

@@ -4,8 +4,6 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../../actions/index";
-import _ from "lodash";
-import TextEditor from "../../Helpers/TextEditor";
 import ImageDrop from '../../Helpers/imgDrop/imgDrop'
 class Gallery extends Component {
   onSubmitHandler = () => {
@@ -21,7 +19,6 @@ class Gallery extends Component {
   };
 
   render() {
-    const token = localStorage.floridiversToken;
     return (
     <div>
       <ImageDrop />

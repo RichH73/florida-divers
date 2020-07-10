@@ -28,7 +28,8 @@ class Admin extends Component {
           _.set(response, "data.user", true);
           this.props.userCheck(response.data);
         }
-      });
+      })
+      
     }
   }
 
@@ -53,6 +54,8 @@ class Admin extends Component {
           return <NewsLetter />;
         case "learn":
           return <LearnForm history={this.props.history} />;
+        default:
+          return this.adminWelcome()
       }
     };
     return (
@@ -89,24 +92,10 @@ class Admin extends Component {
         return <NewsLetter />;
       case "learn":
         return <LearnForm history={this.props.history} />;
+      default:
+        return this.adminWelcome()
     }
   };
-
-  // login = () => {
-  //   const token = localStorage.floridiversToken
-  //   console.log(!!token)
-  //   if(!!token){
-  //     return (
-  //     <div className="admin">
-  //     <this.adminHeader />
-  //     <div className="admin-panel-body">
-  //       <this.navigation />
-  //     <Login />
-  //     </div>
-  //   </div>
-  //   )
-  //   }
-  // }
 
   render() {
     const { loggedUser } = this.props;

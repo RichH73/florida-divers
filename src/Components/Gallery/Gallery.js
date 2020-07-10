@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ImageGallery from "react-image-gallery";
 import "./Gallery.css";
 import axios from 'axios';
-import _ from 'lodash';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";

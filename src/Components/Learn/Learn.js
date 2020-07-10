@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import "./Learn.css";
 import axios from "axios";
-import _ from "lodash";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
 import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
+  // processNodes,
+  // convertNodeToElement,
+  // htmlparser2,
 } from "react-html-parser";
 import { Link } from "react-router-dom";
 class Learn extends Component {
@@ -38,7 +37,7 @@ class Learn extends Component {
   };
 
   render() {
-    const { packagesPrices } = this.props;
+    // const { packagesPrices } = this.props;
     return (
       <div className="learn">
         <h2>Ready to take the next step?</h2>
