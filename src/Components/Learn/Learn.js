@@ -11,7 +11,6 @@ import ReactHtmlParser, {
   htmlparser2,
 } from "react-html-parser";
 import { Link } from "react-router-dom";
-
 class Learn extends Component {
   componentDidMount() {
     axios({
