@@ -11,6 +11,7 @@
     "quill-emoji": "^0.1.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-dropzone": "^11.0.1",
     "react-html-parser": "^2.0.2",
     "react-image-file-resizer": "^0.3.1",
     "react-image-gallery": "^0.9.1",
