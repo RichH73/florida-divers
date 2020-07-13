@@ -1,1 +1,35 @@
-/* No CSS *//*# sourceMappingURL=Gallery.css.map */
+.ImageDrop-body {
+  color: #7a6dee;
+  height: 101px;
+}
+
+.edit-gallery-dropbox {
+  height: auto;
+  background-color: #5D9DE6;
+  color: #1D09CF;
+  border: 1px solid black;
+}
+
+.edit-gallery-image-drop-box-album-info {
+  margin-bottom: 20px;
+}
+
+.edit-gallery-image-drop-box-name {
+  width: 370px;
+  height: 34px;
+}
+
+.edit-gallery-image-drop-box-description {
+  width: 370px;
+  height: 34px;
+}
+
+.edit-gallery-image-flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=Gallery.css.map */

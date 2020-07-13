@@ -12,38 +12,38 @@ class ImageDrop extends Component {
     file: []
   };
 
-  submitHandler = event => {
-    event.preventDefault();
-    //this.props.loader(true);
-    let images = [];
-    event.preventDefault();
-    let fileData = new FormData();
-    let imgFiles = this.props.save_files;
-    forEach(imgFiles, function(file) {
-      fileData.append("file", file);
-      images.push(file.name);
-    });
-    let gallery_data = {
-      gallery_name: this.props.gallery_name,
-    };
-    fileData.append("data", JSON.stringify(gallery_data));
-    axios({
-      method: "post",
-      url: "http://localhost:8600/galleries/upload",
-      headers: {
-        Authorization: `Bearer ${localStorage.floridiversToken}`
-      },
-      data: fileData
-    }).then(response => {
-      //this.props.loader(false);
-    });
-  };
+  // submitHandler = event => {
+  //   event.preventDefault();
+  //   //this.props.loader(true);
+  //   let images = [];
+  //   event.preventDefault();
+  //   let fileData = new FormData();
+  //   let imgFiles = this.props.save_files;
+  //   forEach(imgFiles, function(file) {
+  //     fileData.append("file", file);
+  //     images.push(file.name);
+  //   });
+  //   let gallery_data = {
+  //     gallery_name: this.props.gallery_name,
+  //   };
+  //   fileData.append("data", JSON.stringify(gallery_data));
+  //   axios({
+  //     method: "post",
+  //     url: "http://localhost:8600/galleries/upload",
+  //     headers: {
+  //       Authorization: `Bearer ${localStorage.floridiversToken}`
+  //     },
+  //     data: fileData
+  //   }).then(response => {
+  //     //this.props.loader(false);
+  //   });
+  // };
 
-  change_handler = event => {
-    this.props.gallery_name_handler({
-      [event.target.name]: event.target.value
-    });
-  };
+  // change_handler = event => {
+  //   this.props.gallery_name_handler({
+  //     [event.target.name]: event.target.value
+  //   });
+  // };
 
   clickHandler = path => {
     this.props.delete_album_photos(path);
@@ -71,33 +71,13 @@ class ImageDrop extends Component {
 
   render() {
     return (
-      <div className="edit-profile-dropbox">
-          <div style={{ textAlign: "center", marginBottom: "20px", gridArea: 'opener' }}>
-            Create a new photo album
-          </div>
-          <div className='edit-profile-image-drop-box-album-info'>
-            <div className='edit-profile-image-flex-box'>
-            <div className='edit-profile-image-drop-box-name'>
-              Gallery Name:{" "}
-              <input type="text" name="gallery_name" onChange={this.change_handler} />
-            </div>
-            <div className='edit-profile-image-drop-box-button'>
-              <button
-                className="btn btn-success"
-                type="submit"
-                onClick={this.submitHandler}
-              >
-                Create
-              </button>
-              </div>
-            </div>
-          {/* </div> */}
-          <div className="edit-profile-image-drop-box-body">
+      <React.Fragment>
+          <div className="edit-gallery-image-drop-box-body">
           <Dropzone accept="image/*" onDrop={this.onPreviewDrop}>
             {({ getRootProps, getInputProps }) => (
               <section>
                 <div
-                  className="green-box edit-profile-image-drop-box-dropper"
+                  className="edit-gallery-image-drop-box-dropper"
                   {...getRootProps()}
                 >
                   {this.props.innerMessage}
@@ -110,7 +90,6 @@ class ImageDrop extends Component {
             )}
           </Dropzone>
         </div>
-
         {this.props.photos.length > 0 && (
           <div>
             <h4>Photos to be added</h4>
@@ -128,8 +107,7 @@ class ImageDrop extends Component {
             </div>
           </div>
         )}
-        </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
