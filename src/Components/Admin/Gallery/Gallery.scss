@@ -4,11 +4,17 @@
         height: 101px;
     }
 
-    .edit-gallery-dropbox {
+    .create-gallery-dropbox {
         height: auto;
         background-color: #5D9DE6;
         color: #1D09CF;
         border: 1px solid black;
+    }
+
+    .create-gallery-dropbox p {
+        text-align: left;
+        margin: auto;
+        padding: 1em;
     }
 
     .edit-gallery-image-drop-box-album-info {

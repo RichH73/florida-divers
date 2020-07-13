@@ -39,7 +39,7 @@ class Gallery extends Component {
 
   render() {
     return (
-      <div className="edit-gallery-dropbox">
+      <div className="create-gallery-dropbox">
         <div
           style={{
             textAlign: "center",
@@ -47,7 +47,14 @@ class Gallery extends Component {
             gridArea: "opener",
           }}
         >
-          Create a new photo album
+          <h4>
+          Create a new photo gallery
+          </h4>
+          <p>
+            Type a name for the galler you want to create. This is a simple title that will display above each
+            gallery displayed in the gallery page. Then add some images you would like to upload to the gallery in the box
+            below. Please restrict uploads to 6 images. More images can be added to any gallery later in the edit gallery page (TODO).
+          </p>
         </div>
         <div className="" style={{ margin: "1em auto", textAlign: "center" }}>
           <lable>Gallery Name: </lable>

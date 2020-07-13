@@ -83,7 +83,7 @@ class ImageDrop extends Component {
                   {this.props.innerMessage}
                   <input {...getInputProps()} />
                   <span>
-                    Drop your pictures here.
+                    You can drag and drop images here, or click this box and a file select box will open.
                   </span>
                 </div>
               </section>
@@ -91,8 +91,9 @@ class ImageDrop extends Component {
           </Dropzone>
         </div>
         {this.props.photos.length > 0 && (
-          <div>
-            <h4>Photos to be added</h4>
+          <div className='imagedrop-image-preview-section'>
+            <h4>Image preview.</h4>
+            <p>Click on an image to remove it from the upload queue.</p>
             <div id="imagedrop-image-preview">
               {this.props.photos.map(file => (
                 <div className="imagedrop-image-preview-image">
