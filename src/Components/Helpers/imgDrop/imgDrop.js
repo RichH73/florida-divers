@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import Dropzone from "react-dropzone";
-import { forEach, flatten } from "lodash";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../../actions/index";
-import axios from "axios";
-import './imgDrop.css'
+import './imgDrop.css';
+import _ from 'lodash';
 
 class ImageDrop extends Component {
   state = {
@@ -64,8 +63,8 @@ class ImageDrop extends Component {
       id: file.name
     }));
     this.props.new_album({
-      files: flatten([...this.props.photos, newFile]),
-      save_files: flatten([...this.props.save_files, save_files])
+      files: _.flatten([...this.props.photos, newFile]),
+      save_files: _.flatten([...this.props.save_files, save_files])
     });
   };
 
@@ -82,9 +81,9 @@ class ImageDrop extends Component {
                 >
                   {this.props.innerMessage}
                   <input {...getInputProps()} />
-                  <span>
+                  <p>
                     You can drag and drop images here, or click this box and a file select box will open.
-                  </span>
+                  </p>
                 </div>
               </section>
             )}

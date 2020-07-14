@@ -11,6 +11,7 @@ componentDidMount() {
   axios({
     method: 'get',
     url: 'http://floridivers.com:8600/galleries',
+    // url: 'http://localhost:8600/galleries',
   })
   .then((response) => {
     this.props.getNewGalleries(
