@@ -45,6 +45,20 @@ class LeanrForm extends Component {
     return (
       <div className="admin-learn-form">
         <p>Create a new dive package by filling out the form below.</p>
+        <p>
+          Title: Displays the text in bold letters.
+          <br />
+          Description: Enter the information that you would like to display
+          about each course. Small images can also be used.
+          <br />
+          Price: Display a dollar amount per student for the course.
+          <br />
+          Link: This will be the full url to your PayPal account and to the
+          exact dive package a student will be signing up for. Link Text: This
+          will display as the link in your dive package. You can use any phrase
+          you like, "Signup Here" or "Pay for this course" are a couple of
+          examples.
+        </p>
         <div className="admin-learn-form-element">
           <label>Title</label>
           <div className="admin-learn-form-input-field">
