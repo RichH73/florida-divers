@@ -19,7 +19,7 @@ class About extends Component {
           all the way up to dive master! When you're ready, come on in, we're
           waiting for you!!!
         </p>
-        <h1 id='goal'>Our Goal</h1>
+        <h1 id="goal">Our Goal</h1>
         <p>
           At Floridivers , we know about the amazing connection that can occur
           when you go underwater and explore a whole new world. Let us guide you

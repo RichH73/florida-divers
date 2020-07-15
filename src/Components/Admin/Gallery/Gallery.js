@@ -9,6 +9,7 @@ import _ from "lodash";
 class Gallery extends Component {
   submitHandler = (event) => {
     event.preventDefault();
+    this.props.spinnerStatus("show");
     let images = [];
     event.preventDefault();
     let fileData = new FormData();
@@ -23,18 +24,28 @@ class Gallery extends Component {
     fileData.append("data", JSON.stringify(gallery_data));
     axios({
       method: "post",
-      url: "http://localhost:8600/galleries/upload",
+      url: "http://floridivers.com:8600/galleries/upload",
       headers: {
         Authorization: `Bearer ${localStorage.floridiversToken}`,
       },
       data: fileData,
-    }).then((response) => {});
+    }).then((response) => {
+      this.props.spinnerStatus("hide");
+    });
   };
 
   change_handler = (event) => {
     this.props.gallery_name_handler({
       [event.target.name]: event.target.value,
     });
+  };
+
+  hideSpinner = () => {
+    this.props.spinnerStatus("hide");
+  };
+
+  showSpinner = () => {
+    this.props.spinnerStatus("show");
   };
 
   render() {
@@ -47,13 +58,14 @@ class Gallery extends Component {
             gridArea: "opener",
           }}
         >
-          <h4>
-          Create a new photo gallery
-          </h4>
+          <h4>Create a new photo gallery</h4>
           <p>
-            Type a name for the galler you want to create. This is a simple title that will display above each
-            gallery displayed in the gallery page. Then add some images you would like to upload to the gallery in the box
-            below. Please restrict uploads to 6 images. More images can be added to any gallery later in the edit gallery page (TODO).
+            Type a name for the gallery you want to create. This is a simple
+            title that will display above each gallery displayed in the gallery
+            page. Then add some images you would like to upload to the gallery
+            in the box below. Please restrict uploads to 6 images at a time for
+            larger images. More images can be added to any gallery later in the
+            edit gallery page (TODO).
           </p>
         </div>
         <div className="" style={{ margin: "1em auto", textAlign: "center" }}>

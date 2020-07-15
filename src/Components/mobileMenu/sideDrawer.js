@@ -6,7 +6,7 @@ class SideDrawer extends React.Component {
     return (
       <div>
         <nav className="side-drawer">
-        <div id="logo">
+          <div id="logo">
             <img src="/images/transparent_logo.png" alt="logo" />
           </div>
           <ul>

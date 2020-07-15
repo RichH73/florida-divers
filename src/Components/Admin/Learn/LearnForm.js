@@ -18,13 +18,7 @@ class LeanrForm extends Component {
 
   onSubmitHandler = (event) => {
     event.preventDefault();
-    const {
-      _id,
-      title,
-      price,
-      link,
-      linkText,
-    } = this.props.courseData;
+    const { _id, title, price, link, linkText } = this.props.courseData;
     axios({
       method: "post",
       // url: "http://floridivers.com:8600/learn/createNewPackage",
@@ -47,13 +41,7 @@ class LeanrForm extends Component {
   };
 
   render() {
-    const {
-      title,
-      description,
-      price,
-      link,
-      linkText,
-    } = this.props.courseData;
+    const { title, description, price, link, linkText } = this.props.courseData;
     return (
       <div className="admin-learn-form">
         <p>Create a new dive package by filling out the form below.</p>

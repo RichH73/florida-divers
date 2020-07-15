@@ -4,11 +4,9 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
-import ReactHtmlParser, {
-  // processNodes,
-  // convertNodeToElement,
-  // htmlparser2,
-} from "react-html-parser";
+import ReactHtmlParser from // convertNodeToElement, // processNodes,
+// htmlparser2,
+"react-html-parser";
 import { Link } from "react-router-dom";
 class Learn extends Component {
   componentDidMount() {

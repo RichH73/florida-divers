@@ -16,13 +16,13 @@ export const new_album = (files) => {
 
 export const delete_album_photos = (path) => ({
   type: "delete_album_photos",
-  path
+  path,
 });
 
 export const gallery_name_handler = (data) => ({
-  type: 'album_text_data',
-  data
-})
+  type: "album_text_data",
+  data,
+});
 
 export const contactForm = (data) => {
   return {
@@ -92,5 +92,11 @@ export const userCheck = (data) => {
   return {
     type: "NewUser",
     data,
+  };
+};
+
+export const spinnerStatus = (state) => {
+  return {
+    type: state,
   };
 };

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import './Pages.css';
+import "./Pages.css";
 
 import Main from "../Main/Main";
 import About from "../About/About";
 import Gallery from "../Gallery/Gallery";
-import Contact from '../Contact/Contact';
+import Contact from "../Contact/Contact";
 import Crew from "../Crew/Crew";
-import Learn from '../Learn/Learn';
-import calendar from '../Calendar/Calendar';
-import Admin from '../Admin/Admin';
+import Learn from "../Learn/Learn";
+import calendar from "../Calendar/Calendar";
+import Admin from "../Admin/Admin";
 
 class Body extends Component {
   render() {
@@ -19,10 +19,10 @@ class Body extends Component {
         <Route path="/about" component={About} />
         <Route path="/crew" component={Crew} />
         <Route path="/gallery" component={Gallery} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/learn' component={Learn} />
-        <Route path='/calendar' component={calendar} />
-        <Route path='/admin' component={Admin} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/learn" component={Learn} />
+        <Route path="/calendar" component={calendar} />
+        <Route path="/admin" component={Admin} />
       </div>
     );
   }
