@@ -1,11 +1,13 @@
 .footer {
-    text-align: center;
-    bottom: 0;
-    position: fixed;
-    margin: auto;
-    width: 100%;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  margin: 1em auto 0;
+  width: 100%;
 }
 
 .footer a {
-    color: white;
+  color: white;
+  font-weight: bold;
 }
+/*# sourceMappingURL=Footer.css.map */

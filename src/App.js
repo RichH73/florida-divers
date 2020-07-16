@@ -8,8 +8,19 @@ import Spinner from "react-spinner-material";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "./actions/index";
+import axios from "axios";
 
 class App extends Component {
+  componentDidMount() {
+    axios({
+      method: "get",
+      url: `${this.props.serverURL}learning`,
+      //url: "http://floridivers.com:8600/learning",
+    }).then((response) => {
+      this.props.updateLearningPackageData(response.data);
+    });
+  }
+
   spinner = () => {
     const { spinnerState } = this.props;
     return (
@@ -78,6 +89,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   spinnerState: state.spinner,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {

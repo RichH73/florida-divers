@@ -24,7 +24,7 @@ class Gallery extends Component {
     fileData.append("data", JSON.stringify(gallery_data));
     axios({
       method: "post",
-      url: "http://floridivers.com:8600/galleries/upload",
+      url: `${this.props.serverURL}galleries/upload`,
       headers: {
         Authorization: `Bearer ${localStorage.floridiversToken}`,
       },
@@ -97,6 +97,7 @@ const mapStateToProps = (state) => ({
   gallery_name: state.gallery_uploader.gallery_name,
   photos: state.gallery_uploader.photos,
   save_files: state.gallery_uploader.save_files,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {

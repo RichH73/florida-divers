@@ -6,6 +6,29 @@
   .learn ul {
     text-align: left;
   }
+  .learn-dive-package-info {
+    width: 98%;
+    margin: 20px auto;
+    background-color: #5D9DE6;
+    color: black;
+    border-radius: 6px;
+  }
+  .learn-dive-package-info-title {
+    margin-top: 0;
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 0;
+    background-color: lightskyblue;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+  }
+  .learn-dive-package-info-body {
+    padding: 1em;
+  }
+  .learn-dive-package-info-body a {
+    color: blue;
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1120px) {

@@ -1,3 +1,40 @@
+@media screen and (max-width: 600px) {
+
+    .edit-gallery-image-drop-box-dropper {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        height: 100px;
+        border-radius: 25px;
+        margin-bottom: 1em;
+        border: 1px solid black;
+    }
+
+    #imagedrop-image-preview {
+        padding: 1em;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #imagedrop-image-preview img {
+        width: 100px;
+        margin-left: 2px;
+    }
+
+    .edit-gallery-image-drop-box-body {
+        padding: 1em;
+        text-align: center;
+        color: blue;
+    }
+
+    .imagedrop-image-preview-section {
+        text-align: center;
+    }
+
+}
+   
+@media screen and (min-width: 601px) {
+
     .edit-gallery-image-drop-box-dropper {
         width: 40%;
         text-align: center;
@@ -28,3 +65,5 @@
     .imagedrop-image-preview-section {
         text-align: center;
     }
+
+}

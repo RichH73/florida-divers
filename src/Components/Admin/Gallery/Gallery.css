@@ -38,4 +38,13 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+
+.create-gallery-dropbox button {
+  background-color: #1578E8;
+  border: 0;
+  border-radius: 19px;
+  height: 2em;
+  width: 40%;
+  color: white;
+}
 /*# sourceMappingURL=Gallery.css.map */

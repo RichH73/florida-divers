@@ -12,6 +12,33 @@
     max-width: 40px;
     padding: 10px;
   }
+  .contact-us-form button {
+    background-color: #1578E8;
+    border: 0;
+    border-radius: 19px;
+    width: 60px;
+    color: white;
+  }
+  .contact-us-form {
+    margin: 1em auto 2em;
+    padding: .5em 0;
+    width: 98%;
+    background-color: #9DBFE6;
+    color: black;
+  }
+  .contact-us-container {
+    margin: auto;
+    width: 100%;
+  }
+  .contact-us-form input {
+    margin-bottom: 10px;
+    width: 80%;
+    height: 2em;
+  }
+  .contact-us-form textarea {
+    width: 90%;
+    height: 180px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1120px) {

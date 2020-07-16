@@ -10,7 +10,7 @@ class NewsLetter extends Component {
   onSubmitHandler = () => {
     axios({
       method: "post",
-      url: "http://floridivers.com:8600/newsLetter",
+      url: `${this.props.serverURL}newsLetter`,
       data: {
         html: this.props.text,
         name: "Rich",
@@ -31,6 +31,7 @@ class NewsLetter extends Component {
 
 const mapStateToProps = (state) => ({
   text: state.richText.text,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {

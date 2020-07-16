@@ -4,15 +4,13 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
-import ReactHtmlParser from // htmlparser2, // convertNodeToElement, // processNodes,
-"react-html-parser";
+import ReactHtmlParser from "react-html-parser"; // htmlparser2, // convertNodeToElement, // processNodes,
 import { Link } from "react-router-dom";
 class Learn extends Component {
   componentDidMount() {
     axios({
       method: "get",
-      url: "http://floridivers.com:8600/learning",
-      //url: "http://floridivers.com:8600/learning",
+      url: `${this.props.serverURL}learning`,
     }).then((response) => {
       this.props.updateLearningPackageData(response.data);
     });
@@ -58,6 +56,7 @@ class Learn extends Component {
 const mapStateToProps = (state) => ({
   packagesPrices: state.learningPackages.packages,
   text: state.richText.text,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {

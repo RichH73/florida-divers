@@ -9,7 +9,7 @@ class Gallery extends Component {
   componentDidMount() {
     axios({
       method: "get",
-      url: "http://floridivers.com:8600/galleries",
+      url: `${this.props.serverURL}galleries`,
       // url: 'http://localhost:8600/galleries',
     }).then((response) => {
       this.props.getNewGalleries(response.data);
@@ -32,6 +32,7 @@ class Gallery extends Component {
 
 const mapStateToProps = (state) => ({
   imageGalleries: state.galleries.siteImages,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {

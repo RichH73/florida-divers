@@ -16,7 +16,7 @@ class Contact extends Component {
     event.preventDefault();
     axios({
       method: "post",
-      url: "http://floridivers.com:8600/contact/newContact",
+      url: `${this.props.serverURL}contact/newContact`,
       headers: {
         something: "some headers",
       },
@@ -112,6 +112,7 @@ class Contact extends Component {
 
 const mapStateToProps = (state) => ({
   submissionFormData: state.submissionForm,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {

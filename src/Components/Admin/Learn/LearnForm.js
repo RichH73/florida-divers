@@ -21,8 +21,7 @@ class LeanrForm extends Component {
     const { _id, title, price, link, linkText } = this.props.courseData;
     axios({
       method: "post",
-      // url: "http://floridivers.com:8600/learn/createNewPackage",
-      url: "http://floridivers.com:8600/learn/createNewPackage",
+      url: `${this.props.serverURL}learn/createNewPackage`,
       data: {
         _id: _id,
         title: title,
@@ -54,10 +53,11 @@ class LeanrForm extends Component {
           Price: Display a dollar amount per student for the course.
           <br />
           Link: This will be the full url to your PayPal account and to the
-          exact dive package a student will be signing up for. Link Text: This
-          will display as the link in your dive package. You can use any phrase
-          you like, "Signup Here" or "Pay for this course" are a couple of
-          examples.
+          exact dive package a student will be signing up for.
+          <br />
+          Link Text: This will display as the link in your dive package. You can
+          use any phrase you like, "Signup Here" or "Pay for this course" are a
+          couple of examples.
         </p>
         <div className="admin-learn-form-element">
           <label>Title</label>
@@ -72,7 +72,7 @@ class LeanrForm extends Component {
         </div>
         <div className="admin-learn-form-element">
           <label>Description</label>
-          <div>
+          <div className="admin-learn-form-textarea">
             <TextEditor description={description} />
           </div>
         </div>
@@ -126,6 +126,7 @@ const mapStateToProps = (state) => ({
   price: state.createNewPackage.price,
   link: state.createNewPackage.link,
   linkText: state.createNewPackage.linkText,
+  serverURL: state.Config.url,
 });
 
 const mapDispatchToProps = (dispatch) => {
