@@ -4,8 +4,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
-import ReactHtmlParser from // convertNodeToElement, // processNodes,
-// htmlparser2,
+import ReactHtmlParser from // htmlparser2, // convertNodeToElement, // processNodes,
 "react-html-parser";
 import { Link } from "react-router-dom";
 class Learn extends Component {
@@ -23,13 +22,15 @@ class Learn extends Component {
     return this.props.packagesPrices.map((pack) => (
       <div className="learn-dive-package-info">
         <div className="learn-dive-package-info-title">{pack.title}</div>
-        {ReactHtmlParser(pack.description)}
-        <div className="learn-package-price">
-          Course Price (per student): ${pack.price}
+        <div className="learn-dive-package-info-body">
+          {ReactHtmlParser(pack.description)}
+          <div className="learn-package-price">
+            Course Price (per student): ${pack.price}
+          </div>
+          <a href={pack.link} target="new">
+            {pack.linkText}
+          </a>
         </div>
-        <a href={pack.link} target="new">
-          {pack.linkText}
-        </a>
       </div>
     ));
   };
