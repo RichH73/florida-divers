@@ -4,7 +4,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../actions/index";
-import ReactHtmlParser from "react-html-parser"; // htmlparser2, // convertNodeToElement, // processNodes,
+import ReactHtmlParser from "react-html-parser";
 import { Link } from "react-router-dom";
 class Learn extends Component {
   componentDidMount() {
@@ -34,7 +34,6 @@ class Learn extends Component {
   };
 
   render() {
-    // const { packagesPrices } = this.props;
     return (
       <div className="learn">
         <h2>Ready to take the next step?</h2>

@@ -15,7 +15,6 @@ class App extends Component {
     axios({
       method: "get",
       url: `${this.props.serverURL}learning`,
-      //url: "http://floridivers.com:8600/learning",
     }).then((response) => {
       this.props.updateLearningPackageData(response.data);
     });
@@ -39,7 +38,6 @@ class App extends Component {
             color: "white",
             width: "200px",
             height: "200px",
-            //textAlign: 'center',
             margin: "20% auto",
           }}
         >
