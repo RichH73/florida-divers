@@ -31,6 +31,7 @@ class Gallery extends Component {
       data: fileData,
     }).then((response) => {
       this.props.spinnerStatus("hide");
+      this.props.history.push("/gallery");
     });
   };
 

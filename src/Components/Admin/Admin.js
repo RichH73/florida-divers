@@ -48,7 +48,7 @@ class Admin extends Component {
         case "welcome":
           return this.adminWelcome();
         case "gallery":
-          return <Gallery />;
+          return <Gallery history={this.props.history} />;
         case "letter":
           return <NewsLetter />;
         case "learn":
