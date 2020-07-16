@@ -44,8 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "prettier": "prettier --use-tabs --print-width 150 --arrow-parens always --single-quote --bracket-spacing --write \"src/**/*.{js,json}\""
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
