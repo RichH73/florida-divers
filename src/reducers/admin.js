@@ -1,5 +1,5 @@
 const initialState = {
-	panel: 'welcome',
+	panel: 'gallery',
 };
 
 const adminPanel = (state = initialState, data) => {

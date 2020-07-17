@@ -100,3 +100,20 @@ export const spinnerStatus = (state) => {
 		type: state,
 	};
 };
+
+/*
+	The following funtions are used in editing galleries
+*/
+export const galleryToEdit = (data) => {
+	return {
+		type: 'galleryData',
+		data,
+	};
+};
+
+export const removeImage = (data) => {
+	return {
+		type: 'deleteImage',
+		data,
+	};
+};

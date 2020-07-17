@@ -51,7 +51,7 @@ class App extends Component {
 							margin: '20% auto',
 						}}
 					>
-						<Spinner size={120} stroke={6} color={'rgb(157, 195, 236)'} radius={100} spinnerWidth={10} visible={true} />
+						<Spinner size={120} stroke={6} color={'rgb(157, 195, 236)'} radius={100} spinnerwidth={10} visible={true} />
 					</div>
 				</div>
 			</div>

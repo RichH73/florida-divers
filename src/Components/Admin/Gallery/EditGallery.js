@@ -5,9 +5,18 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../../actions/index';
 import ImageDrop from '../../Helpers/imgDrop/imgDrop';
-import EditGallery from './EditGallery';
 import _ from 'lodash';
-class Gallery extends Component {
+
+class EditGallery extends Component {
+	componentDidMount() {
+		axios({
+			method: 'get',
+			url: `${this.props.serverURL}galleries`,
+		}).then((response) => {
+			this.props.getNewGalleries(response.data);
+		});
+	}
+
 	submitHandler = (event) => {
 		event.preventDefault();
 		this.props.spinnerStatus('show');
@@ -50,37 +59,58 @@ class Gallery extends Component {
 		this.props.spinnerStatus('show');
 	};
 
+	editGallery = (_id) => {
+		console.log(
+			this.props.galleries.filter((gallery) => {
+				return _.isEqual(gallery._id, _id);
+			})
+		);
+		this.props.galleryToEdit(
+			this.props.galleries.filter((gallery) => {
+				return _.isEqual(gallery._id, _id);
+			})
+		);
+	};
+
+	removeImage = (_id) => {
+		console.log('image to remove', _id);
+		this.props.removeImage(_id);
+	};
+
+	editChangeHandler = (event) => {
+		this.props.gallery_name_handler({
+			[event.target.name]: event.target.value,
+		});
+	};
+
 	render() {
+		const { galleries } = this.props;
 		return (
-			<React.Fragment>
-				<div className="create-gallery-dropbox">
-					<div
-						style={{
-							textAlign: 'center',
-							marginBottom: '20px',
-							gridArea: 'opener',
-						}}
-					>
-						<h4>Create a new photo gallery</h4>
-						<p>
-							Type a name for the gallery you want to create. This is a simple title that will display above each gallery displayed in the gallery
-							page. Then add some images you would like to upload to the gallery in the box below. Please restrict uploads to 6 images at a time for
-							larger images. More images can be added to any gallery later in the edit gallery page (TODO).
-						</p>
-					</div>
-					<div className="" style={{ margin: '1em auto', textAlign: 'center' }}>
-						<label>Gallery Name: </label>
-						<input type="text" name="gallery_name" onChange={this.change_handler} />
-					</div>
-					<ImageDrop />
-					<div style={{ textAlign: 'center', margin: '1em 0' }}>
-						<button className="btn btn-success" type="submit" onClick={this.submitHandler}>
-							Create New Gallery
-						</button>
-					</div>
+			<div className="edit-gallery-form">
+				<div className="edit-gallery-form-header">
+					<h4>Edit Gallery</h4>
 				</div>
-				<EditGallery />
-			</React.Fragment>
+				<div className="current-gallery-names">
+					{galleries.map((gallery) => (
+						<div onClick={() => this.editGallery(gallery._id)} key={gallery._id}>
+							Gallery Name: {gallery.galleryName}
+						</div>
+					))}
+				</div>
+				<div style={{ textAlign: 'center', margin: '1em 0' }}>
+					<button className="btn btn-success" type="submit" onClick={this.submitHandler}>
+						Save
+					</button>
+				</div>
+				{this.props.editGallery.map((gallery) => (
+					<div>
+						<div>{gallery.galleryName}</div>
+						{gallery.images.map((image) => (
+							<img src={image.thumbnail} onClick={() => this.removeImage(image)} />
+						))}
+					</div>
+				))}
+			</div>
 		);
 	}
 }
@@ -91,10 +121,12 @@ const mapStateToProps = (state) => ({
 	photos: state.gallery_uploader.photos,
 	save_files: state.gallery_uploader.save_files,
 	serverURL: state.Config.url,
+	galleries: state.galleries.siteImages,
+	editGallery: state.edit_gallery.gallery,
 });
 
 const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators(actionCreators, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Gallery);
+export default connect(mapStateToProps, mapDispatchToProps)(EditGallery);

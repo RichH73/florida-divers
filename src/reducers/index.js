@@ -8,6 +8,7 @@ import userInfo from './user';
 import Config from './config';
 import gallery_uploader from './gallery_uploader';
 import spinner from './spinner';
+import edit_gallery from './editGallery';
 
 const allReducers = combineReducers({
 	galleries: getGalleries,
@@ -20,6 +21,7 @@ const allReducers = combineReducers({
 	Config,
 	gallery_uploader,
 	spinner,
+	edit_gallery,
 });
 
 export default allReducers;
