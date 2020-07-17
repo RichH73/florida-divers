@@ -1,5 +1,9 @@
 const initial_state = {
 	gallery: [],
+	deleteImages: {
+		originals: [],
+		thumbnails: [],
+	},
 };
 
 const edit_gallery = (state = initial_state, data) => {

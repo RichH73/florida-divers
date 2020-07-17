@@ -83,6 +83,36 @@ class EditGallery extends Component {
 		});
 	};
 
+	displayGalleryToEdit = () => {
+		const { serverURL, galleryName } = this.props;
+		return this.props.editGallery.map((gallery) => (
+			<div>
+				<div className="editing-gallery-title">
+					<label>Editing Gallery:</label>
+					<input type="text" placeholder={gallery.galleryName} />
+				</div>
+				<div className="editing-gallery-image-boxes">
+					{gallery.images.map((image) => (
+						<div className="editing-gallery-image-box">
+							<div>{image._id}</div>
+							<div>
+								<a href={`${image.original}`} target="new">
+									Original Image
+								</a>
+								<br />
+								<a href={`${image.thumbnail}`} target="new">
+									Thumbnail Image
+								</a>
+							</div>
+							<img src={image.thumbnail} onClick={() => this.removeImage(image)} />
+							<div className="editing-gallery-image-box-delete">Delete this image?</div>
+						</div>
+					))}
+				</div>
+			</div>
+		));
+	};
+
 	render() {
 		const { galleries } = this.props;
 		return (
@@ -102,14 +132,7 @@ class EditGallery extends Component {
 						Save
 					</button>
 				</div>
-				{this.props.editGallery.map((gallery) => (
-					<div>
-						<div>{gallery.galleryName}</div>
-						{gallery.images.map((image) => (
-							<img src={image.thumbnail} onClick={() => this.removeImage(image)} />
-						))}
-					</div>
-				))}
+				<this.displayGalleryToEdit />
 			</div>
 		);
 	}
@@ -123,6 +146,8 @@ const mapStateToProps = (state) => ({
 	serverURL: state.Config.url,
 	galleries: state.galleries.siteImages,
 	editGallery: state.edit_gallery.gallery,
+	serverURL: state.Config.url,
+	galleryTitle: state.edit_gallery.gallery.galleryName,
 });
 
 const mapDispatchToProps = (dispatch) => {

@@ -15,10 +15,10 @@
   }
   .crew-grid-card {
     background-color: #9DBFE6;
-    margin-top: 20px;
-    padding: 1em;
     -webkit-box-shadow: 2px 4px 4px 0px #8f8f8f;
             box-shadow: 2px 4px 4px 0px #8f8f8f;
+    margin-top: 20px;
+    padding: 1em;
   }
   .crew-grid-card p {
     text-align: left;
