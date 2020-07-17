@@ -3,7 +3,7 @@ const _ = require('lodash');
 const initialState = {
 	url: 'http://floridivers.com:8600/',
 	activeModules: {
-		ADMIN: true,
+		ADMIN: false,
 		LEARN: false,
 	},
 };
