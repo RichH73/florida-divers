@@ -60,11 +60,6 @@ class EditGallery extends Component {
 	};
 
 	editGallery = (_id) => {
-		console.log(
-			this.props.galleries.filter((gallery) => {
-				return _.isEqual(gallery._id, _id);
-			})
-		);
 		this.props.galleryToEdit(
 			this.props.galleries.filter((gallery) => {
 				return _.isEqual(gallery._id, _id);
