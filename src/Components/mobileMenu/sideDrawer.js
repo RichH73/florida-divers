@@ -29,7 +29,7 @@ class SideDrawer extends React.Component {
 							<a href="/learn">Learn</a>
 						</li>
 						<li>
-							<a href="/store">Store</a>
+							<a href="/calendar">Calendar</a>
 						</li>
 					</ul>
 				</nav>

@@ -9,8 +9,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 export const store = createStore(
-	allReducers
-	// composeWithDevTools(applyMiddleware(thunk))
+	allReducers,
+	composeWithDevTools(applyMiddleware(thunk))
 	// // applyMiddleware(thunk)
 );
 

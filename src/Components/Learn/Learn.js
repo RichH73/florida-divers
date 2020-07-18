@@ -34,16 +34,15 @@ class Learn extends Component {
 	render() {
 		return (
 			<div className="learn">
-				<h2>Ready to take the next step?</h2>
-				<p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
-
+				<div className="learn-inner-package-info">
+					<h2>Ready to take the next step?</h2>
+					<h3>We look forward to diving with you soon!!</h3>
+					<p style={{ marginBottom: '2em' }}>
+						If you would like more information about a course, please <Link to="/contact">contact us</Link>.
+					</p>
+					<p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
+				</div>
 				<this.divePackageInfo />
-
-				<p>
-					If you would like more information about a course, or if you are ready to get started please <Link to="/contact">contact us</Link>.
-				</p>
-				<h3>We look forward to diving with you soon!!</h3>
-				<div dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
 			</div>
 		);
 	}

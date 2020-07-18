@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-// import Toolbar from "../mobileMenu/toolbar";
 import SideDrawer from '../mobileMenu/sideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
 import { connect } from 'react-redux';
@@ -35,7 +34,9 @@ class Header extends Component {
 			<div className="header">
 				<div id="header">
 					<div id="label">
-						<img src="/images/label.png" alt="label" />
+						<span style={{ color: 'red', fontSize: '2em' }}>Flori</span>
+						<span style={{ color: 'blue', fontSize: '2em' }}>Divers</span>
+						{/* <img src="/images/label.png" alt="label" /> */}
 						{sideDrawer}
 						{backdrop}
 						<div id="nav-button" onClick={this.drawerToggleClickHandler}>

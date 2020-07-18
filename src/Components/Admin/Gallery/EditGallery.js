@@ -17,48 +17,6 @@ class EditGallery extends Component {
 		});
 	}
 
-	// submitHandler = (event) => {
-	// 	event.preventDefault();
-	// 	this.props.spinnerStatus('show');
-	// 	let images = [];
-	// 	event.preventDefault();
-	// 	let fileData = new FormData();
-	// 	let imgFiles = this.props.save_files;
-	// 	_.forEach(imgFiles, function (file) {
-	// 		fileData.append('file', file);
-	// 		images.push(file.name);
-	// 	});
-	// 	let gallery_data = {
-	// 		gallery_name: this.props.gallery_name,
-	// 	};
-	// 	fileData.append('data', JSON.stringify(gallery_data));
-	// 	axios({
-	// 		method: 'post',
-	// 		url: `${this.props.serverURL}galleries/upload`,
-	// 		headers: {
-	// 			Authorization: `Bearer ${localStorage.floridiversToken}`,
-	// 		},
-	// 		data: fileData,
-	// 	}).then((response) => {
-	// 		this.props.spinnerStatus('hide');
-	// 		this.props.history.push('/gallery');
-	// 	});
-	// };
-
-	// change_handler = (event) => {
-	// 	this.props.gallery_name_handler({
-	// 		[event.target.name]: event.target.value,
-	// 	});
-	// };
-
-	// hideSpinner = () => {
-	// 	this.props.spinnerStatus('hide');
-	// };
-
-	// showSpinner = () => {
-	// 	this.props.spinnerStatus('show');
-	// };
-
 	editGallery = (_id) => {
 		this.props.galleryToEdit(
 			this.props.galleries.filter((gallery) => {
