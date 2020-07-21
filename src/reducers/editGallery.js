@@ -14,6 +14,12 @@ const edit_gallery = (state = initial_state, data) => {
 				gallery: data.data,
 			};
 		case 'deleteImage':
+		//console.log('edit gallery data', state.gallery.images)
+		// return {
+		// 	...state.gallery.images.filter(images => {
+		// 		return images !== data
+		// 	})
+		// }
 		// TODO
 		default:
 			return state;

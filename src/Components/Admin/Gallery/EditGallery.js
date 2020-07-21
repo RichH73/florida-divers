@@ -8,6 +8,11 @@ import ImageDrop from '../../Helpers/imgDrop/imgDrop';
 import _ from 'lodash';
 
 class EditGallery extends Component {
+	state = {
+		image: '',
+		imageAddress: 'http://floridivers.com/images/galleries/pompano_beach/large.C93E06E8-767F-4729-B9B5-8AFA75B57D9Bj.peg',
+		imageDisplay: false,
+	};
 	componentDidMount() {
 		axios({
 			method: 'get',
@@ -36,11 +41,34 @@ class EditGallery extends Component {
 		});
 	};
 
+	imageOverlay = (id) => {
+		if (!id)
+			this.setState({
+				image: '',
+				imageAddress: '',
+				imageDisplay: false,
+			});
+		this.setState({
+			image: id,
+			imageDisplay: true,
+		});
+		// const styles = { zIndex: '350', width: '60%', height: '600px', position: 'absolute' }
+		// const overlayDiv = <div steyle={styles}>Something to test with</div>
+		// return <div style={{ zIndex: '350', width: '60%', height: '600px', position: 'absolute' }}>Something to test with</div>
+	};
+
 	displayGalleryToEdit = () => {
 		const { serverURL, galleryName } = this.props;
 		return this.props.editGallery.map((gallery) => (
 			<div>
 				<div className="editing-gallery-title">
+					{!!this.state.imageDisplay ? (
+						<div style={{ zIndex: '350', width: '60%', height: '600px', position: 'absolute', top: '0', left: '0' }}>
+							<img src={this.state.imageAddress} onClick={() => this.imageOverlay()} />
+						</div>
+					) : (
+						''
+					)}
 					<label>Editing Gallery:</label>
 					<input type="text" placeholder={gallery.galleryName} />
 				</div>
@@ -57,8 +85,10 @@ class EditGallery extends Component {
 									Thumbnail Image
 								</a>
 							</div>
-							<img src={image.thumbnail} onClick={() => this.removeImage(image)} />
-							<div className="editing-gallery-image-box-delete">Delete this image?</div>
+							<img src={image.thumbnail} onClick={() => this.imageOverlay(image._id)} />
+							<div className="editing-gallery-image-box-delete" onClick={() => this.removeImage(image._id)}>
+								Delete this image?
+							</div>
 						</div>
 					))}
 				</div>
