@@ -42,7 +42,8 @@ class EditGallery extends Component {
 	};
 
 	imageOverlay = (id) => {
-		if (!id)
+		console.log(this.state);
+		if (id === 'clear')
 			this.setState({
 				image: '',
 				imageAddress: '',
@@ -62,13 +63,6 @@ class EditGallery extends Component {
 		return this.props.editGallery.map((gallery) => (
 			<div>
 				<div className="editing-gallery-title">
-					{!!this.state.imageDisplay ? (
-						<div style={{ zIndex: '350', width: '60%', height: '600px', position: 'absolute', top: '0', left: '0' }}>
-							<img src={this.state.imageAddress} onClick={() => this.imageOverlay()} />
-						</div>
-					) : (
-						''
-					)}
 					<label>Editing Gallery:</label>
 					<input type="text" placeholder={gallery.galleryName} />
 				</div>
@@ -100,6 +94,13 @@ class EditGallery extends Component {
 		const { galleries } = this.props;
 		return (
 			<div className="edit-gallery-form">
+				{this.state.imageDisplay ? (
+					<div style={{ zIndex: '350', width: '60%', height: '600px', position: 'absolute', top: '0', left: '0' }}>
+						<img src={this.state.imageAddress} onClick={() => this.imageOverlay('clear')} />
+					</div>
+				) : (
+					''
+				)}
 				<div className="edit-gallery-form-header">
 					<h4>Edit Gallery</h4>
 				</div>
