@@ -1,9 +1,9 @@
 const _ = require('lodash');
 
 const initialState = {
-	url: 'http://floridivers.com:8600/',
+	url: 'https://www.floridivers.com:8600/',
 	activeModules: {
-		ADMIN: true,
+		ADMIN: false,
 		LEARN: false,
 	},
 };

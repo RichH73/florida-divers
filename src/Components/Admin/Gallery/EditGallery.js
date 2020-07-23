@@ -10,7 +10,7 @@ import _ from 'lodash';
 class EditGallery extends Component {
 	state = {
 		image: '',
-		imageAddress: 'http://floridivers.com/images/galleries/pompano_beach/large.C93E06E8-767F-4729-B9B5-8AFA75B57D9Bj.peg',
+		imageAddress: 'https://www.floridivers.com/images/galleries/pompano_beach/large.C93E06E8-767F-4729-B9B5-8AFA75B57D9Bj.peg',
 		imageDisplay: false,
 	};
 	componentDidMount() {

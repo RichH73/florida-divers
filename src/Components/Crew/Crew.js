@@ -8,7 +8,7 @@ class Crew extends Component {
 				<h1>Meet the Crew</h1>
 				<div className="crew-grid">
 					<div className="crew-grid-card item1">
-						<img src="http://floridivers.com/images/nich_small.jpg" alt="Nich" />
+						<img src="https://www.floridivers.com/images/nich_small.jpg" alt="Nich" />
 						<h2>Nicholas Strazzulla</h2>
 						<h3>
 							MSDT
