@@ -6,8 +6,10 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 class Learn extends Component {
 	componentDidMount() {
+		ReactGA.pageview('/Learn');
 		axios({
 			method: 'get',
 			url: `${this.props.serverURL}learning`,

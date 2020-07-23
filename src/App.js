@@ -10,6 +10,9 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from './actions/index';
 import axios from 'axios';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-173376472-1');
+
 class App extends Component {
 	componentDidMount() {
 		axios({

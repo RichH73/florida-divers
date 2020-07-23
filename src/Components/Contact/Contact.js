@@ -5,7 +5,11 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
 import axios from 'axios';
 import _ from 'lodash';
+import ReactGA from 'react-ga';
 class Contact extends Component {
+	componentDidMount() {
+		ReactGA.pageview('/Contact');
+	}
 	onChangeHandler = (event) => {
 		this.props.contactForm({
 			[event.target.name]: event.target.value,

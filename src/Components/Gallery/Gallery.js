@@ -5,8 +5,10 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
+import ReactGA from 'react-ga';
 class Gallery extends Component {
 	componentDidMount() {
+		ReactGA.pageview('/Galleries');
 		axios({
 			method: 'get',
 			url: `${this.props.serverURL}galleries`,

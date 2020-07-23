@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Calendar.css';
+import ReactGA from 'react-ga';
 // import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
@@ -10,6 +11,9 @@ import './Calendar.css';
 // import ReactGA from 'react-ga';
 
 class Calendar extends Component {
+	componentDidMount() {
+		ReactGA.pageview('/Calendar');
+	}
 	render() {
 		return (
 			<div className="cal-container">
