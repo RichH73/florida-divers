@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Crew.css';
-
+import ReactGA from 'react-ga';
 class Crew extends Component {
+	componentDidMount() {
+		ReactGA.pageview('/Crew');
+	}
 	render() {
 		return (
 			<div className="crew">

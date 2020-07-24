@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Main.css';
-
+import ReactGA from 'react-ga';
 class Main extends Component {
+	componentDidMount() {
+		ReactGA.pageview('/Home');
+	}
 	render() {
 		return (
 			<div id="main">

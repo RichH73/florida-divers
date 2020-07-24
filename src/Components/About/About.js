@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './About.css';
+import ReactGA from 'react-ga';
 
 class About extends Component {
+	componentDidMount() {
+		ReactGA.pageview('/About');
+	}
 	render() {
 		return (
 			<div className="about">
