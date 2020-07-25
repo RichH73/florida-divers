@@ -12,11 +12,20 @@ class Gallery extends Component {
 		axios({
 			method: 'get',
 			url: `${this.props.serverAPI}/galleries`,
-			// url: 'http://localhost:8600/galleries',
 		}).then((response) => {
 			this.props.getNewGalleries(response.data);
 		});
 	}
+
+	imageMapping = (gallery) => {
+		const { serverURL } = this.props;
+		return gallery.images.map((img) => {
+			return {
+				original: `${serverURL}/images/galleries/${gallery.dirName}/${img.original}`,
+				thumbnail: `${serverURL}/images/galleries/${gallery.dirName}/${img.thumbnail}`,
+			};
+		});
+	};
 
 	render() {
 		return (
@@ -24,7 +33,7 @@ class Gallery extends Component {
 				{this.props.imageGalleries.map((gallery) => (
 					<React.Fragment>
 						<h1>{gallery.galleryName}</h1>
-						<ImageGallery items={gallery.images} />
+						<ImageGallery items={this.imageMapping(gallery)} />
 					</React.Fragment>
 				))}
 			</div>

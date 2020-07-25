@@ -31,7 +31,6 @@ class EditGallery extends Component {
 	};
 
 	removeImage = (_id) => {
-		console.log('image to remove', _id);
 		this.props.removeImage(_id);
 	};
 
@@ -42,7 +41,6 @@ class EditGallery extends Component {
 	};
 
 	imageOverlay = (id) => {
-		console.log(this.state);
 		if (id === 'clear')
 			this.setState({
 				image: '',
