@@ -11,7 +11,7 @@ class Gallery extends Component {
 		ReactGA.pageview('/Galleries');
 		axios({
 			method: 'get',
-			url: `${this.props.serverURL}galleries`,
+			url: `${this.props.serverAPI}/galleries`,
 			// url: 'http://localhost:8600/galleries',
 		}).then((response) => {
 			this.props.getNewGalleries(response.data);
@@ -35,6 +35,7 @@ class Gallery extends Component {
 const mapStateToProps = (state) => ({
 	imageGalleries: state.galleries.siteImages,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {

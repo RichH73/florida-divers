@@ -12,7 +12,7 @@ class Learn extends Component {
 		ReactGA.pageview('/Learn');
 		axios({
 			method: 'get',
-			url: `${this.props.serverURL}learning`,
+			url: `${this.props.serverAPI}/learning`,
 		}).then((response) => {
 			this.props.updateLearningPackageData(response.data);
 		});
@@ -54,6 +54,7 @@ const mapStateToProps = (state) => ({
 	packagesPrices: state.learningPackages.packages,
 	text: state.richText.text,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {

@@ -19,7 +19,7 @@ class Login extends Component {
 	onSubmitHandler = () => {
 		axios({
 			method: 'post',
-			url: `${this.props.serverURL}login`,
+			url: `${this.props.serverAPI}/login`,
 			data: {
 				username: this.state.username,
 				password: this.state.password,
@@ -62,6 +62,7 @@ const mapStateToProps = (state) => ({
 	page: state.adminPanel.panel,
 	text: state.richText.text,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {

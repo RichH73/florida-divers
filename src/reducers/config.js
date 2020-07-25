@@ -1,7 +1,8 @@
 const _ = require('lodash');
 
 const initialState = {
-	url: 'https://www.floridivers.com:8600/',
+	api: 'https://www.floridivers.com:8600',
+	url: 'https://www.floridivers.com',
 	activeModules: {
 		ADMIN: false,
 		LEARN: false,

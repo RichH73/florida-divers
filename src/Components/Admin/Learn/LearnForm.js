@@ -21,7 +21,7 @@ class LeanrForm extends Component {
 		const { _id, title, price, link, linkText } = this.props.courseData;
 		axios({
 			method: 'post',
-			url: `${this.props.serverURL}learn/createNewPackage`,
+			url: `${this.props.serverAPI}/learn/createNewPackage`,
 			data: {
 				_id: _id,
 				title: title,
@@ -104,6 +104,7 @@ const mapStateToProps = (state) => ({
 	link: state.createNewPackage.link,
 	linkText: state.createNewPackage.linkText,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {

@@ -16,7 +16,7 @@ class EditGallery extends Component {
 	componentDidMount() {
 		axios({
 			method: 'get',
-			url: `${this.props.serverURL}galleries`,
+			url: `${this.props.serverAPI}/galleries`,
 		}).then((response) => {
 			this.props.getNewGalleries(response.data);
 		});
@@ -128,9 +128,11 @@ const mapStateToProps = (state) => ({
 	photos: state.gallery_uploader.photos,
 	save_files: state.gallery_uploader.save_files,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 	galleries: state.galleries.siteImages,
 	editGallery: state.edit_gallery.gallery,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 	galleryTitle: state.edit_gallery.gallery.galleryName,
 });
 

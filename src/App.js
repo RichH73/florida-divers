@@ -17,7 +17,7 @@ class App extends Component {
 	componentDidMount() {
 		axios({
 			method: 'get',
-			url: `${this.props.serverURL}learning`,
+			url: `${this.props.serverAPI}/learning`,
 		}).then((response) => {
 			this.props.updateLearningPackageData(response.data);
 		});
@@ -84,6 +84,7 @@ class App extends Component {
 const mapStateToProps = (state) => ({
 	spinnerState: state.spinner,
 	serverURL: state.Config.url,
+	serverAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {
