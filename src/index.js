@@ -10,7 +10,7 @@ import thunk from 'redux-thunk';
 
 export const store = createStore(
 	allReducers,
-	//composeWithDevTools(applyMiddleware(thunk))
+	// composeWithDevTools(applyMiddleware(thunk))
 	applyMiddleware(thunk)
 );
 

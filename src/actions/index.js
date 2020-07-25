@@ -31,6 +31,12 @@ export const contactForm = (data) => {
 	};
 };
 
+export const clearForm = () => {
+	return {
+		type: 'ClearContactForm',
+	};
+};
+
 export const learningPackageData = (data) => {
 	return {
 		type: 'NewPackages',

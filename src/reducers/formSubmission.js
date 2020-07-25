@@ -12,6 +12,9 @@ const listing = (state = initialState, data) => {
 				...state,
 				...data.data,
 			};
+
+		case 'ClearContactForm':
+			return initialState;
 		default:
 			return state;
 	}

@@ -20,14 +20,14 @@ class Contact extends Component {
 		event.preventDefault();
 		axios({
 			method: 'post',
-			url: `${this.props.serverAPI}/contact/newContact`,
+			url: `${this.props.serverAPI}/contact`,
 			headers: {
 				something: 'some headers',
 			},
 			data: this.props.submissionFormData,
 		}).then((response) => {
 			if (_.isEqual(response.status, 200)) {
-				this.props.history.push('/contact');
+				this.props.history.push('/');
 			}
 		});
 	};
