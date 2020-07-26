@@ -35,16 +35,16 @@ class Crew extends Component {
 						<img src="images/sandi_small.png" alt="Sandi" />
 						<h2>Sandi Zoch</h2>
 						<h3>
-							Master Instructor
+							Course Director
 							<br />
 							Public Safety Diver Instructor
 						</h3>
 						<i>"As early as I can remember, I have been fascinated with the Ocean"</i>
 						<br />
 						<p>
-							Sandi began diving in 2006, and in 2013 started her career as a dive instructor, working her way up the ranks. She is a Master
-							Instructor with several specialty ratings. She is our premier PSD instructor, and is more than qualified to help you achieve all of your
-							diving dreams. She is a blessing and a treasure here at Floridivers.
+							Sandi began diving in 2006, and in 2013 started her career as a dive instructor, working her way up the ranks. She is our premier PSD
+							instructor, and is more than qualified to help you achieve all of your diving dreams. She is a blessing and a treasure here at
+							Floridivers.
 						</p>
 					</div>
 				</div>
