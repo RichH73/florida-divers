@@ -55,10 +55,7 @@ class Contact extends Component {
 						<a href="https://facebook.com/scubaforthesoul" target="new">
 							<img src="https://www.floridivers.com/images/icons/fb.png" alt="FaceBook" />
 						</a>
-						<a href="https://twitter.com/@scubaforthesoul" target="new">
-							<img src="https://www.floridivers.com/images/icons/twitter.png" alt="Twitter" />
-						</a>
-						<a href="https://www.instagram.com/explore/tags/scubaforthesoul/" target="new">
+						<a href="https://www.instagram.com/floridivers/" target="new">
 							<img src="https://www.floridivers.com/images/icons/inst.png" alt="Instagram" />
 						</a>
 						<a href="https://www.youtube.com/channel/UC57qQD8U-ZGDKAbzFjllJ4A" target="new">
