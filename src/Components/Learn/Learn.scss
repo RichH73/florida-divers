@@ -63,11 +63,14 @@
 
     .learn-dive-package-info {
         width: 60%;
+        // background-color: #5D9DE6;
+        // background-color: #135485;
         background-color: #5D9DE6;
         color: black;
         // margin-top: 20px;
         margin: 1em auto;
         border-radius: 6px;
+        border: 1px solid #135485;
     }
 
     .learn-dive-package-info-title {
@@ -75,13 +78,16 @@
         font-size: 1.4em;
         text-align: center;
         margin-top: 0;
-        background-color: lightskyblue;
+        color: white;
+        // background-color: lightskyblue;
+        background-color: #135485;
         border-top-right-radius: inherit;
         border-top-left-radius: inherit;
     }
 
     .learn-dive-package-info-body {
         padding: 1em;
+        text-align: left;
     }
 
     .learn-dive-package-info-body a {

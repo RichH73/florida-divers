@@ -99,9 +99,13 @@
 
     .header {
       margin-bottom: 10px;
-      width: 100%;
+      width: 80%;
+      min-width: initial;
+      background-color: #135485;
+      margin: 1em auto;
+      border-radius: 3px;
       // height: 95px;
-      background: #5D9DE6;
+      //background: #5D9DE6;
     }
 
     .header img {
@@ -129,7 +133,7 @@
       
       .header ul li {
         display: inline;
-        color: #1D09CF;
+        //color: #1D09CF;
         justify-content: space-evenly;
         font-size: 1.2em;
         padding: 20px;
@@ -140,7 +144,8 @@
       }
       
       .header nav a {
-        color: #1D09CF;
+        //color: #1D09CF;
+        color: white;
         text-decoration: none;
         font-weight: bold;
       }

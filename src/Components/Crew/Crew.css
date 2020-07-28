@@ -51,7 +51,6 @@
 @media screen and (min-width: 1121px) {
   .crew h1 {
     text-align: center;
-    color: #9AF6E0;
   }
   .crew-grid {
     display: -ms-grid;

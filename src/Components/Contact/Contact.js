@@ -34,54 +34,57 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<div className="contact-us-container">
-				<div className="contact">
-					<h3>Contact</h3>
-					(352)448-0028
-					<br />
-					<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
-					<h4>Nicholas</h4>
-					<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
-					<h4>Tammy</h4>
-					<a href="mailto:Scubydoo1210@floridivers.com">Scubydoo1210@floridivers.com</a>
-					<h3>Hours</h3>
-					Mon-Fri: 2:30pm - 7:30pm
-					<br />
-					Sat: 9:00am -5:00 pm
-					<br />
-					Sun: Closed
-					<div className="social-media">
-						<h3>Social Media</h3>
-						<a href="https://facebook.com/scubaforthesoul" target="new">
-							<img src="https://www.floridivers.com/images/icons/fb.png" alt="FaceBook" />
-						</a>
-						<a href="https://www.instagram.com/floridivers/" target="new">
-							<img src="https://www.floridivers.com/images/icons/inst.png" alt="Instagram" />
-						</a>
-						<a href="https://www.youtube.com/channel/UC57qQD8U-ZGDKAbzFjllJ4A" target="new">
-							<img src="https://www.floridivers.com/images/icons/youtube.png" alt="YouTube" />
-						</a>
+			<div>
+				<h1>Contact Us</h1>
+				<div className="contact-us-container">
+					<div className="contact">
+						<h3>Contact</h3>
+						(352)448-0028
+						<br />
+						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
+						<h4>Nicholas</h4>
+						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
+						<h4>Tammy</h4>
+						<a href="mailto:Scubydoo1210@floridivers.com">Scubydoo1210@floridivers.com</a>
+						<h3>Hours</h3>
+						Mon-Fri: 2:30pm - 7:30pm
+						<br />
+						Sat: 9:00am -5:00 pm
+						<br />
+						Sun: Closed
+						<div className="social-media">
+							<h3>Social Media</h3>
+							<a href="https://facebook.com/scubaforthesoul" target="new">
+								<img src="https://www.floridivers.com/images/icons/fb.png" alt="FaceBook" />
+							</a>
+							<a href="https://www.instagram.com/floridivers/" target="new">
+								<img src="https://www.floridivers.com/images/icons/inst.png" alt="Instagram" />
+							</a>
+							<a href="https://www.youtube.com/channel/UC57qQD8U-ZGDKAbzFjllJ4A" target="new">
+								<img src="https://www.floridivers.com/images/icons/youtube.png" alt="YouTube" />
+							</a>
+						</div>
 					</div>
-				</div>
-				<div className="contact-us-form">
-					<label>Name</label>
-					<div className="input">
-						<input type="text" name="name" onChange={this.onChangeHandler} />
-					</div>
-					<label>Email</label>
-					<div className="input">
-						<input type="text" name="email" onChange={this.onChangeHandler} />
-					</div>
-					<label>Phone</label>
-					<div className="input">
-						<input type="text" name="phone" onChange={this.onChangeHandler} />
-					</div>
-					<label>Note</label>
-					<div className="input">
-						<textarea name="note" onChange={this.onChangeHandler}></textarea>
-					</div>
-					<div className="contact-us-form-button">
-						<button onClick={this.onSubmitHandler}>Send</button>
+					<div className="contact-us-form">
+						<label>Name</label>
+						<div className="input">
+							<input type="text" name="name" onChange={this.onChangeHandler} />
+						</div>
+						<label>Email</label>
+						<div className="input">
+							<input type="text" name="email" onChange={this.onChangeHandler} />
+						</div>
+						<label>Phone</label>
+						<div className="input">
+							<input type="text" name="phone" onChange={this.onChangeHandler} />
+						</div>
+						<label>Note</label>
+						<div className="input">
+							<textarea name="note" onChange={this.onChangeHandler}></textarea>
+						</div>
+						<div className="contact-us-form-button">
+							<button onClick={this.onSubmitHandler}>Send</button>
+						</div>
 					</div>
 				</div>
 			</div>
