@@ -1,4 +1,5 @@
-$color: #9DBFE6;
+@import '../../index';
+//$color: #9DBFE6;
 $desktop: 1121px;
 
 @mixin desktop {
@@ -45,7 +46,7 @@ $desktop: 1121px;
   .about {
     margin-left: 80px;
     margin-top: 125px;
-    color: $color;
+    color: $paragraphFontColor;
     width: 60%;
   }
   .about h3 {

@@ -6,6 +6,7 @@ import * as actionCreators from '../../actions/index';
 import axios from 'axios';
 import _ from 'lodash';
 import ReactGA from 'react-ga';
+import Subscribe from '../Helpers/Subscribe';
 class Contact extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Contact');
@@ -87,6 +88,7 @@ class Contact extends Component {
 						</div>
 					</div>
 				</div>
+				<Subscribe />
 			</div>
 		);
 	}

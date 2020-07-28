@@ -1,7 +1,7 @@
 @media screen and (max-width: 600px) {
   .about {
     width: 98%;
-    color: #9DBFE6;
+    color: black;
     margin: auto;
   }
   .about p {
@@ -16,7 +16,7 @@
 @media screen and (min-width: 601px) and (max-width: 1120px) {
   .about {
     width: 98%;
-    color: #9DBFE6;
+    color: black;
     margin: auto;
   }
   .about p {
@@ -32,7 +32,7 @@
   .about {
     margin-left: 80px;
     margin-top: 125px;
-    color: #9DBFE6;
+    color: black;
     width: 60%;
   }
   .about h3 {
