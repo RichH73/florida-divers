@@ -1,0 +1,118 @@
+Date : 2020-07-27 17:01:12
+Directory : /Users/rhowell/mycode/floridivers/front-end/src
+Total : 71 files,  3501 codes, 136 comments, 446 blanks, all 4083 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         39 |      1,710 |         76 |        210 |      1,996 |
+| CSS        |         20 |      1,020 |         23 |         73 |      1,116 |
+| SCSS       |         12 |        771 |         37 |        163 |        971 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                         | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                            |         71 |      3,501 |        136 |        446 |      4,083 |
+| Components                                                                                   |         53 |      2,980 |        110 |        362 |      3,452 |
+| Components/About                                                                             |          3 |        120 |          1 |         15 |        136 |
+| Components/Admin                                                                             |         13 |        982 |         21 |        121 |      1,124 |
+| Components/Admin/Gallery                                                                     |          4 |        406 |         15 |         54 |        475 |
+| Components/Admin/Learn                                                                       |          2 |        156 |          0 |         16 |        172 |
+| Components/Admin/NewsLetter                                                                  |          3 |         38 |          0 |          7 |         45 |
+| Components/Backdrop                                                                          |          2 |         13 |          0 |          3 |         16 |
+| Components/Calendar                                                                          |          3 |         46 |          8 |          8 |         62 |
+| Components/Contact                                                                           |          3 |        311 |          5 |         28 |        344 |
+| Components/Crew                                                                              |          3 |        194 |          4 |         21 |        219 |
+| Components/Footer                                                                            |          3 |         36 |          1 |          5 |         42 |
+| Components/Gallery                                                                           |          2 |         82 |          0 |         10 |         92 |
+| Components/Header                                                                            |          3 |        353 |          9 |         44 |        406 |
+| Components/Helpers                                                                           |          4 |        203 |         42 |         27 |        272 |
+| Components/Helpers/imgDrop                                                                   |          3 |        158 |         42 |         19 |        219 |
+| Components/Learn                                                                             |          3 |        213 |          7 |         21 |        241 |
+| Components/Main                                                                              |          3 |        210 |          4 |         23 |        237 |
+| Components/Pages                                                                             |          2 |         40 |          0 |          8 |         48 |
+| Components/mobileMenu                                                                        |          6 |        177 |          8 |         28 |        213 |
+| actions                                                                                      |          1 |        103 |          4 |         19 |        126 |
+| reducers                                                                                     |         11 |        266 |         11 |         41 |        318 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                     | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/rhowell/mycode/floridivers/front-end/src/App.css                                      | CSS        |         23 |          6 |          6 |         35 |
+| /Users/rhowell/mycode/floridivers/front-end/src/App.js                                       | JavaScript |         87 |          0 |          8 |         95 |
+| /Users/rhowell/mycode/floridivers/front-end/src/App.test.js                                  | JavaScript |          8 |          0 |          2 |         10 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/About/About.css                   | CSS        |         42 |          1 |          2 |         45 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/About/About.js                    | JavaScript |         29 |          0 |          3 |         32 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/About/About.scss                  | SCSS       |         49 |          0 |         10 |         59 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Admin.css                   | CSS        |        109 |          1 |          2 |        112 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Admin.js                    | JavaScript |        108 |          0 |         12 |        120 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Admin.scss                  | SCSS       |        101 |          4 |         22 |        127 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Gallery/EditGallery.js      | JavaScript |        127 |          4 |         11 |        142 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Gallery/Gallery.css         | CSS        |        100 |          1 |         19 |        120 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Gallery/Gallery.js          | JavaScript |         94 |          0 |          8 |        102 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Gallery/Gallery.scss        | SCSS       |         85 |         10 |         16 |        111 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Learn/DivePackages.js       | JavaScript |         48 |          0 |          9 |         57 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/Learn/LearnForm.js          | JavaScript |        108 |          0 |          7 |        115 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/LoginForm.js                | JavaScript |         64 |          1 |          8 |         73 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/NewsLetter/NewsLetter.css   | CSS        |          1 |          0 |          0 |          1 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/NewsLetter/NewsLetter.js    | JavaScript |         37 |          0 |          6 |         43 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Admin/NewsLetter/NewsLetter.scss  | SCSS       |          0 |          0 |          1 |          1 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Backdrop/Backdrop.css             | CSS        |          9 |          0 |          0 |          9 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Backdrop/Backdrop.js              | JavaScript |          4 |          0 |          3 |          7 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Calendar/Calendar.css             | CSS        |         13 |          1 |          2 |         16 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Calendar/Calendar.js              | JavaScript |         20 |          7 |          4 |         31 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Calendar/Calendar.scss            | SCSS       |         13 |          0 |          2 |         15 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Contact/Contact.css               | CSS        |        109 |          1 |          3 |        113 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Contact/Contact.js                | JavaScript |         97 |          0 |          6 |        103 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Contact/Contact.scss              | SCSS       |        105 |          4 |         19 |        128 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Crew/Crew.css                     | CSS        |         73 |          1 |          3 |         77 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Crew/Crew.js                      | JavaScript |         53 |          0 |          4 |         57 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Crew/Crew.scss                    | SCSS       |         68 |          3 |         14 |         85 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Footer/Footer.css                 | CSS        |         11 |          1 |          1 |         13 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Footer/Footer.js                  | JavaScript |         14 |          0 |          3 |         17 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Footer/Footer.scss                | SCSS       |         11 |          0 |          1 |         12 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Gallery/Gallery.css               | CSS        |         33 |          0 |          4 |         37 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Gallery/Gallery.js                | JavaScript |         49 |          0 |          6 |         55 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Header/Header.css                 | CSS        |        144 |          1 |          2 |        147 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Header/Header.js                  | JavaScript |         87 |          1 |         10 |         98 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Header/Header.scss                | SCSS       |        122 |          7 |         32 |        161 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Helpers/TextEditor.js             | JavaScript |         45 |          0 |          8 |         53 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Helpers/imgDrop/imgDrop.css       | CSS        |         64 |          1 |          1 |         66 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Helpers/imgDrop/imgDrop.js        | JavaScript |         38 |         41 |          4 |         83 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Helpers/imgDrop/imgDrop.scss      | SCSS       |         56 |          0 |         14 |         70 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Learn/Learn.css                   | CSS        |         77 |          1 |          2 |         80 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Learn/Learn.js                    | JavaScript |         59 |          0 |          6 |         65 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Learn/Learn.scss                  | SCSS       |         77 |          6 |         13 |         96 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Main/Main.css                     | CSS        |         92 |          1 |          2 |         95 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Main/Main.js                      | JavaScript |         34 |          0 |          2 |         36 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Main/Main.scss                    | SCSS       |         84 |          3 |         19 |        106 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Pages/Pages.css                   | CSS        |         12 |          0 |          4 |         16 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/Pages/Pages.js                    | JavaScript |         28 |          0 |          4 |         32 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/mobileMenu/DrawerToggleButton.css | CSS        |         20 |          0 |          2 |         22 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/mobileMenu/SideDrawer.css         | CSS        |         37 |          3 |          6 |         46 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/mobileMenu/Toolbar.css            | CSS        |         37 |          3 |          8 |         48 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/mobileMenu/drawerToggleButton.js  | JavaScript |         10 |          0 |          4 |         14 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/mobileMenu/sideDrawer.js          | JavaScript |         39 |          0 |          3 |         42 |
+| /Users/rhowell/mycode/floridivers/front-end/src/Components/mobileMenu/toolbar.js             | JavaScript |         34 |          2 |          5 |         41 |
+| /Users/rhowell/mycode/floridivers/front-end/src/actions/index.js                             | JavaScript |        103 |          4 |         19 |        126 |
+| /Users/rhowell/mycode/floridivers/front-end/src/index.css                                    | CSS        |         14 |          0 |          4 |         18 |
+| /Users/rhowell/mycode/floridivers/front-end/src/index.js                                     | JavaScript |         19 |          1 |          3 |         23 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/admin.js                            | JavaScript |         15 |          0 |          3 |         18 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/config.js                           | JavaScript |         22 |          1 |          5 |         28 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/editGallery.js                      | JavaScript |         20 |          7 |          3 |         30 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/formSubmission.js                   | JavaScript |         20 |          0 |          4 |         24 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/galleries.js                        | JavaScript |         14 |          0 |          3 |         17 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/gallery_uploader.js                 | JavaScript |         32 |          1 |          6 |         39 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/index.js                            | JavaScript |         25 |          0 |          3 |         28 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/learn.js                            | JavaScript |         61 |          0 |          5 |         66 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/richText.js                         | JavaScript |         19 |          0 |          3 |         22 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/spinner.js                          | JavaScript |         18 |          0 |          3 |         21 |
+| /Users/rhowell/mycode/floridivers/front-end/src/reducers/user.js                             | JavaScript |         20 |          2 |          3 |         25 |
+| /Users/rhowell/mycode/floridivers/front-end/src/setupTests.js                                | JavaScript |          1 |          4 |          1 |          6 |
+| Total                                                                                        |            |      3,501 |        136 |        446 |      4,083 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
