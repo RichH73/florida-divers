@@ -30,16 +30,16 @@
 
 @media (min-width: 1121px) {
   .about {
-    margin-left: 80px;
-    margin-top: 125px;
+    text-align: left;
     color: black;
-    width: 60%;
+    width: 75%;
+    margin: auto;
   }
   .about h3 {
     text-align: center;
   }
   .about p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }
 /*# sourceMappingURL=About.css.map */

@@ -35,7 +35,7 @@ class Header extends Component {
 			<div>
 				<div className="header-top">
 					<div className="header-logo">
-						<img src="images/trans-fldv-logo.png" alt="logo" />
+						<img src="images/small-trans-fldv-logo.png" alt="logo" />
 						{/* <img src="images/transparent_logo.png" alt="logo" /> */}
 					</div>
 					<Subscribe />
@@ -43,8 +43,8 @@ class Header extends Component {
 				<div className="header">
 					<div id="header">
 						<div id="label">
-							<span style={{ color: 'red', fontSize: '2em' }}>Flori</span>
-							<span style={{ color: 'blue', fontSize: '2em' }}>Divers</span>
+							<span style={{ color: 'red', fontSize: '2em', fontWeight: 'bold', marginLeft: '3em' }}>Flori</span>
+							<span style={{ color: '#9DBFE6', fontSize: '2em', fontWeight: 'bold' }}>Divers</span>
 							{/* <img src="/images/label.png" alt="label" /> */}
 							{sideDrawer}
 							{backdrop}

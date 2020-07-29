@@ -161,6 +161,15 @@
     margin: 3em 2em 0;
     background-color: #9DBFE6;
     font-size: small;
+    border-radius: 4px;
+  }
+  .newsletter-subscribe button {
+    background-color: #1578E8;
+    border: 0;
+    border-radius: 19px;
+    width: 80px;
+    color: white;
+    margin-left: 3px;
   }
   .header-top {
     display: -webkit-box;
