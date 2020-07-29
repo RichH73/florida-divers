@@ -40,6 +40,7 @@ class GalleryDisplay extends Component {
 }
 
 const mapStateToProps = (state) => ({
+	stuff: state,
 	imageGalleries: state.galleries.siteImages,
 	viewingGallery: state.galleries.galleryView,
 	serverURL: state.Config.url,
