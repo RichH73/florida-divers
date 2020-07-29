@@ -63,12 +63,14 @@
 @media screen and (min-width: 1121px) {
     .contact {
         background-color: #9DBFE6;
+        // background-color: #5D9DE6;
         width: 40%;
         //height: 750px;
         margin-top: 20px;
         margin: auto;
         font-size: 18px;
         padding-left: 20px;
+        border: 1px solid black;
         // box-shadow: 1px 1px 3px 1px black;
     }
 
@@ -93,7 +95,9 @@
         margin-left: 10px;
         padding: 40px 20px 0 ;
         width: 55%;
+        // background-color: #5D9DE6;
         background-color: #9DBFE6;
+        border: 1px solid black;
         color: black;
     }
 

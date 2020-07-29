@@ -88,7 +88,6 @@ class Contact extends Component {
 						</div>
 					</div>
 				</div>
-				<Subscribe />
 			</div>
 		);
 	}

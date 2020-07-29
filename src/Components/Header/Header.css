@@ -146,13 +146,31 @@
             flex-direction: row;
   }
   .header-logo {
-    width: 80%;
-    margin: 1em auto;
+    width: 20%;
     text-align: left;
     padding-left: 10%;
   }
   .header-logo img {
     width: 150px;
+  }
+  .newsletter-subscribe {
+    vertical-align: middle;
+    border: 1px solid black;
+    width: 350px;
+    height: 80px;
+    margin: 3em 2em 0;
+    background-color: #9DBFE6;
+    font-size: small;
+  }
+  .header-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=Header.css.map */

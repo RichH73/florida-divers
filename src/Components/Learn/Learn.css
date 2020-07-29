@@ -51,7 +51,8 @@
   }
   .learn-dive-package-info {
     width: 60%;
-    background-color: #5D9DE6;
+    background-color: #9DBFE6;
+    border: 1px solid black;
     color: black;
     margin: 1em auto;
     border-radius: 6px;

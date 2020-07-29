@@ -32,9 +32,10 @@ class Subscribe extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="newsletter-subscribe">
 				<form>
-					<lable>Email Address</lable>
+					<p>Want to recieve our newsletter? Signup here!</p>
+					<lable>Email Address: </lable>
 					<input type="email" name="email" onChange={this.handleChange} required />
 					<button type="submit" onClick={this.subscribeSubmitHandler}>
 						Subscribe

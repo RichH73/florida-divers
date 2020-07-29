@@ -6,6 +6,7 @@ import Backdrop from '../Backdrop/Backdrop';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
+import Subscribe from '../Helpers/Subscribe';
 
 class Header extends Component {
 	state = {
@@ -32,9 +33,12 @@ class Header extends Component {
 		}
 		return (
 			<div>
-				<div className="header-logo">
-					<img src="images/trans-fldv-logo.png" alt="logo" />
-					{/* <img src="images/transparent_logo.png" alt="logo" /> */}
+				<div className="header-top">
+					<div className="header-logo">
+						<img src="images/trans-fldv-logo.png" alt="logo" />
+						{/* <img src="images/transparent_logo.png" alt="logo" /> */}
+					</div>
+					<Subscribe />
 				</div>
 				<div className="header">
 					<div id="header">
