@@ -52,19 +52,27 @@
   
 
 @media screen and (min-width: 1121px) {
-  #main {
-    display: flex;
-    flex-direction: row;
-  }
   .main {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin-right: 70px;
     margin: auto;
   }
 
-  .main img {
-    width: 286px;
+  .main-intro {
+    width: 45%;
+    text-align: left;
+  }
+
+  .main-hero {
+    width: 45%;
+    text-align: right;
+    vertical-align: middle;
+  }
+
+  .main-hero img {
+    width: 100%;
+    border-radius: 50%;
   }
 
   #logo {

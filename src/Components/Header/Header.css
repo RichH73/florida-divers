@@ -145,5 +145,14 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .header-logo {
+    width: 80%;
+    margin: 1em auto;
+    text-align: left;
+    padding-left: 10%;
+  }
+  .header-logo img {
+    width: 150px;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

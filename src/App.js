@@ -66,7 +66,7 @@ class App extends Component {
 			<BrowserRouter>
 				<this.spinner />
 				<div className="App">
-					<div className="header">
+					<div className="head">
 						<Header />
 					</div>
 					<div className="pages">
