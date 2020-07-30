@@ -38,7 +38,7 @@ class Header extends Component {
 						<img src="images/small-trans-fldv-logo.png" alt="logo" />
 						{/* <img src="images/transparent_logo.png" alt="logo" /> */}
 					</div>
-					<Subscribe />
+					<Subscribe history={this.props.history} />
 				</div>
 				<div className="header">
 					{/* <div id="header"> */}

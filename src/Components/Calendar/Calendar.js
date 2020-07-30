@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import * as actionCreators from '../../../actions/index';
-// import axios from 'axios';
+import axios from 'axios';
 
 //Google analytics for visitor tracking
 // import ReactGA from 'react-ga';
@@ -13,6 +13,13 @@ import ReactGA from 'react-ga';
 class Calendar extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Calendar');
+		// axios({
+		// 	url: 'https://apis.google.com/js/api.js',
+		// 	method: 'get'
+		// })
+		// .then(response => {
+		// 	console.log(response)
+		// })
 	}
 	render() {
 		return (

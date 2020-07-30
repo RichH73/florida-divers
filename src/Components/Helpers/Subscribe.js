@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
 import axios from 'axios';
-
+import { withRouter } from 'react-router-dom';
 class Subscribe extends Component {
 	handleChange = (event) => {
-		// console.log({
 		// 	email: event.target.value
 		// });
 		this.props.subscribeEmail({
@@ -18,16 +17,21 @@ class Subscribe extends Component {
 		this.props.clearSubscribeEmail();
 	}
 
-	subscribeSubmitHandler = () => {
+	subscribeSubmitHandler = (event) => {
+		event.preventDefault();
+		const { serverAPI } = this.props;
 		axios({
-			url: `http://localhost:8600/subscribe`,
+			url: `${serverAPI}/subscribe`,
 			// url: `${this.props.serverAPI}/subscribe`,
 			method: 'post',
 			data: {
 				email: this.props.newEmail,
 				signupDate: new Date(),
 			},
-		}).then(() => this.props.clearSubscribeEmail());
+		}).then(() => {
+			this.props.clearSubscribeEmail();
+			//this.props.history.push('/')
+		});
 	};
 
 	render() {
@@ -35,7 +39,7 @@ class Subscribe extends Component {
 			<div className="newsletter-subscribe">
 				<form>
 					<p>Want to recieve our newsletter? Signup here!</p>
-					<lable>Email Address: </lable>
+					<label>Email Address: </label>
 					<input type="email" name="email" onChange={this.handleChange} required />
 					<button type="submit" onClick={this.subscribeSubmitHandler}>
 						Subscribe
@@ -56,4 +60,4 @@ const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators(actionCreators, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Subscribe);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Subscribe));

@@ -118,7 +118,6 @@ export const galleryToEdit = (data) => {
 };
 
 export const removeImage = (data) => {
-	console.log(data);
 	return {
 		type: 'deleteImage',
 		data,

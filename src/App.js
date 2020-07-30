@@ -67,7 +67,7 @@ class App extends Component {
 				<this.spinner />
 				<div className="App">
 					<div className="head">
-						<Header />
+						<Header history={this.props.history} />
 					</div>
 					<div className="pages">
 						<Pages />

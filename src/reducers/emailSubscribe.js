@@ -5,7 +5,6 @@ const initialState = {
 const emailSubscribe = (state = initialState, data) => {
 	switch (data.type) {
 		case 'NewEmailAddress':
-			console.log('from the reducer', data.data);
 			return {
 				//...state,
 				...data.data,
