@@ -125,6 +125,13 @@ export const removeImage = (data) => {
 	};
 };
 
+export const setGalleryView = (data) => {
+	return {
+		type: 'GalleryID',
+		data,
+	};
+};
+
 // Subscribe to newsletter
 export const subscribeEmail = (data) => {
 	return {

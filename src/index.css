@@ -10,6 +10,13 @@ body {
   /* color: #9DBFE6; */
 }
 
+a:visited {
+  color: blue;
+}
+
+a {
+  color: blue;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -34,7 +34,6 @@ class GalleryDisplay extends Component {
 				return gallery._id === galleryIndex;
 			})
 			.map((gallery) => <ImageGallery items={this.imageMapping(gallery)} />);
-		console.log('the view', gallery);
 		return gallery;
 	}
 }

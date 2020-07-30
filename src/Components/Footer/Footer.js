@@ -6,7 +6,11 @@ const Footer = () => {
 		<div className="footer">
 			<footer>
 				<small>
-					All content owned by FloriDivers. Contact the <a href="mailto:richh73@yahoo.com">Webmaster</a>.
+					All content owned by FloriDivers. Contact the{' '}
+					<a href="mailto:webmaster@rich-hosts.com" style={{ color: 'blue', fontWeight: 'bold' }}>
+						Webmaster
+					</a>
+					.
 				</small>
 			</footer>
 		</div>

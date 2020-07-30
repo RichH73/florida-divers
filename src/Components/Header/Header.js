@@ -41,53 +41,53 @@ class Header extends Component {
 					<Subscribe />
 				</div>
 				<div className="header">
-					<div id="header">
-						<div id="label">
-							<span style={{ color: 'red', fontSize: '2em', fontWeight: 'bold', marginLeft: '3em' }}>Flori</span>
-							<span style={{ color: '#9DBFE6', fontSize: '2em', fontWeight: 'bold' }}>Divers</span>
-							{/* <img src="/images/label.png" alt="label" /> */}
-							{sideDrawer}
-							{backdrop}
-							<div id="nav-button" onClick={this.drawerToggleClickHandler}>
-								<img src="images/hamburger_button.png" alt="nav" />
-							</div>
-						</div>
-
-						<div id="nav">
-							<nav id="navigation-bar">
-								<ul>
-									{!!this.props.modules.ADMIN ? (
-										<li>
-											<Link to="/admin">Admin</Link>
-										</li>
-									) : (
-										''
-									)}
-									<li>
-										<Link to="/">Home</Link>
-									</li>
-									<li>
-										<Link to="/about">About</Link>
-									</li>
-									<li>
-										<Link to="/contact">Contact</Link>
-									</li>
-									<li>
-										<Link to="/crew">Crew</Link>
-									</li>
-									<li>
-										<Link to="/gallery">Gallery</Link>
-									</li>
-									<li>
-										<Link to="/learn">Learn</Link>
-									</li>
-									<li>
-										<Link to="/Calendar">Calendar</Link>
-									</li>
-								</ul>
-							</nav>
+					{/* <div id="header"> */}
+					<div id="label">
+						<span style={{ color: 'orange', fontSize: '2em', fontWeight: 'bold', marginLeft: '3em' }}>Flori</span>
+						<span style={{ color: '#9DBFE6', fontSize: '2em', fontWeight: 'bold' }}>Divers</span>
+						{/* <img src="/images/label.png" alt="label" /> */}
+						{sideDrawer}
+						{backdrop}
+						<div id="nav-button" onClick={this.drawerToggleClickHandler}>
+							<img src="images/hamburger_button.png" alt="nav" />
 						</div>
 					</div>
+
+					<div id="nav">
+						<nav id="navigation-bar">
+							<ul>
+								{!!this.props.modules.ADMIN ? (
+									<li>
+										<Link to="/admin">Admin</Link>
+									</li>
+								) : (
+									''
+								)}
+								<li>
+									<Link to="/">Home</Link>
+								</li>
+								<li>
+									<Link to="/about">About</Link>
+								</li>
+								<li>
+									<Link to="/contact">Contact</Link>
+								</li>
+								<li>
+									<Link to="/crew">Crew</Link>
+								</li>
+								<li>
+									<Link to="/gallery-index">Gallery</Link>
+								</li>
+								<li>
+									<Link to="/learn">Learn</Link>
+								</li>
+								<li>
+									<Link to="/Calendar">Calendar</Link>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					{/* </div> */}
 				</div>
 			</div>
 		);

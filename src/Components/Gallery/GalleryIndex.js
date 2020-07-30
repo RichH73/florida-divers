@@ -16,19 +16,26 @@ class GalleryIndex extends Component {
 			url: `${this.props.serverAPI}/galleries`,
 		}).then((response) => {
 			this.props.getNewGalleries(response.data);
+			let galleryId = this.props.imageGalleries.map((gallery) => {
+				return gallery._id;
+			});
+			this.props.setGalleryView(galleryId[0]);
 		});
 	}
+
+	chooseGallery = (ID) => {
+		this.props.setGalleryView(ID);
+	};
 
 	indexMapping = () => {
 		const { imageGalleries, serverURL } = this.props;
 		return imageGalleries.map((gallery) => (
-			<div className="galleries-index-gallery">
+			<div className="galleries-index-gallery" onClick={() => this.chooseGallery(gallery._id)}>
 				<img src={`${serverURL}/images/galleries/${gallery.dirName}/${gallery.images[0].thumbnail}`} />
 				<div>{gallery.galleryName}</div>
 			</div>
 		));
 	};
-
 	imageMapping = (gallery) => {
 		const { serverURL } = this.props;
 		return gallery.images.map((img) => {
@@ -43,7 +50,7 @@ class GalleryIndex extends Component {
 		return (
 			<div className="gallery-display-page">
 				<div className="gallery-index">{this.indexMapping()}</div>
-				<GalleryDisplay />
+				{!!this.props.viewingGallery.length ? <GalleryDisplay /> : ''}
 			</div>
 		);
 	}
@@ -51,6 +58,7 @@ class GalleryIndex extends Component {
 
 const mapStateToProps = (state) => ({
 	imageGalleries: state.galleries.siteImages,
+	viewingGallery: state.galleries.galleryView,
 	serverURL: state.Config.url,
 	serverAPI: state.Config.api,
 });

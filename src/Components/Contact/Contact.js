@@ -39,7 +39,7 @@ class Contact extends Component {
 				<h3>Contact Us</h3>
 				<div className="contact-us-container">
 					<div className="contact">
-						<h3>Contact</h3>
+						<h3>Contact Info</h3>
 						(352)448-0028
 						<br />
 						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
@@ -67,20 +67,21 @@ class Contact extends Component {
 						</div>
 					</div>
 					<div className="contact-us-form">
-						<label>Name</label>
+						<p>Please fill out the form below then click the send button.</p>
 						<div className="input">
+							<label>Name: </label>
 							<input type="text" name="name" onChange={this.onChangeHandler} />
 						</div>
-						<label>Email</label>
 						<div className="input">
+							<label>Email: </label>
 							<input type="text" name="email" onChange={this.onChangeHandler} />
 						</div>
-						<label>Phone</label>
 						<div className="input">
+							<label>Phone: </label>
 							<input type="text" name="phone" onChange={this.onChangeHandler} />
 						</div>
 						<label>Note</label>
-						<div className="input">
+						<div className="input-textarea">
 							<textarea name="note" onChange={this.onChangeHandler}></textarea>
 						</div>
 						<div className="contact-us-form-button">

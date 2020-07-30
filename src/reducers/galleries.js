@@ -1,6 +1,6 @@
 const initialState = {
 	siteImages: [],
-	galleryView: '5f0fa4f7ecef242e63c1b410',
+	galleryView: '',
 };
 
 const getGalleries = (state = initialState, galleries) => {
@@ -9,6 +9,11 @@ const getGalleries = (state = initialState, galleries) => {
 			return {
 				...state,
 				siteImages: galleries.data,
+			};
+		case 'GalleryID':
+			return {
+				...state,
+				galleryView: galleries.data,
 			};
 		default:
 			return state;

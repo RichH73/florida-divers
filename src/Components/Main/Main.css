@@ -16,6 +16,15 @@
     opacity: 0.5;
     width: 98%;
   }
+  .main-intro {
+    width: 100%;
+  }
+  .main-intro p {
+    text-align: left;
+  }
+  .main-hero img {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1120px) {
@@ -52,6 +61,7 @@
   .main-intro {
     width: 45%;
     text-align: left;
+    font-size: 1.2em;
   }
   .main-hero {
     width: 45%;

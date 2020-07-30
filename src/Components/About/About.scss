@@ -10,9 +10,10 @@ $desktop: 1121px;
 
 @media screen and (max-width: 600px) {
   .about {
-    width: 98%;
+    width: 100%;
     color: $color;
     margin: auto;
+    padding: 1em .5em
   }
 
   .about p {
