@@ -69,15 +69,15 @@ class EditGallery extends Component {
 						<div className="editing-gallery-image-box">
 							<div>{image._id}</div>
 							<div>
-								<a href={`${image.original}`} target="new">
+								<a href={`${serverURL}/images/galleries/${gallery.dirName}/${image.original}`} target="new">
 									Original Image
 								</a>
 								<br />
-								<a href={`${image.thumbnail}`} target="new">
+								<a href={`${serverURL}/images/galleries/${gallery.dirName}/${image.thumbnail}`} target="new">
 									Thumbnail Image
 								</a>
 							</div>
-							<img src={image.thumbnail} onClick={() => this.imageOverlay(image._id)} />
+							<img src={`${serverURL}/images/galleries/${gallery.dirName}/${image.thumbnail}`} onClick={() => this.imageOverlay(image._id)} />
 							<div className="editing-gallery-image-box-delete" onClick={() => this.removeImage(image._id)}>
 								Delete this image?
 							</div>
