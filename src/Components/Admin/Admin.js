@@ -39,7 +39,7 @@ class Admin extends Component {
 				case 'gallery':
 					return <Gallery history={this.props.history} />;
 				case 'letter':
-					return <NewsLetter />;
+					return <NewsLetter history={this.props.history} />;
 				case 'learn':
 					return <LearnForm history={this.props.history} />;
 				default:

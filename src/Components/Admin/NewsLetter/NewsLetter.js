@@ -5,8 +5,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../../actions/index';
 import TextEditor from '../../Helpers/TextEditor';
-
+import Modal from 'react-modal';
 class NewsLetter extends Component {
+	state = {
+		isOpen: false,
+	};
 	onSubmitHandler = () => {
 		axios({
 			method: 'post',
@@ -16,10 +19,26 @@ class NewsLetter extends Component {
 				name: 'Rich',
 				subject: 'Monthly News Letter',
 			},
+		}).then((response) => {
+			this.setState({ isOpen: true });
+			this.props.clearRichText();
+			//this.props.history.push('/admin')
 		});
 	};
-
+	closeModal = () => {
+		this.setState({ isOpen: false });
+	};
 	render() {
+		const customStyles = {
+			content: {
+				top: '50%',
+				left: '50%',
+				right: 'auto',
+				bottom: 'auto',
+				marginRight: '-50%',
+				transform: 'translate(-50%, -50%)',
+			},
+		};
 		return (
 			<div className="edit-newsletter-form">
 				<p>You can use this form to edit the newsletter directly or copy text from another program (ie Word), and paste here.</p>
@@ -29,6 +48,20 @@ class NewsLetter extends Component {
 				</p>
 				<TextEditor />
 				<button onClick={this.onSubmitHandler}>Send</button>
+				<Modal
+					isOpen={this.state.isOpen}
+					//onAfterOpen={afterOpenModal()}
+					onRequestClose={this.closeModal}
+					style={customStyles}
+					contentLabel="Example Modal"
+					className="Modal"
+				>
+					<h3>Success!</h3>
+					<p>News Letter has been sent.</p>
+					<div className="menu-header hbox vcenter" onClick={this.closeModal}>
+						<button>Ok</button>
+					</div>
+				</Modal>
 			</div>
 		);
 	}
