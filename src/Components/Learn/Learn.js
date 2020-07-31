@@ -7,6 +7,7 @@ import * as actionCreators from '../../actions/index';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import PastStudents from './PastStudents';
 class Learn extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Learn');
@@ -45,6 +46,7 @@ class Learn extends Component {
 					<p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
 				</div>
 				<this.divePackageInfo />
+				<PastStudents />
 			</div>
 		);
 	}
