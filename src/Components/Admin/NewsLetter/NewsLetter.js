@@ -21,7 +21,12 @@ class NewsLetter extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="edit-newsletter-form">
+				<p>You can use this form to edit the newsletter directly or copy text from another program (ie Word), and paste here.</p>
+				<p>
+					Once you have the newsletter formatted and ready to send, click the send button at the bottom and it will be sent out to all registered
+					email addresses.
+				</p>
 				<TextEditor />
 				<button onClick={this.onSubmitHandler}>Send</button>
 			</div>

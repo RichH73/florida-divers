@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,qBAAqB,CAAC;EAClB,gBAAgB,ECKP,OAAO;EDJhB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,GAAG;EACZ,UAAU,EAAE,IAAI;CACnB",
     "sources": [
-        "NewsLetter.scss"
+        "NewsLetter.scss",
+        "../../../_index.scss"
     ],
     "names": [],
     "file": "NewsLetter.css"

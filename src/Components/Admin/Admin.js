@@ -48,7 +48,7 @@ class Admin extends Component {
 		};
 		return (
 			<React.Fragment>
-				<div className="admin-header">
+				<div className="edit-header">
 					<ul>
 						<li id="learn" onClick={this.changePanel}>
 							Learn
@@ -61,7 +61,7 @@ class Admin extends Component {
 						</li>
 					</ul>
 				</div>
-				<div className="admin-panel-main-body">{navigation()}</div>
+				<div className="edit-panel-main-body">{navigation()}</div>
 			</React.Fragment>
 		);
 	};
@@ -88,7 +88,7 @@ class Admin extends Component {
 	render() {
 		const { loggedUser } = this.props;
 		return (
-			<div className="admin-panel-main-body1">{_.isEqual(loggedUser, false) ? <Login history={this.props.history} /> : <this.adminHeader />}</div>
+			<div className="edit-panel-main-body1">{_.isEqual(loggedUser, false) ? <Login history={this.props.history} /> : <this.adminHeader />}</div>
 		);
 	}
 }

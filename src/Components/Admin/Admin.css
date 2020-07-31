@@ -3,7 +3,7 @@
     width: 98%;
     margin: auto;
   }
-  .admin-header li {
+  .edit-header li {
     display: inline;
     color: white;
     -webkit-box-pack: space-evenly;
@@ -12,38 +12,38 @@
     font-size: 20px;
     padding: 20px;
   }
-  .admin-header {
+  .edit-header {
     background-color: #5D9DE6;
     width: 100%;
     margin: auto;
     text-align: center;
   }
-  .admin-panel-main-body {
+  .edit-panel-main-body {
     width: 98%;
     margin: auto;
   }
-  .admin-learn-form p {
+  .edit-learn-form p {
     text-align: left;
   }
-  .admin-form-edit-dive-package div {
+  .edit-form-edit-dive-package div {
     border: 1px solid black;
     padding: 0 8px;
     cursor: pointer;
   }
-  .admin-form-edit-dive-package {
+  .edit-form-edit-dive-package {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .admin-learn-form-input-field input {
+  .edit-learn-form-input-field input {
     width: 60%;
     height: 2em;
     margin-bottom: 1em;
   }
-  .admin-learn-form-textarea {
+  .edit-learn-form-textarea {
     margin-bottom: 1em;
   }
-  .admin-learn-form {
+  .edit-learn-form {
     margin-top: 3em;
   }
 }
@@ -61,13 +61,13 @@
     margin-left: 80px;
     margin-top: 125px;
   }
-  .admin-header {
+  .edit-header {
     background-color: #135485;
-    width: 60%;
+    width: 80%;
     margin: auto;
     text-align: center;
   }
-  .admin-header li {
+  .edit-header li {
     display: inline;
     color: white;
     -webkit-box-pack: space-evenly;
@@ -76,36 +76,45 @@
     font-size: 20px;
     padding: 20px;
   }
-  .admin-header li:hover {
+  .edit-header li:hover {
     color: white;
     cursor: pointer;
   }
-  .admin-panel-body {
-    width: 60%;
+  .edit-panel-body {
+    width: 80%;
     margin: auto;
   }
-  .admin-learn-form {
-    padding: 1em 0 1em 2em;
+  .edit-learn-form {
+    padding: 1em;
+    background-color: #9DBFE6;
+    text-align: left;
+    width: 95%;
   }
-  .admin-learn-form-element {
+  .edit-learn-form p {
+    margin: 0 auto .5em;
+  }
+  .edit-learn-form-element {
     margin: 1em 0;
   }
-  .admin-learn-form-input-field input {
+  .edit-learn-form-input-field input {
     width: 60%;
     height: 2em;
   }
-  .admin-form-edit-dive-package {
+  .edit-form-edit-dive-packages {
+    width: 90%;
+  }
+  .edit-form-edit-dive-package {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .admin-form-edit-dive-package div {
+  .edit-form-edit-dive-package div {
     border: 1px solid black;
     padding: 0 8px;
     cursor: pointer;
   }
-  .admin-panel-main-body {
-    width: 60%;
+  .edit-panel-main-body {
+    width: 75%;
     margin: auto;
   }
 }
