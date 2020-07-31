@@ -29,6 +29,7 @@ class Login extends Component {
 				localStorage.setItem('floridiversToken', response.data.token);
 				_.set(response, 'data.user', true);
 				this.props.userCheck(response.data.user);
+				this.props.adminLogged();
 				//this.props.history.push('/')
 			}
 		});

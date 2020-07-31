@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const getNewGalleries = (data) => {
 	return {
 		type: 'NewGalleries',
@@ -94,10 +96,36 @@ export const messageSeen = (data) => {
 	return function (dispatch) {};
 };
 
+// User actions
 export const userCheck = (data) => {
 	return {
 		type: 'NewUser',
 		data,
+	};
+};
+
+export const adminLogged = () => {
+	return {
+		type: 'Admin_Login',
+	};
+};
+
+export const checkForUserToken = () => {
+	return function (dispatch) {
+		axios({
+			method: 'post',
+			url: `https://www.floridivers.com:8600/login/token_check`,
+			headers: {
+				Authorization: `bearer ${localStorage.floridiversToken}`,
+			},
+		})
+			.then((response) => {
+				if (response.status && response.status === 200) {
+					dispatch(userCheck(response.data));
+					dispatch(adminLogged());
+				}
+			})
+			.catch((error) => console.log(error));
 	};
 };
 

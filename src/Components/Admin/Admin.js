@@ -16,19 +16,8 @@ class Admin extends Component {
 		password: '',
 	};
 	componentDidMount() {
-		if (localStorage.floridiversToken) {
-			axios({
-				method: 'post',
-				url: `${this.props.siteURL}login/token_check`,
-				headers: {
-					Authorization: `bearer ${localStorage.floridiversToken}`,
-				},
-			}).then((response) => {
-				if (_.isEqual(response.status, 200)) {
-					_.set(response, 'data.user', true);
-					this.props.userCheck(response.data);
-				}
-			});
+		if (!!localStorage.floridiversToken) {
+			this.props.checkForUserToken();
 		}
 	}
 
@@ -110,6 +99,7 @@ const mapStateToProps = (state) => ({
 	userInfo: state.userInfo,
 	loggedUser: state.userInfo.user,
 	siteURL: state.Config.url,
+	siteAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {

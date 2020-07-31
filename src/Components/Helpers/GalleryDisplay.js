@@ -7,15 +7,15 @@ import * as actionCreators from '../../actions/index';
 
 import ReactGA from 'react-ga';
 class GalleryDisplay extends Component {
-	componentDidMount() {
-		ReactGA.pageview('/Galleries');
-		axios({
-			method: 'get',
-			url: `${this.props.serverAPI}/galleries`,
-		}).then((response) => {
-			this.props.getNewGalleries(response.data);
-		});
-	}
+	// componentDidMount() {
+	// 	ReactGA.pageview('/Galleries');
+	// 	axios({
+	// 		method: 'get',
+	// 		url: `${this.props.serverAPI}/galleries`,
+	// 	}).then((response) => {
+	// 		this.props.getNewGalleries(response.data);
+	// 	});
+	// }
 
 	imageMapping = (gallery) => {
 		const { serverURL } = this.props;

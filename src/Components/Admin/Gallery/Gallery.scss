@@ -1,13 +1,15 @@
+    @import '../../../index';
     .ImageDrop-body {
-        color: #7a6dee;
+        // color: #7a6dee;
         // padding: 2em;
         height: 101px;
     }
 
     .create-gallery-dropbox {
         height: auto;
-        background-color: #5D9DE6;
-        color: #1D09CF;
+        background-color: $panelColor;
+        // background-color: #5D9DE6;
+        // color: #1D09CF;
         border: 1px solid black;
     }
 
@@ -60,8 +62,9 @@
         margin-top: 1em;
         margin-bottom: 2em;
         height: auto;
-        background-color: #5D9DE6;
-        color: #1D09CF;
+        background-color: $panelColor;
+        //background-color: #5D9DE6;
+        // color: #1D09CF;
         border: 1px solid black;
     }
 

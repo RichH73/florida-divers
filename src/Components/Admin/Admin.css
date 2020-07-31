@@ -5,7 +5,7 @@
   }
   .admin-header li {
     display: inline;
-    color: #1D09CF;
+    color: white;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -62,14 +62,14 @@
     margin-top: 125px;
   }
   .admin-header {
-    background-color: #5D9DE6;
+    background-color: #135485;
     width: 60%;
     margin: auto;
     text-align: center;
   }
   .admin-header li {
     display: inline;
-    color: #1D09CF;
+    color: white;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
