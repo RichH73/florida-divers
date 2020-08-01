@@ -7,7 +7,7 @@ const Footer = () => {
 			<footer>
 				<small>
 					All content owned by FloriDivers. Contact the{' '}
-					<a href="mailto:webmaster@rich-hosts.com" style={{ color: 'blue', fontWeight: 'bold' }}>
+					<a href="mailto:rich@richthats.me" style={{ color: 'blue', fontWeight: 'bold' }}>
 						Webmaster
 					</a>
 					.
