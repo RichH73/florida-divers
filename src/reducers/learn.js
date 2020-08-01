@@ -26,7 +26,6 @@ const packageInitialState = {
 
 const learningPackages = (state = initialState, data) => {
 	const addNewStudent = (student) => {
-		console.log(student);
 		return [student, ...state.students];
 	};
 	switch (data.type) {

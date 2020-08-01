@@ -4,9 +4,9 @@ import axios from 'axios';
 const _ = require('lodash');
 
 const initialState = {
-	// api: 'https://www.floridivers.com:8600',
+	api: 'https://www.floridivers.com:8600',
 	url: 'https://www.floridivers.com',
-	api: 'http://localhost:8600',
+	// api: 'http://localhost:8600',
 	// url: 'http://www.floridivers.com',
 	activeModules: {
 		ADMIN: false,

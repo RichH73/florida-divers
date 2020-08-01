@@ -31,7 +31,6 @@ class StudentAdd extends Component {
 				certification: this.state.studentCertification,
 			},
 		}).then((response) => {
-			console.log(response);
 			studentNameRef.current.value = '';
 			studentCertificationRef.current.value = '';
 			this.props.addNewStudent({
