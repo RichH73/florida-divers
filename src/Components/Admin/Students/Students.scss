@@ -1,0 +1,22 @@
+@import '../../../index';
+
+.add-students-form {
+    background-color: $panelColor;
+    text-align: center;
+    padding: 1em;
+}
+
+.add-students-form h3 {
+    margin: 1em auto;
+}
+
+.student-add-box {
+    //margin: 1em auto;
+}
+
+.student-add-form {
+    width: 600px;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}

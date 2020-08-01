@@ -86,6 +86,32 @@
         border-top-left-radius: inherit;
     }
 
+    .learn-past-students {
+        width: 80%;
+        background-color: #9DBFE6;
+        border: 1px solid black;
+        color: black;
+        margin: 1em auto;
+        border-radius: 6px;
+        border: 1px solid #135485;
+    }
+
+    .learn-past-students-list {
+        padding: 1em 0;
+    }
+
+    .learn-past-students-title {
+        margin-top: 0;
+        font-size: 1.4em;
+        text-align: center;
+        margin-top: 0;
+        color: white;
+        // background-color: lightskyblue;
+        background-color: #135485;
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+    }
+
     .learn-dive-package-info-body {
         padding: 1em;
         text-align: left;

@@ -7,7 +7,18 @@ import ReactHtmlParser from 'react-html-parser';
 
 class PastStudents extends Component {
 	render() {
-		return <div className="learn-past-students">Some of our past Students</div>;
+		return (
+			<div className="learn-past-students">
+				<div className="learn-past-students-title">Some of our past students!</div>
+				<div className="learn-past-students-list">
+					{this.props.pastStudents.map((student) => (
+						<div>
+							{student.name} - {student.certification}
+						</div>
+					))}
+				</div>
+			</div>
+		);
 	}
 }
 
@@ -16,6 +27,7 @@ const mapStateToProps = (state) => ({
 	text: state.richText.text,
 	serverURL: state.Config.url,
 	serverAPI: state.Config.api,
+	pastStudents: state.learningPackages.students,
 });
 
 const mapDispatchToProps = (dispatch) => {

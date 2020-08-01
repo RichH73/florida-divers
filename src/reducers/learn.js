@@ -9,6 +9,12 @@ const initialState = {
 			linkText: '',
 		},
 	],
+	students: [
+		{
+			name: '',
+			certification: '',
+		},
+	],
 };
 
 const packageInitialState = {
@@ -19,14 +25,27 @@ const packageInitialState = {
 };
 
 const learningPackages = (state = initialState, data) => {
+	const addNewStudent = (student) => {
+		console.log(student);
+		return [student, ...state.students];
+	};
 	switch (data.type) {
 		case 'NewPackages':
 			return {
+				...state,
 				packages: data.diveCourses,
 			};
 		case 'UpdatePackages':
 			return {
-				packages: data.data,
+				...state,
+				packages: data.data.packages,
+				students: data.data.students,
+			};
+		case 'newStudent':
+			//addNewStudent(data.student)
+			return {
+				...state,
+				students: addNewStudent(data.student),
 			};
 		default:
 			return state;

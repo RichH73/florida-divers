@@ -9,6 +9,7 @@ import LearnForm from './Learn/LearnForm';
 import Login from './LoginForm';
 import NewsLetter from './NewsLetter/NewsLetter';
 import Gallery from './Gallery/Gallery';
+import StudentAdd from './Students/StudentAdd';
 
 class Admin extends Component {
 	state = {
@@ -20,6 +21,8 @@ class Admin extends Component {
 			this.props.checkForUserToken();
 		}
 	}
+
+	clickHandler = (event) => {};
 
 	changePanel = (event) => {
 		this.props.changeAdminPanel(event.target.id);
@@ -42,6 +45,8 @@ class Admin extends Component {
 					return <NewsLetter history={this.props.history} />;
 				case 'learn':
 					return <LearnForm history={this.props.history} />;
+				case 'student-add':
+					return <StudentAdd history={this.props.history} />;
 				default:
 					return this.adminWelcome();
 			}
@@ -58,6 +63,9 @@ class Admin extends Component {
 						</li>
 						<li id="letter" onClick={this.changePanel}>
 							News Letter
+						</li>
+						<li id="student-add" onClick={this.changePanel}>
+							Add Student
 						</li>
 					</ul>
 				</div>

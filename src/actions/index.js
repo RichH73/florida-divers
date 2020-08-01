@@ -53,6 +53,13 @@ export const updateLearningPackageData = (data) => {
 	};
 };
 
+export const addNewStudent = (student) => {
+	return {
+		type: 'newStudent',
+		student,
+	};
+};
+
 export const loadPackageData = (data) => {
 	return {
 		type: 'EditPackage',
