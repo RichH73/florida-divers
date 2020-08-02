@@ -1,6 +1,3 @@
-import { checkForUserToken } from '../actions/index';
-import axios from 'axios';
-
 const _ = require('lodash');
 
 const initialState = {

@@ -152,10 +152,10 @@ export const galleryToEdit = (data) => {
 	};
 };
 
-export const removeImage = (data) => {
+export const removeImage = (image) => {
 	return {
 		type: 'deleteImage',
-		data,
+		image,
 	};
 };
 
@@ -163,6 +163,18 @@ export const setGalleryView = (data) => {
 	return {
 		type: 'GalleryID',
 		data,
+	};
+};
+
+export const clearUploader = () => {
+	return {
+		type: 'UploaderClear',
+	};
+};
+
+export const clearEditor = () => {
+	return {
+		type: 'EditorClear',
 	};
 };
 
@@ -177,5 +189,20 @@ export const subscribeEmail = (data) => {
 export const clearSubscribeEmail = () => {
 	return {
 		type: 'ClearEmailAddress',
+	};
+};
+
+export const studentEdit = (id, key, value) => {
+	return {
+		type: 'EditStudent',
+		id,
+		key,
+		value,
+	};
+};
+
+export const clearStudentForm = () => {
+	return {
+		type: 'ClearStudent',
 	};
 };

@@ -29,7 +29,8 @@ const gallery_uploader = (state = initial_state, photo_data) => {
 				...state,
 				...photo_data.data,
 			};
-
+		case 'EditorClear':
+			return initial_state;
 		default:
 			return state;
 	}

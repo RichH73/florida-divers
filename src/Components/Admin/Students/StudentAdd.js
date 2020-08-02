@@ -5,15 +5,14 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../../actions/index';
 import './Students.css';
 import _ from 'lodash';
+import { resetCalls } from 'react-ga';
 
 const studentNameRef = React.createRef();
 const studentCertificationRef = React.createRef();
 
 class StudentAdd extends Component {
-	state = {
-		sutdentName: '',
-		studentCertification: '',
-	};
+	initialState = {};
+	state = {};
 
 	onChangeHandler = (event) => {
 		this.setState({
@@ -46,6 +45,41 @@ class StudentAdd extends Component {
 		studentCertificationRef.current.value = '';
 	};
 
+	editStudentChange = (event) => {
+		const id = event.target.name.split('_')[1];
+		// this.setState({
+		// })
+		// console.log('this id is ', id)
+		// console.log({[event.target.name.split('_')[0]]: event.target.value})
+		this.props.studentEdit(id, [event.target.name.split('_')[0]], event.target.value);
+	};
+	editStudentClick = (student) => {
+		const { _id, firstName, lastName, certification } = this.props.student;
+		axios({
+			url: 'http://localhost:8600/learn/student-update',
+			method: 'post',
+			data: {
+				studentId: _id,
+				update: {
+					firstName,
+					lastName,
+					certification,
+				},
+			},
+		}).then(() => {
+			this.props.clearStudentForm();
+		});
+		//console.log(this.state)
+		// return (
+		// 	<React.Fragment>
+		// 		<input type='hidden' value={student._id} />
+		// 		<input type='text' placeholder={student.firstName} />
+		// 		<input type='text' placeholder={student.lastName} />
+		// 		<input type='text' placeholder={student.certification} />
+		// 	</React.Fragment>
+		// )
+	};
+
 	render() {
 		const { pastStudents } = this.props;
 		return (
@@ -68,10 +102,19 @@ class StudentAdd extends Component {
 					<h3>Current Students</h3>
 				</div>
 				{pastStudents.map((student) => (
-					<div>
-						{student.name} - {student.certification}
+					<div className="edit-student-field">
+						<input type="hidden" value={student._id} />
+						<input type="text" placeholder={student.firstName} name={`firstName_${student._id}`} onChange={this.editStudentChange} />
+						<input type="text" placeholder={student.lastName} name={`lastName_${student._id}`} onChange={this.editStudentChange} />
+						<input type="text" placeholder={student.certification} name={`certification_${student._id}`} onChange={this.editStudentChange} />
+						<button onClick={() => this.editStudentClick(student)}>ok</button>
 					</div>
+					// <div className='edit-student-data' onClick={()=> this.editStudentClick(student)}>
+					// 	{`${student.firstName} ${student.lastName} ${student.certification}`}
+					// </div>
 				))}
+				<br />
+				<button onClick={this.editStudentClick}>Save Students</button>
 			</div>
 		);
 	}
@@ -88,6 +131,7 @@ const mapStateToProps = (state) => ({
 	serverURL: state.Config.url,
 	serverAPI: state.Config.api,
 	pastStudents: state.learningPackages.students,
+	student: state.editStudent,
 });
 
 const mapDispatchToProps = (dispatch) => {

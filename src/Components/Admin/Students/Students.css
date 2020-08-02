@@ -18,4 +18,18 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+
+.edit-student-data {
+  cursor: pointer;
+  margin: .3em auto;
+  width: auto;
+}
+
+.edit-student-data :hover {
+  text-decoration: underline;
+}
+
+.edit-student-field {
+  margin: .2em .2em;
+}
 /*# sourceMappingURL=Students.css.map */
