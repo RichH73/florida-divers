@@ -1,0 +1,35 @@
+.add-students-form {
+  background-color: #9DBFE6;
+  text-align: center;
+  padding: 1em;
+}
+
+.add-students-form h3 {
+  margin: 1em auto;
+}
+
+.student-add-form {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.edit-student-data {
+  cursor: pointer;
+  margin: .3em auto;
+  width: auto;
+}
+
+.edit-student-data :hover {
+  text-decoration: underline;
+}
+
+.edit-student-field {
+  margin: .2em .2em;
+}
+/*# sourceMappingURL=Students.css.map */

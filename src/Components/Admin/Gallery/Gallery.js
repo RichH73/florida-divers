@@ -8,6 +8,9 @@ import ImageDrop from '../../Helpers/imgDrop/imgDrop';
 import EditGallery from './EditGallery';
 import _ from 'lodash';
 class Gallery extends Component {
+	componentWillUnmount() {
+		this.props.clearEditor();
+	}
 	submitHandler = (event) => {
 		event.preventDefault();
 		this.props.spinnerStatus('show');
@@ -32,7 +35,8 @@ class Gallery extends Component {
 			data: fileData,
 		}).then((response) => {
 			this.props.spinnerStatus('hide');
-			this.props.history.push('/gallery');
+			this.props.clearEditor();
+			this.props.history.push('/gallery-index');
 		});
 	};
 
@@ -79,7 +83,7 @@ class Gallery extends Component {
 						</button>
 					</div>
 				</div>
-				<EditGallery />
+				<EditGallery history={this.props.history} />
 			</React.Fragment>
 		);
 	}

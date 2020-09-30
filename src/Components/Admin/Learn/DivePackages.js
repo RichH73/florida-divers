@@ -20,8 +20,8 @@ class DivePackages extends Component {
 
 	sortPackageData = () => {
 		return this.props.packagesPrices.map((course) => (
-			<div className="admin-form-edit-dive-packages">
-				<div className="admin-form-edit-dive-package" onClick={() => this.onClickHandler(course)}>
+			<div className="edit-form-edit-dive-packages">
+				<div className="edit-form-edit-dive-package" onClick={() => this.onClickHandler(course)}>
 					<div>{course.title}</div>
 					<div>${course.price}</div>
 				</div>
@@ -32,7 +32,7 @@ class DivePackages extends Component {
 
 	render() {
 		return (
-			<div className="admin-learn-form">
+			<div className="edit-learn-form">
 				<p>You can edit existing dive packages by clicking on the package below. This will load the package data into the form to view/edit.</p>
 				<this.sortPackageData />
 			</div>

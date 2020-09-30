@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from './actions/index';
 import axios from 'axios';
+import _ from 'lodash';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-173376472-1');
@@ -21,6 +22,10 @@ class App extends Component {
 		}).then((response) => {
 			this.props.updateLearningPackageData(response.data);
 		});
+
+		if (!!localStorage.floridiversToken) {
+			this.props.checkForUserToken();
+		}
 	}
 
 	spinner = () => {
@@ -66,8 +71,8 @@ class App extends Component {
 			<BrowserRouter>
 				<this.spinner />
 				<div className="App">
-					<div className="header">
-						<Header />
+					<div className="head">
+						<Header history={this.props.history} />
 					</div>
 					<div className="pages">
 						<Pages />

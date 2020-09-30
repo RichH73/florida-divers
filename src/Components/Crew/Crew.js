@@ -8,7 +8,7 @@ class Crew extends Component {
 	render() {
 		return (
 			<div className="crew">
-				<h1>Meet the Crew</h1>
+				<h3>Meet the Crew</h3>
 				<div className="crew-grid">
 					<div className="crew-grid-card item1">
 						<img src="https://www.floridivers.com/images/nich_small.jpg" alt="Nich" />

@@ -48,10 +48,15 @@
   }
 }
 
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .crew-grid {
+    width: 60%;
+  }
+}
+
 @media screen and (min-width: 1121px) {
   .crew h1 {
     text-align: center;
-    color: #9AF6E0;
   }
   .crew-grid {
     display: -ms-grid;
@@ -69,6 +74,7 @@
     padding: 45px;
     -webkit-box-shadow: 1px 1px 3px 1px black;
             box-shadow: 1px 1px 3px 1px black;
+    text-align: left;
   }
   .crew-grid-card img {
     max-width: 200px;

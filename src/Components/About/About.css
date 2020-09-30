@@ -1,8 +1,9 @@
 @media screen and (max-width: 600px) {
   .about {
-    width: 98%;
-    color: #9DBFE6;
+    width: 100%;
+    color: black;
     margin: auto;
+    padding: 1em .5em;
   }
   .about p {
     font-size: 1.2em;
@@ -16,7 +17,7 @@
 @media screen and (min-width: 601px) and (max-width: 1120px) {
   .about {
     width: 98%;
-    color: #9DBFE6;
+    color: black;
     margin: auto;
   }
   .about p {
@@ -30,16 +31,16 @@
 
 @media (min-width: 1121px) {
   .about {
-    margin-left: 80px;
-    margin-top: 125px;
-    color: #9DBFE6;
-    width: 60%;
+    text-align: left;
+    color: black;
+    width: 75%;
+    margin: auto;
   }
   .about h3 {
     text-align: center;
   }
   .about p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }
 /*# sourceMappingURL=About.css.map */

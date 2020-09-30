@@ -9,6 +9,7 @@ import LearnForm from './Learn/LearnForm';
 import Login from './LoginForm';
 import NewsLetter from './NewsLetter/NewsLetter';
 import Gallery from './Gallery/Gallery';
+import StudentAdd from './Students/StudentAdd';
 
 class Admin extends Component {
 	state = {
@@ -16,21 +17,12 @@ class Admin extends Component {
 		password: '',
 	};
 	componentDidMount() {
-		if (localStorage.floridiversToken) {
-			axios({
-				method: 'post',
-				url: `${this.props.siteURL}login/token_check`,
-				headers: {
-					Authorization: `bearer ${localStorage.floridiversToken}`,
-				},
-			}).then((response) => {
-				if (_.isEqual(response.status, 200)) {
-					_.set(response, 'data.user', true);
-					this.props.userCheck(response.data);
-				}
-			});
+		if (!!localStorage.floridiversToken) {
+			this.props.checkForUserToken();
 		}
 	}
+
+	clickHandler = (event) => {};
 
 	changePanel = (event) => {
 		this.props.changeAdminPanel(event.target.id);
@@ -50,16 +42,18 @@ class Admin extends Component {
 				case 'gallery':
 					return <Gallery history={this.props.history} />;
 				case 'letter':
-					return <NewsLetter />;
+					return <NewsLetter history={this.props.history} />;
 				case 'learn':
 					return <LearnForm history={this.props.history} />;
+				case 'student-add':
+					return <StudentAdd history={this.props.history} />;
 				default:
 					return this.adminWelcome();
 			}
 		};
 		return (
 			<React.Fragment>
-				<div className="admin-header">
+				<div className="edit-header">
 					<ul>
 						<li id="learn" onClick={this.changePanel}>
 							Learn
@@ -70,9 +64,12 @@ class Admin extends Component {
 						<li id="letter" onClick={this.changePanel}>
 							News Letter
 						</li>
+						<li id="student-add" onClick={this.changePanel}>
+							Add Student
+						</li>
 					</ul>
 				</div>
-				<div className="admin-panel-main-body">{navigation()}</div>
+				<div className="edit-panel-main-body">{navigation()}</div>
 			</React.Fragment>
 		);
 	};
@@ -99,7 +96,7 @@ class Admin extends Component {
 	render() {
 		const { loggedUser } = this.props;
 		return (
-			<div className="admin-panel-main-body1">{_.isEqual(loggedUser, false) ? <Login history={this.props.history} /> : <this.adminHeader />}</div>
+			<div className="edit-panel-main-body1">{_.isEqual(loggedUser, false) ? <Login history={this.props.history} /> : <this.adminHeader />}</div>
 		);
 	}
 }
@@ -110,6 +107,7 @@ const mapStateToProps = (state) => ({
 	userInfo: state.userInfo,
 	loggedUser: state.userInfo.user,
 	siteURL: state.Config.url,
+	siteAPI: state.Config.api,
 });
 
 const mapDispatchToProps = (dispatch) => {

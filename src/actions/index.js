@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const getNewGalleries = (data) => {
 	return {
 		type: 'NewGalleries',
@@ -51,6 +53,13 @@ export const updateLearningPackageData = (data) => {
 	};
 };
 
+export const addNewStudent = (student) => {
+	return {
+		type: 'newStudent',
+		student,
+	};
+};
+
 export const loadPackageData = (data) => {
 	return {
 		type: 'EditPackage',
@@ -94,10 +103,36 @@ export const messageSeen = (data) => {
 	return function (dispatch) {};
 };
 
+// User actions
 export const userCheck = (data) => {
 	return {
 		type: 'NewUser',
 		data,
+	};
+};
+
+export const adminLogged = () => {
+	return {
+		type: 'Admin_Login',
+	};
+};
+
+export const checkForUserToken = () => {
+	return function (dispatch) {
+		axios({
+			method: 'post',
+			url: `https://www.floridivers.com:8600/login/token_check`,
+			headers: {
+				Authorization: `bearer ${localStorage.floridiversToken}`,
+			},
+		})
+			.then((response) => {
+				if (response.status && response.status === 200) {
+					dispatch(userCheck(response.data));
+					dispatch(adminLogged());
+				}
+			})
+			.catch((error) => console.log(error));
 	};
 };
 
@@ -117,9 +152,57 @@ export const galleryToEdit = (data) => {
 	};
 };
 
-export const removeImage = (data) => {
+export const removeImage = (image) => {
 	return {
 		type: 'deleteImage',
+		image,
+	};
+};
+
+export const setGalleryView = (data) => {
+	return {
+		type: 'GalleryID',
 		data,
+	};
+};
+
+export const clearUploader = () => {
+	return {
+		type: 'UploaderClear',
+	};
+};
+
+export const clearEditor = () => {
+	return {
+		type: 'EditorClear',
+	};
+};
+
+// Subscribe to newsletter
+export const subscribeEmail = (data) => {
+	return {
+		type: 'NewEmailAddress',
+		data,
+	};
+};
+
+export const clearSubscribeEmail = () => {
+	return {
+		type: 'ClearEmailAddress',
+	};
+};
+
+export const studentEdit = (id, key, value) => {
+	return {
+		type: 'EditStudent',
+		id,
+		key,
+		value,
+	};
+};
+
+export const clearStudentForm = () => {
+	return {
+		type: 'ClearStudent',
 	};
 };

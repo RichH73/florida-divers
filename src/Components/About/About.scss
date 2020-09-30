@@ -1,4 +1,5 @@
-$color: #9DBFE6;
+@import '../../index';
+//$color: #9DBFE6;
 $desktop: 1121px;
 
 @mixin desktop {
@@ -9,9 +10,10 @@ $desktop: 1121px;
 
 @media screen and (max-width: 600px) {
   .about {
-    width: 98%;
+    width: 100%;
     color: $color;
     margin: auto;
+    padding: 1em .5em
   }
 
   .about p {
@@ -43,16 +45,19 @@ $desktop: 1121px;
 
 @include desktop {
   .about {
-    margin-left: 80px;
-    margin-top: 125px;
-    color: $color;
-    width: 60%;
+    //margin-left: 80px;
+    text-align: left;
+    // margin-top: 125px;
+    color: $paragraphFontColor;
+    width: 75%;
+    margin: auto;
+    
   }
   .about h3 {
     text-align: center;
   }
 
   .about p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }

@@ -43,6 +43,8 @@
     max-width: 200px;
   }
 
+
+
   .crew-grid-card {
     background-color: #9DBFE6;
     margin-top: 20px;
@@ -55,10 +57,16 @@
 }
 }
 
-@media screen and (min-width: 1121px) {
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .crew-grid {
+    width: 60%;
+  }
+}
+
+  @media screen and (min-width: 1121px) {
     .crew h1 {
         text-align: center;
-        color: #9AF6E0;
+        //color: #9AF6E0;
     }
     .crew-grid {
         display: grid;
@@ -71,10 +79,12 @@
       }
 
       .crew-grid-card {
+        // background-color: #5D9DE6;
         background-color: #9DBFE6;
         max-width: 400px;
         padding: 45px;
         box-shadow: 1px 1px 3px 1px black;
+        text-align: left;
     }
 
     .crew-grid-card img {

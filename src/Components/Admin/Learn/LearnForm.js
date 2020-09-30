@@ -42,52 +42,62 @@ class LeanrForm extends Component {
 	render() {
 		const { title, description, price, link, linkText } = this.props.courseData;
 		return (
-			<div className="admin-learn-form">
-				<p>Create a new dive package by filling out the form below.</p>
+			<div className="edit-learn-form">
 				<p>
-					Title: Displays the text in bold letters.
-					<br />
-					Description: Enter the information that you would like to display about each course. Small images can also be used.
-					<br />
-					Price: Display a dollar amount per student for the course.
-					<br />
-					Link: This will be the full url to your PayPal account and to the exact dive package a student will be signing up for.
-					<br />
-					Link Text: This will display as the link in your dive package. You can use any phrase you like, "Signup Here" or "Pay for this course" are a
-					couple of examples.
+					<b>Create a new dive package by filling out the form below.</b>
 				</p>
-				<div className="admin-learn-form-element">
+				<p>
+					<b>Title:</b> Displays the text in bold letters.
+				</p>
+
+				<p>
+					<b>Description:</b> Enter the information that you would like to display about each course. Small images can also be used.
+				</p>
+
+				<p>
+					<b>Price:</b> Display a dollar amount per student for the course.
+				</p>
+
+				<p>
+					<b>Link:</b> This will be the full url to your PayPal account and to the exact dive package a student will be signing up for.
+				</p>
+
+				<p>
+					<b>Link Text:</b> This will display as the link in your dive package. You can use any phrase you like, "Signup Here" or "Pay for this
+					course" are a couple of examples.
+				</p>
+				<div className="edit-learn-form-element">
 					<label>Title</label>
-					<div className="admin-learn-form-input-field">
+					<div className="edit-learn-form-input-field">
 						<input type="text" name="title" onChange={this.onChangeHandler} value={title} />
 					</div>
 				</div>
-				<div className="admin-learn-form-element">
+				<div className="edit-learn-form-element">
 					<label>Description</label>
-					<div className="admin-learn-form-textarea">
+					<div className="edit-learn-form-textarea">
 						<TextEditor description={description} />
 					</div>
 				</div>
-				<div className="admin-learn-form-element">
+				<div className="edit-learn-form-element">
 					<label>Price</label>
-					<div className="admin-learn-form-input-field">
+					<div className="edit-learn-form-input-field">
 						<input type="text" name="price" onChange={this.onChangeHandler} value={price} />
 					</div>
 				</div>
-				<div className="admin-learn-form-element">
+				<div className="edit-learn-form-element">
 					<label>Link</label>
-					<div className="admin-learn-form-input-field">
+					<div className="edit-learn-form-input-field">
 						<input type="text" name="link" onChange={this.onChangeHandler} value={link} />
 					</div>
 				</div>
-				<div className="admin-learn-form-element">
+				<div className="edit-learn-form-element">
 					<label>Link Text</label>
-					<div className="admin-learn-form-input-field">
+					<div className="edit-learn-form-input-field">
 						<input type="text" name="linkText" onChange={this.onChangeHandler} value={linkText} />
 					</div>
 				</div>
 				<button onClick={this.onSubmitHandler}>Submit</button>
-				<div className="admin-form-edit-dive-packages">
+				<div className="edit-form-edit-dive-packages">
 					<DivePackages />
 				</div>
 			</div>

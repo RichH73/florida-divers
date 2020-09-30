@@ -6,6 +6,7 @@ import Backdrop from '../Backdrop/Backdrop';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
+import Subscribe from '../Helpers/Subscribe';
 
 class Header extends Component {
 	state = {
@@ -31,11 +32,19 @@ class Header extends Component {
 			sideDrawer = <SideDrawer />;
 		}
 		return (
-			<div className="header">
-				<div id="header">
+			<div>
+				<div className="header-top">
+					<div className="header-logo">
+						<img src="images/small-trans-fldv-logo.png" alt="logo" />
+						{/* <img src="images/transparent_logo.png" alt="logo" /> */}
+					</div>
+					<Subscribe history={this.props.history} />
+				</div>
+				<div className="header">
+					{/* <div id="header"> */}
 					<div id="label">
-						<span style={{ color: 'red', fontSize: '2em' }}>Flori</span>
-						<span style={{ color: 'blue', fontSize: '2em' }}>Divers</span>
+						<span style={{ color: 'orange', fontSize: '2em', fontWeight: 'bold', marginLeft: '3em' }}>Flori</span>
+						<span style={{ color: '#9DBFE6', fontSize: '2em', fontWeight: 'bold' }}>Divers</span>
 						{/* <img src="/images/label.png" alt="label" /> */}
 						{sideDrawer}
 						{backdrop}
@@ -67,7 +76,7 @@ class Header extends Component {
 									<Link to="/crew">Crew</Link>
 								</li>
 								<li>
-									<Link to="/gallery">Gallery</Link>
+									<Link to="/gallery-index">Gallery</Link>
 								</li>
 								<li>
 									<Link to="/learn">Learn</Link>
@@ -78,6 +87,7 @@ class Header extends Component {
 							</ul>
 						</nav>
 					</div>
+					{/* </div> */}
 				</div>
 			</div>
 		);

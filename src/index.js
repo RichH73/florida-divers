@@ -13,7 +13,6 @@ export const store = createStore(
 	// composeWithDevTools(applyMiddleware(thunk))
 	applyMiddleware(thunk)
 );
-
 ReactDOM.render(
 	<Provider store={store}>
 		<App />

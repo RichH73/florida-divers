@@ -10,6 +10,7 @@ import Crew from '../Crew/Crew';
 import Learn from '../Learn/Learn';
 import calendar from '../Calendar/Calendar';
 import Admin from '../Admin/Admin';
+import GalleryIndex from '../Gallery/GalleryIndex';
 
 class Body extends Component {
 	render() {
@@ -23,6 +24,7 @@ class Body extends Component {
 				<Route path="/learn" component={Learn} />
 				<Route path="/calendar" component={calendar} />
 				<Route path="/admin" component={Admin} />
+				<Route path="/gallery-index" component={GalleryIndex} />
 			</div>
 		);
 	}
