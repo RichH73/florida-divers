@@ -206,3 +206,33 @@ export const clearStudentForm = () => {
 		type: 'ClearStudent',
 	};
 };
+
+/*
+	Reviews section
+*/
+
+const loadReviews = (reviews) => {
+	return {
+		type: 'NewReviews',
+		reviews,
+	};
+};
+
+export const getAllReviews = () => {
+	return function (dispatch) {
+		axios({
+			method: 'get',
+			url: 'http://localhost:8600/reviews',
+			// url: `https://www.floridivers.com:8600/reviews`,
+			headers: {
+				Authorization: `bearer ${localStorage.floridiversToken}`,
+			},
+		})
+			.then((response) => {
+				if (response.status && response.status === 200) {
+					dispatch(loadReviews(response.data));
+				}
+			})
+			.catch((error) => console.log(error));
+	};
+};

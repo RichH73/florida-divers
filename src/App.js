@@ -26,6 +26,7 @@ class App extends Component {
 		if (!!localStorage.floridiversToken) {
 			this.props.checkForUserToken();
 		}
+		this.props.getAllReviews();
 	}
 
 	spinner = () => {

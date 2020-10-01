@@ -11,6 +11,7 @@ import spinner from './spinner';
 import edit_gallery from './editGallery';
 import emailSubscribe from './emailSubscribe';
 import editStudent from './editStudent';
+import reviews from './reviews';
 
 const allReducers = combineReducers({
 	galleries: getGalleries,
@@ -26,6 +27,7 @@ const allReducers = combineReducers({
 	edit_gallery,
 	emailSubscribe,
 	editStudent,
+	reviews,
 });
 
 export default allReducers;

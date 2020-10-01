@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Main.css';
 import ReactGA from 'react-ga';
 import Subscribe from '../Helpers/Subscribe';
+import Reviews from '../Modules/Reviews/Reviews';
 class Main extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Home');
@@ -21,6 +22,9 @@ class Main extends Component {
 					</div>
 					<div className="main-hero">
 						<img src="images/hero.png" alt="hero img" />
+					</div>
+					<div>
+						<Reviews />
 					</div>
 				</div>
 				{/* <Subscribe/> */}
