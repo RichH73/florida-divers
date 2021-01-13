@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Crew.css';
 import ReactGA from 'react-ga';
+import nich_small from '../../images/nich_small.jpg';
+import tam_small from '../../images/tam_small.jpg';
+import sandi_small from '../../images/sandi_small.png';
 class Crew extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Crew');
@@ -11,7 +14,7 @@ class Crew extends Component {
 				<h3>Meet the Crew</h3>
 				<div className="crew-grid">
 					<div className="crew-grid-card item1">
-						<img src="https://www.floridivers.com/images/nich_small.jpg" alt="Nich" />
+						<img src={nich_small} alt="Nich" />
 						<h2>Nicholas Strazzulla</h2>
 						<h3>
 							MSDT
@@ -22,7 +25,7 @@ class Crew extends Component {
 					</div>
 
 					<div className="crew-grid-card item2">
-						<img src="images/tam_small.jpg" alt="Tammy" />
+						<img src={tam_small} alt="Tammy" />
 						<h2>Tammy Strazzulla</h2>
 						<h3>Master Scub​a Diver</h3>
 						<p>
@@ -32,7 +35,7 @@ class Crew extends Component {
 					</div>
 
 					<div className="crew-grid-card item3">
-						<img src="images/sandi_small.png" alt="Sandi" />
+						<img src={sandi_small} alt="Sandi" />
 						<h2>Sandi Zoch</h2>
 						<h3>
 							Course Director

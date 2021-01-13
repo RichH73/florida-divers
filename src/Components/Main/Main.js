@@ -23,7 +23,7 @@ class Main extends Component {
 						<img src="images/hero.png" alt="hero img" />
 					</div>
 				</div>
-				{/* <Subscribe/> */}
+				{window.innerWidth < 601 ? <Subscribe history={this.props.history} /> : ''}
 			</React.Fragment>
 		);
 	}

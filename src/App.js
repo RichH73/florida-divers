@@ -9,7 +9,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from './actions/index';
 import axios from 'axios';
-import _ from 'lodash';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-173376472-1');
@@ -39,16 +38,14 @@ class App extends Component {
 					zIndex: '300',
 					position: 'absolute',
 					background: 'rgba(0, 0, 0, 0.2)',
-				}}
-			>
+				}}>
 				<div
 					style={{
 						color: 'white',
 						width: '200px',
 						height: '200px',
 						margin: '20% auto',
-					}}
-				>
+					}}>
 					<div style={{ textAlign: 'center' }}>
 						<b>Loading</b>
 					</div>
@@ -57,8 +54,7 @@ class App extends Component {
 							width: '100px',
 							height: '100px',
 							margin: '20% auto',
-						}}
-					>
+						}}>
 						<Spinner size={120} stroke={6} color={'rgb(157, 195, 236)'} radius={100} spinnerwidth={10} visible={true} />
 					</div>
 				</div>

@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import './Calendar.css';
 import ReactGA from 'react-ga';
-// import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
-// import * as actionCreators from '../../../actions/index';
-import axios from 'axios';
 
 //Google analytics for visitor tracking
 // import ReactGA from 'react-ga';

@@ -62,7 +62,7 @@ class EditGallery extends Component {
 	};
 
 	onSubmitHandler = () => {
-		const { editGallery, saveImages, deleteImages } = this.props;
+		const { editGallery, deleteImages } = this.props;
 		const saveGallery = {
 			id: editGallery.map((gallery) => gallery._id),
 			dirName: editGallery.map((gallery) => gallery.dirName),
@@ -80,7 +80,7 @@ class EditGallery extends Component {
 	};
 
 	displayGalleryToEdit = () => {
-		const { serverURL, galleryName, gallery_images } = this.props;
+		const { serverURL, gallery_images } = this.props;
 		return this.props.editGallery.map((gallery) => (
 			<div>
 				<div className="editing-gallery-title">
@@ -100,7 +100,7 @@ class EditGallery extends Component {
 									Thumbnail Image
 								</a>
 							</div>
-							<img src={`${serverURL}/images/galleries/${gallery.dirName}/${image.thumbnail}`} />
+							<img src={`${serverURL}/images/galleries/${gallery.dirName}/${image.thumbnail}`} alt="" />
 							<div className="editing-gallery-image-box-delete">
 								<div className="editing-gallery-image-delete" onClick={() => this.removeImage(image)}>
 									{/* onClick={() => this.imageOverlay(image._id)} */}
@@ -143,7 +143,7 @@ class EditGallery extends Component {
 			<div className="edit-gallery-form">
 				{this.state.imageDisplay ? (
 					<div style={{ zIndex: '350', width: '60%', height: '600px', position: 'absolute', top: '0', left: '0' }}>
-						<img src={this.state.imageAddress} />
+						<img src={this.state.imageAddress} alt="" />
 						{/* onClick={() => this.imageOverlay('clear')}  */}
 					</div>
 				) : (
@@ -181,8 +181,6 @@ const mapStateToProps = (state) => ({
 	serverAPI: state.Config.api,
 	galleries: state.galleries.siteImages,
 	editGallery: state.edit_gallery.gallery,
-	serverURL: state.Config.url,
-	serverAPI: state.Config.api,
 	galleryTitle: state.edit_gallery.gallery.galleryName,
 	galId: state.edit_gallery.galleryId,
 });

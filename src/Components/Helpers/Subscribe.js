@@ -4,6 +4,9 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
 class Subscribe extends Component {
 	handleChange = (event) => {
 		// 	email: event.target.value
@@ -37,14 +40,17 @@ class Subscribe extends Component {
 	render() {
 		return (
 			<div className="newsletter-subscribe">
-				<form>
+				<Form>
 					<p>Want to recieve our newsletter? Signup here!</p>
-					<label>Email Address: </label>
-					<input type="email" name="email" onChange={this.handleChange} required />
-					<button type="submit" onClick={this.subscribeSubmitHandler}>
-						Subscribe
-					</button>
-				</form>
+					<InputGroup className="mb-3">
+						<Form.Control type="email" name="email" onChange={this.handleChange} required size="sm" placeholder="Email Address" />
+						<InputGroup.Append>
+							<Button type="submit" onClick={this.subscribeSubmitHandler} size="sm">
+								Subscribe
+							</Button>
+						</InputGroup.Append>
+					</InputGroup>
+				</Form>
 			</div>
 		);
 	}

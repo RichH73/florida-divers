@@ -1,13 +1,13 @@
 @media screen and (max-width: 600px) {
   .main {
-    width: 98%;
+    width: 100%;
     margin: auto;
   }
   .main p {
     font-size: 1.3em;
     margin: auto;
     text-align: left;
-    width: 90%;
+    width: 100%;
   }
   #hero {
     z-index: -1;

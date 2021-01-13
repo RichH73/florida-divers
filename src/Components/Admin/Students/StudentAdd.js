@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../../actions/index';
 import './Students.css';
-import _ from 'lodash';
-import { resetCalls } from 'react-ga';
 
 const studentNameRef = React.createRef();
 const studentCertificationRef = React.createRef();

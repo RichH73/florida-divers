@@ -17,7 +17,9 @@ class Body extends Component {
 		return (
 			<div className="main-body">
 				<Route exact path="/" component={Main} />
+				<Route path="/#home" component={Main} />
 				<Route path="/about" component={About} />
+				<Route path="/#about" component={About} />
 				<Route path="/crew" component={Crew} />
 				<Route path="/gallery" component={Gallery} />
 				<Route path="/contact" component={Contact} />

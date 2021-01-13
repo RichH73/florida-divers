@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/index';
-import ReactHtmlParser from 'react-html-parser';
 
 class PastStudents extends Component {
 	render() {
 		return (
 			<div className="learn-past-students">
-				<div className="learn-past-students-title">Some of our past students!</div>
+				<div className="learn-past-students-title">Some of our past students</div>
 				<div className="learn-past-students-list">
 					{this.props.pastStudents.map((student) => (
 						<div key={student._id} className="learn-past-student">

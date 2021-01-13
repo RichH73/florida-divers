@@ -5,8 +5,9 @@
 @media screen and (max-width: 600px) {
     .contact {
         background-color: #9DBFE6;
-        width: 98%;
         margin: auto;
+        text-align: left;
+        padding: 1rem;
     }
 
     .social-media img {
@@ -14,18 +15,10 @@
         padding: 10px;
     }
 
-    .contact-us-form button {
-        background-color: #1578E8;
-        border: 0;
-        border-radius: 19px;
-        width: 60px;
-        color: white;
-    }
-
     .contact-us-form {
+        text-align: left;
+        padding: 1rem;
         margin: 1em auto 2em;
-        padding: .5em 0;
-        width: 98%;
         background-color: #9DBFE6;
         color: black;
     }
@@ -63,15 +56,10 @@
 @media screen and (min-width: 1121px) {
     .contact {
         background-color: #9DBFE6;
-        // background-color: #5D9DE6;
         width: 40%;
-        //height: 750px;
-        margin-top: 20px;
-        margin: auto;
         font-size: 18px;
         padding-left: 20px;
         border: 1px solid black;
-        // box-shadow: 1px 1px 3px 1px black;
     }
 
     .social-media img {
@@ -85,17 +73,17 @@
 
     .contact-us-container {
         margin: auto;
-        width: 60%;
+        width: 70%;
         height: 100%;
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-evenly;
     }
 
     .contact-us-form {
         margin-left: 10px;
-        //padding: 40px 20px 0 ;
-        width: 75%;
-        // background-color: #5D9DE6;
+        width: 60%;
+        padding: 10px;
         background-color: #9DBFE6;
         border: 1px solid black;
         color: black;
@@ -105,39 +93,7 @@
         margin: 1em auto;
     }
 
-    .contact-us-form input {
-        margin-bottom: 15px;
-        width: 65%;
-    }
-
-    .contact-us-form textarea {
-        margin: auto;
-        width: 90%;
-        height: 180px;
-    }
-
     .contact-us-form label {
         font-size: 18px;
-    }
-
-    .contact-us-form-button {
-        width: 100%;
-        margin-right: 10px;
-        margin-left: auto;
-    }
-
-    .contact-us-form button {
-        // margin-left: auto;
-        // margin-right: 10px;
-        background-color: #1578E8;
-        border: 0;
-        border-radius: 19px;
-        width: 60px;
-        color: white;
-    }
-
-    .input {
-        text-align: left;
-        margin: 2px auto 2px 10px;
     }
 }

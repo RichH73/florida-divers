@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ImageGallery from 'react-image-gallery';
 import './Gallery.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
@@ -31,7 +30,7 @@ class GalleryIndex extends Component {
 		const { imageGalleries, serverURL } = this.props;
 		return imageGalleries.map((gallery) => (
 			<div className="galleries-index-gallery" onClick={() => this.chooseGallery(gallery._id)}>
-				<img src={`${serverURL}/images/galleries/${gallery.dirName}/${gallery.images[0].thumbnail}`} />
+				<img src={`${serverURL}/images/galleries/${gallery.dirName}/${gallery.images[0].thumbnail}`} alt="" />
 				<div>{gallery.galleryName}</div>
 			</div>
 		));

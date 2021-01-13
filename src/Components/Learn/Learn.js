@@ -8,6 +8,8 @@ import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import PastStudents from './PastStudents';
+import sdi_small from '../../images/sdi_small.png';
+import padi_small from '../../images/padi_small.png';
 class Learn extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Learn');
@@ -43,6 +45,10 @@ class Learn extends Component {
 					<p style={{ marginBottom: '2em' }}>
 						If you would like more information about a course, please <Link to="/contact">contact us</Link>.
 					</p>
+					<div className="learn-dive-package-logos">
+						<img src={sdi_small} alt={sdi_small} />
+						<img src={padi_small} alt={padi_small} />
+					</div>
 					<p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
 				</div>
 				<this.divePackageInfo />

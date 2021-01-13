@@ -8,18 +8,18 @@ const initial_state = {
 };
 
 const edit_gallery = (state = initial_state, data) => {
-	const grabImages = (gallery) => {
-		const images = gallery.map((gal) => {
-			return gal.images;
-		});
-		return _.flatten(images);
-	};
+	// const grabImages = (gallery) => {
+	// 	const images = gallery.map((gal) => {
+	// 		return gal.images;
+	// 	});
+	// 	return _.flatten(images);
+	// };
 	const removeImage = (image) => {
-		const imagesToRemove = state.images.map((image) => {
-			return state.images.filter((gal) => {
-				return gal._id !== image._id;
-			});
-		});
+		// const imagesToRemove = state.images.map((image) => {
+		// 	return state.images.filter((gal) => {
+		// 		return gal._id !== image._id;
+		// 	});
+		// });
 		return [...state.deleteImages, image];
 	};
 

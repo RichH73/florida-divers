@@ -40,19 +40,12 @@
   #label img {
     max-width: 164px;
   }
-  #nav-button {
-    width: 10px;
-    margin-left: auto;
-    margin-top: 1.5em;
-    margin-right: 3em;
-  }
   .newsletter-subscribe {
-    display: none;
+    text-align: left;
+    padding: 10px;
     vertical-align: middle;
     border: 1px solid black;
-    width: 350px;
-    height: 80px;
-    margin: 3em auto;
+    margin: 3em 2em 0;
     background-color: #9DBFE6;
     font-size: small;
     border-radius: 4px;
@@ -102,6 +95,17 @@
     margin-top: 1em;
     margin-right: 2em;
   }
+  .newsletter-subscribe {
+    text-align: left;
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid black;
+    width: 375px;
+    margin: 3em 2em 0;
+    background-color: #9DBFE6;
+    font-size: small;
+    border-radius: 4px;
+  }
 }
 
 @media screen and (min-width: 1121px) {
@@ -143,17 +147,6 @@
   .header ul {
     padding: 0;
   }
-  .header nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .header nav a:hover {
-    color: white;
-  }
-  .header nav a:active {
-    color: white;
-  }
   #header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -172,22 +165,14 @@
     width: 150px;
   }
   .newsletter-subscribe {
+    padding: 10px;
     vertical-align: middle;
     border: 1px solid black;
-    width: 375px;
-    height: 80px;
+    height: 100px;
     margin: 3em 2em 0;
     background-color: #9DBFE6;
     font-size: small;
     border-radius: 4px;
-  }
-  .newsletter-subscribe button {
-    background-color: #1578E8;
-    border: 0;
-    border-radius: 19px;
-    width: 80px;
-    color: white;
-    margin-left: 3px;
   }
   .header-top {
     display: -webkit-box;
