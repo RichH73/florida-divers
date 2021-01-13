@@ -54,8 +54,7 @@ class NewsLetter extends Component {
 					onRequestClose={this.closeModal}
 					style={customStyles}
 					contentLabel="Example Modal"
-					className="Modal"
-				>
+					className="Modal">
 					<h3>Success!</h3>
 					<p>News Letter has been sent.</p>
 					<div className="menu-header hbox vcenter" onClick={this.closeModal}>

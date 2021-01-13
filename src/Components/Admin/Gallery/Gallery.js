@@ -63,8 +63,7 @@ class Gallery extends Component {
 							textAlign: 'center',
 							marginBottom: '20px',
 							gridArea: 'opener',
-						}}
-					>
+						}}>
 						<h4>Create a new photo gallery</h4>
 						<p>
 							Type a name for the gallery you want to create. This is a simple title that will display above each gallery displayed in the gallery
