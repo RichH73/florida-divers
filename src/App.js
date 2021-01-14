@@ -67,7 +67,7 @@ class App extends Component {
 			<BrowserRouter>
 				<this.spinner />
 				<div className="App">
-					<div className="head">
+					<div className="app-header">
 						<Header history={this.props.history} />
 					</div>
 					<div className="pages">

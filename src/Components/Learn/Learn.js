@@ -40,8 +40,8 @@ class Learn extends Component {
 		return (
 			<div className="learn">
 				<div className="learn-inner-package-info">
-					<h2>Ready to take the next step?</h2>
-					<h3>We look forward to diving with you soon!!</h3>
+					<h3>Ready to take the next step?</h3>
+					<h4>We look forward to diving with you soon!!</h4>
 					<p style={{ marginBottom: '2em' }}>
 						If you would like more information about a course, please <Link to="/contact">contact us</Link>.
 					</p>

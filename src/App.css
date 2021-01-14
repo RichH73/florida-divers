@@ -10849,6 +10849,9 @@ a {
     font-size: calc(10px + 2vmin);
     color: white;
   }
+  .app-header {
+    margin-bottom: 2rem;
+  }
   .App-link {
     color: #61dafb;
   }

@@ -11,7 +11,6 @@ class Crew extends Component {
 	render() {
 		return (
 			<div className="crew">
-				<h3>Meet the Crew</h3>
 				<div className="crew-grid">
 					<div className="crew-grid-card item1">
 						<img src={nich_small} alt="Nich" />
