@@ -26,6 +26,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.5.3",
+    "email-validator": "^2.0.4",
     "lodash": "^4.17.20",
     "quill-emoji": "^0.1.8",
     "react": "^16.14.0",

@@ -1,95 +1,59 @@
-.crew {
-  color: black;
-}
-
-
 @media screen and (max-width: 601px) {
-  .crew {
-    padding: 1em;
-  }
+	.meet-the-crew {
+		width: 100%;
+	}
 
-  .crew h1 {
-    text-align: center;
-    color: #9AF6E0;
-}
+	.meet-the-crew-card {
+		width: 98%;
+		margin: 1rem auto;
+		background-color: #9dbfe6;
+		margin-bottom: 1rem;
+	}
 
-  .crew-grid-card img {
-    max-width: 200px;
-  }
-
-  .crew-grid-card {
-    background-color: #9DBFE6;
-    box-shadow: 2px 4px 4px 0px rgb(143, 143, 143);
-    margin-top: 20px;
-    padding: 1em;
-}
-
-.crew-grid-card p {
-    text-align: left;
-}
+	.meet-the-crew-list {
+		background-color: #9dbfe6;
+		font-weight: bold;
+	}
 }
 
 @media screen and (min-width: 601px) and (max-width: 1120px) {
-  .crew {
-    padding: 1em;
-  }
-  
-  .crew h1 {
-    text-align: center;
-    color: #9AF6E0;
+	.meet-the-crew {
+		width: 70%;
+		margin: 1rem auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.meet-the-crew-card {
+		width: 18rem;
+		background-color: #9dbfe6;
+		margin-bottom: 1rem;
+	}
+
+	.meet-the-crew-list {
+		background-color: #9dbfe6;
+		font-weight: bold;
+	}
 }
 
-  .crew-grid-card img {
-    max-width: 200px;
-  }
+@media screen and (min-width: 1121px) {
+	.meet-the-crew {
+		width: 80%;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
 
+	.meet-the-crew-card {
+		width: 18rem;
+		background-color: #9dbfe6;
+		margin-bottom: 1rem;
+	}
 
-
-  .crew-grid-card {
-    background-color: #9DBFE6;
-    margin-top: 20px;
-    padding: 1em;
-    box-shadow: 2px 4px 4px 0px rgb(143, 143, 143);
-}
-
-.crew-grid-card p {
-    text-align: left;
-}
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .crew-grid {
-    width: 60%;
-  }
-}
-
-  @media screen and (min-width: 1121px) {
-    .crew h1 {
-        text-align: center;
-        //color: #9AF6E0;
-    }
-    .crew-grid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-        // padding: 10px;
-        width: 80%;
-        margin: auto;
-      }
-
-      .crew-grid-card {
-        // background-color: #5D9DE6;
-        background-color: #9DBFE6;
-        max-width: 400px;
-        padding: 45px;
-        box-shadow: 1px 1px 3px 1px black;
-        text-align: left;
-    }
-
-    .crew-grid-card img {
-        max-width: 200px;
-        // margin-top: 45px;
-        // margin-left: 45px;
-    }
+	.meet-the-crew-list {
+		background-color: #9dbfe6;
+		font-weight: bold;
+	}
 }

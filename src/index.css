@@ -5,18 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #135485; */
   background-color: rgb(232, 235, 247);
-  /* color: #9DBFE6; */
 }
-
-/* a:visited {
-  color: blue;
-}
-
-a {
-  color: blue;
-} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

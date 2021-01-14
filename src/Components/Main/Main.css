@@ -2,15 +2,13 @@
   .main {
     width: 100%;
     margin: auto;
+    padding: 10px;
   }
   .main p {
     font-size: 1.3em;
     margin: auto;
     text-align: left;
     width: 100%;
-  }
-  #hero {
-    z-index: -1;
   }
   #hero img {
     opacity: 0.5;

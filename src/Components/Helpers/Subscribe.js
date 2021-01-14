@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
+import EmailValidator from 'email-validator';
 class Subscribe extends Component {
 	handleChange = (event) => {
 		// 	email: event.target.value
@@ -33,7 +34,7 @@ class Subscribe extends Component {
 			},
 		}).then(() => {
 			this.props.clearSubscribeEmail();
-			//this.props.history.push('/')
+			this.props.subscribeEmail({ email: '' });
 		});
 	};
 
@@ -43,9 +44,21 @@ class Subscribe extends Component {
 				<Form>
 					<p>Want to recieve our newsletter? Signup here!</p>
 					<InputGroup className="mb-3">
-						<Form.Control type="email" name="email" onChange={this.handleChange} required size="sm" placeholder="Email Address" />
+						<Form.Control
+							type="email"
+							name="email"
+							onChange={this.handleChange}
+							value={this.props.newEmail}
+							required
+							size="sm"
+							placeholder="Email Address"
+						/>
 						<InputGroup.Append>
-							<Button type="submit" onClick={this.subscribeSubmitHandler} size="sm">
+							<Button
+								type="submit"
+								onClick={this.subscribeSubmitHandler}
+								size="sm"
+								disabled={EmailValidator.validate(this.props.newEmail) ? false : true}>
 								Subscribe
 							</Button>
 						</InputGroup.Append>

@@ -2,6 +2,7 @@
   .main {
     width: 100%;
     margin: auto;
+    padding: 10px;
   }
 
   .main p {
@@ -11,11 +12,7 @@
     width: 100%;
   }
 
-  #hero {
-    //margin: 2em 0 auto auto;
-    // width: 98%;
-    z-index: -1;
-  }
+
 
   #hero img {
     opacity: 0.5;
