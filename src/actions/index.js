@@ -206,3 +206,17 @@ export const clearStudentForm = () => {
 		type: 'ClearStudent',
 	};
 };
+
+export const studentData = (student) => {
+	return {
+		type: 'Student_Data',
+		student,
+	};
+};
+
+export const getStudentRecords = (studentRecords) => {
+	return {
+		type: 'allRecords',
+		studentRecords,
+	};
+};

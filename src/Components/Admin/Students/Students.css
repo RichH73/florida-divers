@@ -1,4 +1,27 @@
+table, th, td {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.student-table {
+  width: 600px;
+  margin: auto;
+}
+
+.add-new-student {
+  font-size: 1.2rem;
+  width: 600px;
+  margin: 2em auto;
+}
+
+.add-new-student span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .add-students-form {
+  width: 640px;
+  margin: auto;
   background-color: #9DBFE6;
   text-align: center;
   padding: 1em;

@@ -17,14 +17,14 @@
         border: 1px solid black;
         color: black;
         // margin-top: 20px;
-        margin: 1em auto;
+        margin: auto;
         border-radius: 6px;
         border: 1px solid #135485;
     }
 
     .learn-dive-package-info-title {
         margin-top: 0;
-        font-size: 1.4em;
+        font-size: 1em;
         text-align: center;
         margin-top: 0;
         color: white;
@@ -32,6 +32,12 @@
         background-color: #135485;
         border-top-right-radius: inherit;
         border-top-left-radius: inherit;
+    }
+
+    .learn-dive-package-info-body {
+        padding: 1em;
+        text-align: left;
+        background-color: #9DBFE6;
     }
 
     .learn-dive-package-logos {
@@ -46,6 +52,11 @@
     }
 
     .learn-dive-package-info-body a {
+        color: blue;
+        cursor: pointer;
+    }
+
+    .learn-dive-package-info-body a:visited {
         color: blue;
         cursor: pointer;
     }
@@ -102,14 +113,14 @@
         border: 1px solid black;
         color: black;
         // margin-top: 20px;
-        margin: 1em auto;
+        margin: auto;
         border-radius: 6px;
         border: 1px solid #135485;
     }
 
     .learn-dive-package-info-title {
         margin-top: 0;
-        font-size: 1.4em;
+        font-size: 1em;
         text-align: center;
         margin-top: 0;
         color: white;
@@ -117,6 +128,12 @@
         background-color: #135485;
         border-top-right-radius: inherit;
         border-top-left-radius: inherit;
+    }
+
+    .learn-dive-package-info-body {
+        padding: 1em;
+        text-align: left;
+        background-color: #9DBFE6;
     }
 
     .learn-dive-package-logos {
@@ -162,8 +179,8 @@
         cursor: pointer;
     }
 
-    a {
-        color: white;
+    .learn-dive-package-info-body a:visited {
+        color: blue;
         cursor: pointer;
     }
 }
@@ -192,14 +209,27 @@
         border: 1px solid black;
         color: black;
         // margin-top: 20px;
-        margin: 1em auto;
+        margin: auto;
         border-radius: 6px;
         border: 1px solid #135485;
     }
 
+    .learn-dive-package-info-body {
+        padding: 1em;
+        text-align: left;
+        background-color: #9DBFE6;
+    }
+
+    .learn-card-header {
+        // padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
     .learn-dive-package-info-title {
         margin-top: 0;
-        font-size: 1.4em;
+        font-size: 1em;
         text-align: center;
         margin-top: 0;
         color: white;
@@ -242,18 +272,15 @@
         border-top-left-radius: inherit;
     }
 
-    .learn-dive-package-info-body {
-        padding: 1em;
-        text-align: left;
-    }
+
 
     .learn-dive-package-info-body a {
         color: blue;
         cursor: pointer;
     }
 
-    a {
-        color: white;
+    .learn-dive-package-info-body a:visited {
+        color: blue;
         cursor: pointer;
     }
 }

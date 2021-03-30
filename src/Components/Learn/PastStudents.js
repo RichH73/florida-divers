@@ -11,7 +11,7 @@ class PastStudents extends Component {
 				<div className="learn-past-students-list">
 					{this.props.pastStudents.map((student) => (
 						<div key={student._id} className="learn-past-student">
-							{student.firstName} {student.lastName} - {student.certification}
+							{student.firstName} {student.lastName} - {student.certificationLevel}
 						</div>
 					))}
 				</div>

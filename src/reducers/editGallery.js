@@ -25,7 +25,6 @@ const edit_gallery = (state = initial_state, data) => {
 
 	switch (data.type) {
 		case 'galleryData':
-			console.log(data.data.map((gallery) => gallery.images)[0]);
 			return {
 				...state,
 				gallery: data.data,
@@ -33,7 +32,6 @@ const edit_gallery = (state = initial_state, data) => {
 				images: data.data.map((gallery) => gallery.images)[0], //grabImages(data.data)
 			};
 		case 'deleteImage':
-			//console.log({...images: newImages(data.image)})
 			return {
 				...state,
 				deleteImages: removeImage(data.image),

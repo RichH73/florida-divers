@@ -11,6 +11,8 @@ import inst from '../../images/inst.png';
 import youtube from '../../images/youtube.png';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import NumberFormat from 'react-number-format';
+import Spinner from 'react-bootstrap/Spinner';
 class Contact extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Contact');
@@ -23,6 +25,9 @@ class Contact extends Component {
 
 	onSubmitHandler = (event) => {
 		event.preventDefault();
+		this.props.contactForm({
+			sending: true,
+		});
 		axios({
 			method: 'post',
 			url: `${this.props.serverAPI}/contact`,
@@ -32,6 +37,13 @@ class Contact extends Component {
 			data: this.props.submissionFormData,
 		}).then((response) => {
 			if (_.isEqual(response.status, 200)) {
+				this.props.contactForm({
+					sending: false,
+					name: '',
+					email: '',
+					phone: '',
+					note: '',
+				});
 				this.props.history.push('/');
 			}
 		});
@@ -44,7 +56,7 @@ class Contact extends Component {
 				<div className="contact-us-container">
 					<div className="contact">
 						<h4>Contact Info</h4>
-						(352)448-0028
+						(352) 220-1148
 						<br />
 						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
 						<h5>Nicholas</h5>
@@ -83,33 +95,28 @@ class Contact extends Component {
 							</Form.Group>
 							<Form.Group size="sm">
 								<Form.Label>Phone Number</Form.Label>
-								<Form.Control type="text" name="phone" onChange={this.onChangeHandler} size="sm" />
+								<NumberFormat
+									format="+1 (###) ###-####"
+									className="textInput form-control"
+									allowEmptyFormatting
+									mask="_"
+									//defaultValue={user.businessPhone}
+									onChange={this.onChangeHandler}
+									name="phone"
+								/>
 							</Form.Group>
 							<Form.Group size="sm">
 								<Form.Label>Message</Form.Label>
-								<Form.Control as="textarea" name="name" onChange={this.onChangeHandler} size="sm" />
+								<Form.Control as="textarea" name="note" onChange={this.onChangeHandler} size="sm" />
 							</Form.Group>
 						</Form>
-						<Button onClick={this.onSubmitHandler}>Send</Button>
-						{/* <div className="input">
-							<label>Name: </label>
-							<input type="text" name="name" onChange={this.onChangeHandler} />
-						</div>
-						<div className="input">
-							<label>Email: </label>
-							<input type="text" name="email" onChange={this.onChangeHandler} />
-						</div>
-						<div className="input">
-							<label>Phone: </label>
-							<input type="text" name="phone" onChange={this.onChangeHandler} />
-						</div>
-						<label>Note</label>
-						<div className="input-textarea">
-							<textarea name="note" onChange={this.onChangeHandler}></textarea>
-						</div>
-						<div className="contact-us-form-button">
-							<button onClick={this.onSubmitHandler}>Send</button>
-						</div> */}
+						{!this.props.submissionFormData.sending ? (
+							<Button onClick={this.onSubmitHandler}>Send</Button>
+						) : (
+							<Button variant="primary" onClick={this.onSubmitHandler} disabled>
+								<Spinner as="span" animation="grow" size="sm" role="status" aria-hidden="true" /> Sending...
+							</Button>
+						)}
 					</div>
 				</div>
 			</div>

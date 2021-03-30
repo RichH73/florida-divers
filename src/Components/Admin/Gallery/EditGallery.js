@@ -35,7 +35,6 @@ class EditGallery extends Component {
 	};
 
 	removeImage = (image) => {
-		//console.log(_.cloneDeep(image))
 		this.props.removeImage(image);
 	};
 
@@ -68,7 +67,6 @@ class EditGallery extends Component {
 			dirName: editGallery.map((gallery) => gallery.dirName),
 			deleteImages,
 		};
-		console.log(saveGallery);
 		axios({
 			method: 'post',
 			url: `${this.props.serverAPI}/galleries/remove-images`,
@@ -128,14 +126,9 @@ class EditGallery extends Component {
 		);
 	};
 
-	selectHandler = (event) => {
-		console.log(_.cloneDeep(event.target.value));
-	};
+	selectHandler = (event) => {};
 
-	deleteGallery = (event) => {
-		console.log(this.props.galId);
-		console.log(_.cloneDeep(event));
-	};
+	deleteGallery = (event) => {};
 
 	render() {
 		const { galleries } = this.props;

@@ -52,7 +52,7 @@ class Header extends Component {
 		);
 		return (
 			<React.Fragment>
-				<div style={{ width: '90%', display: 'flex', margin: 'auto', justifyContent: 'space-around' }}>
+				<div style={{ width: '100%', display: 'flex', margin: 'auto', justifyContent: 'space-between' }}>
 					<div className="header-logo">
 						<img src="images/small-trans-fldv-logo.png" alt="logo" />
 					</div>

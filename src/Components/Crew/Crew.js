@@ -19,7 +19,7 @@ class Crew extends Component {
 					<Card.Body>
 						<Card.Title>Nicholas Strazzulla</Card.Title>
 						<Card.Text>
-							Nicholas' experience includes: 10+ years as a paramedic 8 years as a scuba diver 2 years as a Hyperbaric technician.
+							Nicholas' experience includes: 18 years as a paramedic 10 years as a scuba diver 5 years as a Hyperbaric technologist.
 						</Card.Text>
 					</Card.Body>
 					<ListGroup className="list-group-flush">

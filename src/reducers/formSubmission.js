@@ -1,4 +1,5 @@
 const initialState = {
+	sending: false,
 	name: '',
 	email: '',
 	phone: '',

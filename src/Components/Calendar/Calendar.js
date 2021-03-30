@@ -8,14 +8,8 @@ import ReactGA from 'react-ga';
 class Calendar extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Calendar');
-		// axios({
-		// 	url: 'https://apis.google.com/js/api.js',
-		// 	method: 'get'
-		// })
-		// .then(response => {
-		// 	console.log(response)
-		// })
 	}
+
 	render() {
 		return (
 			<div className="cal-container">

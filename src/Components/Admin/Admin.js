@@ -64,7 +64,7 @@ class Admin extends Component {
 							News Letter
 						</li>
 						<li id="student-add" onClick={this.changePanel}>
-							Add Student
+							Students and Members
 						</li>
 					</ul>
 				</div>

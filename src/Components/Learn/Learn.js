@@ -10,6 +10,8 @@ import ReactGA from 'react-ga';
 import PastStudents from './PastStudents';
 import sdi_small from '../../images/sdi_small.png';
 import padi_small from '../../images/padi_small.png';
+import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
 class Learn extends Component {
 	componentDidMount() {
 		ReactGA.pageview('/Learn');
@@ -24,14 +26,34 @@ class Learn extends Component {
 	divePackageInfo = () => {
 		return this.props.packagesPrices.map((pack) => (
 			<div className="learn-dive-package-info">
-				<div className="learn-dive-package-info-title">{pack.title}</div>
+				<Accordion>
+					<Card>
+						<Card.Header bsPrefix={'learn-card-header'} className="learn-dive-package-info-title">
+							<Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+								{pack.title}
+							</Accordion.Toggle>
+						</Card.Header>
+						<Accordion.Collapse eventKey="0">
+							<Card.Body className="learn-dive-package-info-body">
+								<div className="learn-dive-package-info-body">
+									{ReactHtmlParser(pack.description)}
+									<div className="learn-package-price">Course Price (per student): ${pack.price}</div>
+									<a href={pack.link} target="new">
+										{pack.linkText}
+									</a>
+								</div>
+							</Card.Body>
+						</Accordion.Collapse>
+					</Card>
+				</Accordion>
+				{/* <div className="learn-dive-package-info-title">{pack.title}</div>
 				<div className="learn-dive-package-info-body">
 					{ReactHtmlParser(pack.description)}
 					<div className="learn-package-price">Course Price (per student): ${pack.price}</div>
 					<a href={pack.link} target="new">
 						{pack.linkText}
 					</a>
-				</div>
+				</div> */}
 			</div>
 		));
 	};
@@ -49,7 +71,11 @@ class Learn extends Component {
 						<img src={sdi_small} alt={sdi_small} />
 						<img src={padi_small} alt={padi_small} />
 					</div>
-					<p>CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:</p>
+					<p>
+						CERTIFICATION’S AVAILABLE ARE AS FOLLOWS:
+						<br />
+						<small>(Tap the title to learn more)</small>
+					</p>
 				</div>
 				<this.divePackageInfo />
 				<PastStudents />
