@@ -19,6 +19,7 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "lodash": "^4.17.19",
+    "node-sass": "^7.0.1",
     "prettier": "^2.0.5",
     "quill-emoji": "^0.1.7",
     "react": "^16.13.1",

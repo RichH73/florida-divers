@@ -42,11 +42,11 @@ class Contact extends Component {
 						<h3>Contact Info</h3>
 						(352)448-0028
 						<br />
-						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
-						<h4>Nicholas</h4>
-						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
+						<a href="mailto:floridivers@gmail.com">floridivers@gmail.com</a>
+						{/* <h4>Nicholas</h4>
+						<a href="mailto:floridivers@gmail.com">floridivers@gmail.com</a>
 						<h4>Tammy</h4>
-						<a href="mailto:Scubydoo1210@floridivers.com">Scubydoo1210@floridivers.com</a>
+						<a href="mailto:Scubydoo1210@floridivers.com">Scubydoo1210@floridivers.com</a> */}
 						<h3>Hours</h3>
 						Mon-Fri: 2:30pm - 7:30pm
 						<br />
