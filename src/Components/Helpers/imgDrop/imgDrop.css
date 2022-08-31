@@ -10,12 +10,8 @@
   }
   #imagedrop-image-preview {
     padding: 1em;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   #imagedrop-image-preview img {
     width: 100px;
@@ -30,7 +26,6 @@
     text-align: center;
   }
 }
-
 @media screen and (min-width: 601px) {
   .edit-gallery-image-drop-box-dropper {
     width: 40%;
@@ -43,12 +38,8 @@
   }
   #imagedrop-image-preview {
     padding: 1em;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   #imagedrop-image-preview img {
     width: 100px;
@@ -62,5 +53,4 @@
   .imagedrop-image-preview-section {
     text-align: center;
   }
-}
-/*# sourceMappingURL=imgDrop.css.map */
+}/*# sourceMappingURL=imgDrop.css.map */

@@ -29,12 +29,8 @@
 }
 
 .edit-gallery-image-flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .create-gallery-dropbox button {
@@ -51,7 +47,7 @@
   text-align: left;
   width: 40%;
   cursor: pointer;
-  padding: .2em 0 .2em;
+  padding: 0.2em 0 0.2em;
 }
 
 .edit-gallery-form {
@@ -79,15 +75,11 @@
   width: 200px;
 }
 
-.editing-gallery-title input::-webkit-input-placeholder {
+.editing-gallery-title input::-moz-placeholder {
   color: blue;
 }
 
 .editing-gallery-title input:-ms-input-placeholder {
-  color: blue;
-}
-
-.editing-gallery-title input::-ms-input-placeholder {
   color: blue;
 }
 
@@ -96,10 +88,8 @@
 }
 
 .editing-gallery-image-boxes {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -125,5 +115,4 @@
 
 #delete-button {
   background-color: red;
-}
-/*# sourceMappingURL=Gallery.css.map */
+}/*# sourceMappingURL=Gallery.css.map */

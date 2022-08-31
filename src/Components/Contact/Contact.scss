@@ -3,6 +3,23 @@
     color: black;
 }
 
+.phone-contact {
+    margin: 10px 0;
+}
+
+.email-contact {
+    margin: 10px 0;
+    color: black;
+}
+.email-contact a {
+    margin: 10px 0;
+    color: blue;
+}
+
+.hours-contact {
+    margin: 10px 0;
+}
+
 @media screen and (max-width: 600px) {
     .contact {
         background-color: #9DBFE6;

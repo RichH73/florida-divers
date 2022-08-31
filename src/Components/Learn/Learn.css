@@ -31,13 +31,10 @@
     background-color: #9DBFE6;
   }
   .learn-dive-package-logos {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 70%;
     margin: 1rem auto;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .learn-dive-package-info-body {
     padding: 1em;
@@ -74,7 +71,6 @@
     border-top-left-radius: inherit;
   }
 }
-
 @media screen and (min-width: 601px) and (max-width: 1120px) {
   .learn {
     font-size: 1.2em;
@@ -111,13 +107,10 @@
     background-color: #9DBFE6;
   }
   .learn-dive-package-logos {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 70%;
     margin: 1rem auto;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .learn-past-students {
     width: 80%;
@@ -154,7 +147,6 @@
     cursor: pointer;
   }
 }
-
 @media screen and (min-width: 1121px) {
   .learn {
     font-size: 1.2em;
@@ -196,13 +188,10 @@
     border-top-left-radius: inherit;
   }
   .learn-dive-package-logos {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 70%;
     margin: 1rem auto;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .learn-past-students {
     width: 80%;
@@ -234,5 +223,4 @@
     color: blue;
     cursor: pointer;
   }
-}
-/*# sourceMappingURL=Learn.css.map */
+}/*# sourceMappingURL=Learn.css.map */

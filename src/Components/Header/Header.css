@@ -16,10 +16,7 @@
   #header {
     height: 70px;
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   #logo {
     margin-top: 31px;
@@ -30,15 +27,10 @@
     height: 123px;
   }
   #label {
-    margin-left: .75em;
+    margin-left: 0.75em;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   #label img {
     max-width: 164px;
@@ -57,7 +49,6 @@
     display: none;
   }
 }
-
 @media screen and (min-width: 601px) and (max-width: 1120px) {
   #nav {
     display: none;
@@ -68,13 +59,8 @@
     background-color: #5D9DE6;
   }
   #header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   #logo {
     margin-top: 31px;
@@ -109,14 +95,11 @@
     border-radius: 4px;
   }
 }
-
 @media screen and (min-width: 1121px) {
   #nav-button {
     display: none;
   }
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 10px;
     width: 80%;
@@ -140,9 +123,7 @@
   }
   .header ul li {
     display: inline;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     font-size: 1.2em;
     padding: 20px;
   }
@@ -150,13 +131,8 @@
     padding: 0;
   }
   #header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .header-logo {
     width: 20%;
@@ -177,14 +153,9 @@
     border-radius: 4px;
   }
   .header-top {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 80%;
     margin: auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
-}
-/*# sourceMappingURL=Header.css.map */
+}/*# sourceMappingURL=Header.css.map */

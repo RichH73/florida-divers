@@ -55,20 +55,21 @@ class Contact extends Component {
 				{/* <h3>Contact Us</h3> */}
 				<div className="contact-us-container">
 					<div className="contact">
-						<h4>Contact Info</h4>
-						(352) 220-1148
-						<br />
-						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
-						<h5>Nicholas</h5>
-						<a href="mailto:scubaJ1210@floridivers.com">scubaJ1210@floridivers.com</a>
-						<h5>Tammy</h5>
-						<a href="mailto:Scubydoo1210@floridivers.com">Scubydoo1210@floridivers.com</a>
-						<h3>Hours</h3>
-						Mon-Fri: 2:30pm - 7:30pm
-						<br />
-						Sat: 9:00am -5:00 pm
-						<br />
-						Sun: Closed
+						<h3>Contact Info</h3>
+						<div className="phone-contact">
+							<p>Call us: (352) 220-1148</p>
+						</div>
+						<div className="email-contact">
+							<a href="mailto:floridivers@gmail.com">Email: floridivers@gmail.com</a>
+						</div>
+						<div className="hours-contact">
+							<h3>Hours</h3>
+							Mon-Fri: 2:30pm - 7:30pm
+							<br />
+							Sat: 9:00am -5:00 pm
+							<br />
+							Sun: Closed
+						</div>
 						<div className="social-media">
 							<h3>Social Media</h3>
 							<a href="https://facebook.com/scubaforthesoul" target="new">

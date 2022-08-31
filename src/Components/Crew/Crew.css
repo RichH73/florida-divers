@@ -13,18 +13,13 @@
     font-weight: bold;
   }
 }
-
 @media screen and (min-width: 601px) and (max-width: 1120px) {
   .meet-the-crew {
     width: 70%;
     margin: 1rem auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   .meet-the-crew-card {
     width: 18rem;
@@ -36,18 +31,13 @@
     font-weight: bold;
   }
 }
-
 @media screen and (min-width: 1121px) {
   .meet-the-crew {
     width: 80%;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   .meet-the-crew-card {
     width: 18rem;
@@ -58,5 +48,4 @@
     background-color: #9dbfe6;
     font-weight: bold;
   }
-}
-/*# sourceMappingURL=Crew.css.map */
+}/*# sourceMappingURL=Crew.css.map */
